@@ -1085,7 +1085,7 @@ async function fetchNews() {
   try {
     const today = new Date().toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
     const text = await callClaude({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-4-5',
       max_tokens: 1000,
       tools: [{ type: 'web_search_20250305', name: 'web_search' }],
       messages: [{ role: 'user', content: `Today is ${today}. Search for today's top news. Give me 4-5 factual, completely politically neutral bullet points. Focus on economy, major world events, science, health, things affecting everyday Americans. Skip partisan drama. Start each bullet with a relevant emoji then one clear sentence. Under 150 words total. Write like a calm trusted friend.` }]
@@ -1109,7 +1109,7 @@ async function fetchSports() {
   try {
     const today = new Date().toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
     const text = await callClaude({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-4-5',
       max_tokens: 800,
       tools: [{ type: 'web_search_20250305', name: 'web_search' }],
       messages: [{ role: 'user', content: `Today is ${today}. Search for the latest NFL and NBA scores and highlights from the last 48 hours. Give me 4-5 bullets max. Casual — like a friend texting before a date. Who won, scores, anything talk-worthy. Start NFL bullets with 🏈 and NBA with 🏀. If offseason say so. No jargon. Under 150 words.` }]
