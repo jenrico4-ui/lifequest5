@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Life Quest V5 ✨">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAlYklEQVR4nO3daYxl5Z3f8d+599yl9r2rq7q6oWkwGNsQ24PpwRsG21FGcZSMJkomssS8iLKMEimKgsF5E2mkyNhEeTWRkhcjy5GSOLFiJV7GkxiwMc1iMGCHHbqhu/Z9v1V3P3lRFHRX39rucp7nnOf7kUpITXfV/5665/5/53/Oc463+S//UrBeYLoAAKiDZ7oA7M+ns1iBXwOAODrss42AYJBvugAH0ewBYEetz0NCQUgIAK1FsweA4yEUhIQA0Hw0fQBorqs/VwkDTUIAaBwNHwDCs/czl0BQJwJAfWj6AGAHpgN1YhXA8bC5AMBeu5/RBIEj8NlOh6LpA0C0MBU4Ak4B7I/GDwDRx1RgHwSAa9H0ASCemArsQQDYQeMHAHcwFRABgMYPAO5yOgi4GgBo/ACAXU4GAReXATr4kgEARxDIoRDg0gSAxg8AOIwz0wAX7gNA4wcAHFfsg0DCdAEtRvMHADQitn0krqcAYvsLAwCELpbTgLgFABo/AKBVYhUE4rQKIEYvBQBgsVisFvCj/xIk0fwBAOGKfAiI+ikAGj8AwJRInxKI8jJAmj8AwAaRnAZEdRkgzR8AYJPI9aWonQKI3AYGADgjUqcEojQBoPkDAKIgEv0qKssAI1ImAACSInBdQBQmADR/AEAUWd2/bA8AVm88AAAOYW0fs/UiQGs3GAAAx2TlxYE23geA5g8AiCOrrguw7RQAzR8AEGfW9DmbAoA1GwUAgBayot/ZsgzQkjIAAAiF8dMBNkwAaP4AABcZ7X+mAwDNHwDgMmN90GQAoPkDAGCoH9q4DBAAALSYqQkAR/8AAHwo9L5oYhUAzR8AgOuFujLAD/kMAM0fAID9hRYCwjwFQPMHgAjof/TLM6ZrcFwo/TKsAEDzBwDg6FreN03fBwAAYJHdo3+mAPEXRgDg6B8AgONraf/0lv7VY638/jR/AIiI/kfvv+6of/nBx0dM1IJrtOSiwFYuA6T5A0DE8UFuhZasDOAaAACABmoc/R/054i+VgUAQiMAAM3T9L7aigBA8weACOEoPzKa2l+bHQBo/gAQMwQEqzStz3INAAA4jOburmY+DpijfwCIqYFH759ZevAJlgTaoSmrAkw8DRAAYIHBR+871tE//SJemnUKgPcFAADhabjvNiMA0PwBwAHHnRig5Rrqv1wECAAOopmj0QDA0T8AOITgYJ26+zATAABwDE0cUmOrADj6BwAHDT5638wCSwJtUteywHrvA0DzB4AIGnr0S006+m/JE2pRv2OHAJ/fIQDg2OgdkVfPNQAc/QNABA19p1lH/839XmiaY/VnLgIEAMBBxw0AHP0DQAS14oidKYCVjtynmQAAAOAgb+7BJ476dzn6B4AIOtHiI/X5b/yCJYH2OfQyzWY+DhgA4CT6SBR5cw/+4qh/lwkAAETIie/cG+o5+vlv/JJJgD0OTWVHDQA0fwCIiLAb/14EAWscGAIIAAAQE6Ybfy2EAaMaDgA0fwCwlI1NvxaCgDH7hgACAABEUFQa/14EgdDtHwBmCQAAEBnDEW38e80RBMJSdwCg+QOABeLS+GshDLRczRDgzT74y4P+EQEAAAwa/s4XY9v495r7xpMEgdY4dgCg+QOAIS41/r0IAi1xXQggAACAJVxu+rUQBJqKAAAAtqHxH44w0LDrA8BM7QBA8weAFjtJ4z+2WYJAI64JAQQAADCMIHA4Gn9T7AkA3/hlrb9EAAAAA05+mzCwa/Yhmn6T7Q0AT9b6SwQAADDo5Le/4GwQmH3oVzT+1jg0AND8AcASrgQBmn5oPggBBAAAiIg4hgEaf+gIAAAQVVEPAjR9oz4MANPXBgCaPwBEyEiEwsAMjd8WnkQAAIBYsDUI0PStRAAAgLixJQjQ+K1GAACAOAs7DND0I2M3APzq6j8kAABAzIx8+/MtDQIzDz1F448WT5ISV/0BzR8AgPgLpGsDAAAghlp5hM7Rf3T5HPYDAOpFD4kuJgAA4IDpFhypt+J7IjwEAAAAHLQbAJjiAEDMccSOqwT+nqcDAgBwqOmHLozQP6KNUwAAYKnRb3/ue83+njuNG2AVAABYzcbP6ClCRCwwAQAAC516/+j/VAumAIBEAAAA53AED0nyuYYDAOxy6pE9R/0WfU5PPXxhxKZ6UD8mAABguesCQRNMPcwUwHUJ2XmNCQA4qRXNvlkIDfGS2Jkt8cUXX3zxZcdXbTvBoLk/a+rhp4/Z0E1vG76a+cUyQACwxNgjn/3eQf/f5Of15LHDAmzHNQAA4DAau7sIAABggcOO/o/6d4CjIgAAAA7ElCCevImHLnAZAAAYUu9R/eTDTz/Q5DpmDvhZBIAY8k0XAAAuanScf/W/b3YYuBrNP768iYeeZgIAACEYe+Selp7Dn3z4mYaCwNgj91w3BZh8+BkCQEyxDBAAWux0ixv/rqsDxkSDYWAXPSK+vHEmAADQEmE1/oMcNwicvmoKMMHRf6xxDQAAtMjVzTfMMNCso3/EGxMAAAhZK8JAM5v+6UfumeHoP/6YAABAyHabdaNBgCN9NIIJAABY4KhhgKaPZmEVAABECJ/ZaBbvykPP8H4CAAuceeT3D5wCjD/8LEf/aBqeBQAAgIN8eaZLAABI0vg3n33gzLcOmALweY0mYgIAABEw/k3G/2guAgAAWIRGj7AQAAAAcBDLAAHAcleYCqAFfK4qAQC7XPnmcw/c8K3zV10MyOc0mo9TAAAAOIgAAAAWuvLN5x64+r9AsxEAAABwkHf54We5DhAAAMewCgAAAAdxCgAAAAcRAAAAcBD3AQAAwEFMAAAAcBABAAAABxEAAABwEMsAAQBwEBMAAAAcRAAAAMBBBAAAABzky+M+AAAAuIYJAAAADiIAAADgIJYBAgDgICYAAAA4iAAAAICDCAAAADiIxwEDAOAgJgAAADiIVQAAADiICQAAAA4iAAAA4CACAAAADiIAAADgIAIAAAAO4j4AAAA4iGWAAAA4iFMAAAA4iAAAAICDCAAAADjI5xpAAADcwwQAAAAHsQwQAAAHsQwQ+0oPZXXDv/iY6TIib/YH72njt8sNfQ9+Fy0WSEG5qqAS7HyVqwrKgYJKVZWtiiq5siq50vv/3fkqrRRUXMyrul0xXT1QF990AQBgnCd5qYS81PH/aWWrrNLiThgoLuaVn8ipMJlTtVhtfp1AExEAAKAByXZfyTO+smc6PvzDaqDCXF75iU3lJ3Laemdd5Y2SuSKBGggAANBsCU+ZkTZlRtrU85khKZDyUznl3ljT5hurKs5tm64QIAAAQMt5UnasQ9mxDg18ZVSl5YLWX1rS+m8WmQzAGAIAAIQs1Z/RwJdH1X/fiHJvrmnt+QVtXVyXuCobIWIVAPbFe6N5Gt2W/C7iyUt46ry9V52396q4kNfSY9PaeG2FXzhCwX0AcADeG83hqfFtye8i7tJDWY388U3qn97S4s+nlXt73XRJiDnuBAgAFsmMtuvUAzdr7B/eotRAxnQ5iDECAABYqP1sl2785x9V32dPMABCSxAAAMBSXiqhoT8Y0+l/dKvSTAPQZAQAALBc25kOnfnT29R+S7fpUhAj3lv/+kWuN0Xozn3zE0p21nHf1RDkJ3Ia/49vmS6jpU587bR6zw+ZLqOmymZJl771yvH/oSclUgl5fkJeKiG/05ffk5bfk1J6IKvsqXZlRtrkpSJ83FMNNP+Xk1p9dsF0JYgBlgHCCNvfd7bXF2eB6tz+gVQpVqX378FfWitKU1vX/p2Ep+xImzpv61HHbT3KjrY3Wm64Ep5O/M3TSg9lNffjCd6oaAjLAGGI7e872+uLs2Ysm9xHVcpPbSs/ta3Fx2eVHsqq9+5B9XyqX4lMsjU/swV67x6S5GnuRxOmS0GERXgWBgCNKS7kNf+TSV369qta+sWsqqXoPMGv9+5BDf31UdNlIMIIAACcVy1UtfjYjN77969r49VV0+UcWf8XhjXwxWHTZSCiCAAA8L7yeknT/+09zf5wXNViNKYBg18ZVcctXabLQAT5nOoE9mjhKWhr2P76DNe39tKS8lNbGvuTc/K77Fyt8gFPOvlHN+rKn7+h8mbZdDWIECYAAFBDYW5b4//pbRUX8qZLOZTf6evkH91oPDghWlgGCOxR9zK0CLH99dlSX3G1qPHvXtSN/+RW+d12TwI6bu5Sz+8NavWFRdOlICKYAADAAcrrJU3850uqFiqmSznU4P0jSmT4WMfRcB8A4DpcBGCeXfUVZvOa/dGkRv/uDaZLOZDf6Wvg8ye18NiM6VIQAURFADiC9d+tRGKJYP9nh6w/XQE7EAAA4IhmfzRp/akAL5VQ392DpstABBAAAOCIKltlLV+w/0E8PZ/ul5ew6zQK7MMqAKAG9guzbN7+S0/Pq+/8oJIdvulS9uV3ptRxW7c2Xl8zXQosxgQAAI6hWqxq9cUl02UcqveuAdMlwHIEAAA4ppXfLNk9ppDUcVOXEmk+4rE/lgECNbFfmGX39i8tl7T13qbab+o0Xcq+vKSn9rNd2nxr3XQpsBTxEADqsPG2/Y2145y9AQXmEQAAoA65tzZMl3Cojpt5SiD2RwAAgDoUFvIqrZdMl3GgzIks1wFgXywDBGqI+35h++uzvb5d+eltpSy/615qIKP8zLbpMmAhoiEA1Ck/bX9jTQ9lTJcASxEAAKBO+Vn7A0BmgACA2ggAAFCn8prd1wBIUpoAgH1wHwCgprjvF7a/Ptvr21GKQABItCUVle2JcPm8L4Aa2C/Misj2L2+VFVQCeUl7C05mkpHZnggXpwAAoF7BzrMBbMYyQOyHZYBADewXZkVp+wflqqSk6TL25aUTkdqeCA/REAAaUC3Z3V4TPvN/1EYAAIAGBBW7A0C1bHd9MIcAAAAN8Cw/wg4sv0YB5rAMEKiJ/cKs6Gz/hG/3cVS1VFWUtifCY/c7FwAs56Xsbq6VPBMA1MYqAKAG9guzorL9vYS3s87eYsXVYmS2J8LFBAAA6uR32X8WtbRSNF0CLEUAAIA62f4oYEkqLhMAUBsBAADqlOpLmy7hUPm5vOkSYCkCAADUqe1k1nQJBypvlpkAYF8EAACoU3a0zXQJB9oa3zJdAixm/xUsQOg8xX+/sP312V6fJE9qG7E7AOQu5xSJbQkjWAYI7BEoOsvQ6mX767O9PklqP9WmZLvFSwADae319UhsS5jBKQAAqEPXR7pMl3CgrYktldZKpsuAxQgAAFCHrtu6TZdwoNVX1kyXAMsRAADgmNpGsmobsXcFQCVf0epvV02XAcsRAADgmPrv6jddwoGWn19WJV8xXQYsRwAAgGPwO3z13tlruox9BeVAi88smS4DEeDLY4kIcB32C7Ms3v4n7h1SIm3vsdP8Uwsqb1Ws3oawA8sAgRrYL8yydfun+9JWj/8LS0XNP7Vo7faDXeyNsQBgE08a+9uj8pKWHlkH0tSPpxWUaf84GgIAABzB4PkBdZ7tMF3GvuafWtDmuznTZSBCCAAAcIiOGzs08tVh02Xsa+PipmYfnzddBiKGAAAAB8gMZnTjH5+2dvRfWCho/AeT9l44AWv5pgsAAFtlhzI6+8ANSrbZec//wmJBl757WZVt1vzj+FgFANQQ9/3C9tdnQ30dp9t19utn7G3+S0Vd+u5llTbLpktBRPE4YKAm9guzDG5/Txo636+RrwzL8+18H2y+m9Pl/z75/pG/nTXCfpwCAID3pfvSGvvaSXXd3Gm6lH0tPres6b+aU1C1YU6CKCMAAHBesi2p4S8MavB8v7UX+5VzZU3+ZFZrr62bLgUxQQAA4KzscFaDn+lT3509Vt/ed/WVdU39dGbnFr9AkxAAADjDS0hto23qvrVLPbd1KTucMV3SgbZn8pr5+bw2Lm6aLgUxRAAAEA+elPA9eX5CiVRCfkdS6Z6UUr0pZQbSahttU9vJrBIpO0f8VyssFzX7+IJWX12zY0kEYollgEAN7Bfm+J2+7vyz202XYUTuypYWnl3W2pvrCqqmq0HcsQwQqCnu+0XcX190VLYrWn19Q4u/XtH2bP79P+X3g9bjFAAAhKxarGrtzU2tvLKmjYs5BRVmTggfAQAAWi2Qtmby2riU08bFTeXGt2n6MI4AAABNVt6qaGtqW1tT+Z3/TmyzhA/WIQAAQJ2qhaq2pvMqLBaUXyyqsFhUfqGg4mrJdGnAoXyuNQFqiPt+EffXF5JEJqFMf0qVQkXJjbLkSeXtCtsXkcAyQGCPQPFfBhj31xemVE9KPT0p9dzWJUmqlgNtXNrU6hsbWntzk0f1wlqcAgCAJkr4nnpu7VLPrV0KqoFWX13X3IUlbc8VTJcGXIP7AAA1sV+gcV7CU98dPeq7o0fr72xq9skl5Sa2TZcFSGICAACh6L6lU903d2rppVVN/d95VfLc6g9m2fv4KwCIG08a+HSvPvrPblLvR7tMVwPHMQEAYJXyZlmvPHqx5v/zkp6S2YSSmaSS2YT8Tl/tI1m1j+58pbqj8ZGW6vJ19u+f0sJzK5r6P/MKqlyWifCxCgBG2P6+s72+ODtoFUZQCVTNVVTKfXhl/drbHz4qt204o4FP9ar/zm75bcnWFtoEQ+f7lBlK693vT6la5JQAwsUpAACxsT1X0OTP5vTKv7uoiZ/OReI8e/e5Dt3yJ2eUzPJxjHDxjgMQO0E50MLzK3r9z9/V6hsbpss5VMeprG7++mkl0nwkIzwsAwSu4yn++4Xtr6859ZU2Knr3+9Ma/ly/Tn15yOqX3XG6TTf9vVO69F8mFdg/uEAMEDcBxN7chWVN/GzedBmH6r65Q2N/Y9h0GXAEAQCAExZ+vaLZXy2ZLuNQQ5/pVf8d3abLgAMIAACcMf3EotbeyZku41BnvjasTH/adBmIOZYBAjWwX5jVsu0fSO/9zxnd/k9vULon1aqf0rBEOqEb/vCk3vqLcd6MaBkmAACcUtmu6PIPZ61vrJ2n2zR8vs90GYgxAgAA52xc3tLccyumyzjU6H2Dkbm7IaKHAADASdNPLKq4WjJdxoES6YTGvjpkugzEFPcBgCG2v+9sry/OwrkPQ7UYaPwn87r566da/rMa0f/xbs0/u6rcVN50KYgZJgAAnLX2Tk6rb20e/hdN8qRTXx00XQViiFUAQA1x3y9sf31h1jfxVwvqOdchz7d36tN1Y7u6zrVr/dKW6VIQIz6TTqAG9guzQtz+hZWS5p5b0cnP9Yf3Q+sw9uVBvf7uuOkyECOcAgDgvJkLyypvVQ7/iwa1j2bVd3un6TIQIwQAAM6r5KuaeWrZdBmHOvWlQXl8aqNJeCsBgKT5F1atXxaYHUprgOcEoEkIAAAgKSgHmn7S/inA6L0D8pJcpILGcR8AoCb2C7PMbP+l321o5PP9yvTb+5yAdG9KQ7/Xq/lfr5ouBRHHMkCgBvYLs0xt/6C6MwU4+3eGDVVwNCOf79fCS2uqlninon6cAgCAqyy9sq7thaLpMg6U6kzyoCA0jAAAAFcJqtLUE0umyzjUyGf7lMzyEY768e4BgD1W3thUbtLue+8nswmNfJYpAOpHAACAGiYeWzRdwqGGz/cp1Zk0XQYiigAAADVsXN7W2kW7772fSHka/YLdtzCGvVgGCNQU9/3C9tdnR32Tjy+p51y7LeXUNPTpHs0+s6aC5Tcxgn1YBgjsESj+ywBtf3221JebKWjptU0NfNzee/B7SU+j9/br3f81Z7oURAynAADgAJNPLCmo2BJJahu4o0ttQ2nTZSBiCAAAcIDCckkLL62bLuNAXkI69SWuBcDxEAAA4BBTTy5bf9e9/ts71TGaMV0GIoQAAACHKG1WNPvcqukyDjV2/4DpEhAhBAAAOIKZp1dU3q6YLuNAPefa1XVjm+kyEBGsAgBqYL8wy8btX85XNf3Uis58ddB0KQcau39Ar//FpOkyEAG+PIsXuCK+bH7beVLs9wubX57F23/uhXWdPN+rdLdvupR9dZ3OqvfWDq2+bfdNjGAepwAA4Iiq5UCTv1wxXcahTt/HtQA4HAEAAI5h8bfr2l60+6577cNpq29eBDsQAADgGIJg5+ZAthv7Ur+8hJ2nUmAHAgAAHNPyGzltThVMl3GgbH9KQ5/sMl0GLEYAAIA6TDxm/xTg1Bf6lPCZAqA2lgECNbBfmBWF7b92eVtrl7Z2nhZoqXS3rxN39Wjm2VXTpcBCPA4YuI6n+O8Xtr8+2+vbMf74ij5hcQCQpFOf69X8ixuqFKumS4FlOAUAAHXafVywzfz2pEZ+v8d0GbAQAQAAGjDxxIqCqt0nLUbu6ZHfljRdBixDAACABuSXS5p/acN0GQdKphM69fle02XAMgQAAGjQ5JMr1j8uePiubqW77L2FMcJHAACABpU2K5r59ZrpMg6U8D2NfbHXdBmwCMsAgRrivl/Y/vpsr6+WqQurGv50t/w2e4+rhj7Zpaln1pRftvtWxgiHve9UAIiQSqGqqQurpss4kJfwdPpLfabLgCW4DwBQE/uFWdHc/rPPr2vkfI/SXfZecT/48U5NXVjT1lzRdCkwjAkAADRJtRxoIgKPCz5zH1MAEAAAoKkWXt7Q9pLd59j7PtKurrGM6TJgGAEAAJooCKSJxyMwBbi/33QJMIxVAMAegaJ5FXqcRH37L76R0+h0QZ2j9h5ld9+YVc+5Nq1e2jZdCgxhAgAALXDlsQhMAbgWwGl+RC+2BVrLsv2ibTClT/7pmOkyQpHqSOqef3O2ad9v7sUNXfrpYtO+31GtXd7W6rvb6r2pLfSffVSdo5mGtvX6lbxe/d5MEytCmFgGCNRk235hWz1RY2b7XXl8xeoA0By8N6OKUwAA0CK5maIWX8+ZLgOoiQAAAC00/sSq9Y8LhpsIAADQQvnlkuZf3jRdBnAdlgECNdi2X9hWT5TYsKxz/MlVDd3RqUQqXufLbdi2qB8TAABoseJmRdPPr5suA7gGAQAAQjD19JrK+arpMoAPEABghJewdxQa8BmNFijnq5q8sGa6DOAD3AcAZlj8tquWAtlXoG31RI0d22/m+Q2N3t1t9eOCj8+ObYvjYwIAIzyL33nVMpc1oTWq5UDjT66aLgOQRACAIZ5n71FDQABAC82/vGn944LhBpYBwgibJwCVcmDd0qatxZIu/NkV02WgCYJAevE/TJsuA2ACgPB5nuQl7Z0AcAoAgAsIAAhdIm33246lWgBcYPcnMWIpafnd0IobZdMlAEDLsQwQoUuk7M6dxY2q2C8AxJ3dn8SIpWTG7rddcaNiugQAaDlWASB0fpvdASC/XrFuFQAANJvdn8SIJasDQLDz4BYAiDufU50IW6rd3gCwvVxWUA24BABA7Nn7SYzYSrXbex/0zdmi6RIAIBQEAIQu021vAMjNEQAAuIEAgNClLQ4ATAAAuIL7ACB0mW7fdAn72pwti30CgAtYBhhRw3d26Na/1X+sfxME0lP/dkKm17hle+0MAFuLJRVzrAAA4AZOATjE86SU4SV4me6kkmk7j7CXL+ZNlwAAoSEAOCbdafb8e/tQyujPP8gKAQCAQwgAjsn2mR2/d1gaACrFQKvjBdNlAEBoCACOaes3GwC6TqWN/vz9rLybV1DhihgA7iAAOKbzpNkG3D2WMfrz9zP3u5zpEgAgVCwDjKz6fm9do+m6/22jsr2+lTcBKqxXtPxOXuwLAFzCMkDHtPX7SvckVVgLf7lb/y3Z0H/mUcy8lFOVHQGAYzgF4KD+c2Ya8eBtbUZ+7kGCqjTzMuN/AO4hADho+BPtof/MTFdSPWfsO/8/+9scj/8F4CQCgIN6zmTUPhDuaoDRuzrlWfZuq5QCXX5y3XQZAGCEZR/JCMvpe7pC+1l+NqHRT3WE9vOOavLZDY7+ATiLAOCo4Ts71Dkczk15zt7XLd/wLYj3Km5WNPHshukyAMAYVgFEVKO/N8+TPvK1Pr383QVVW3gDnP5zWY18qrNl379eb/10ReUi734A7uI+AA7rGknrI3/Qpzd/vNKS798+6Ov2P+yXZ9lbbOqFTS29XRDvfQAus/O5rAjNyb/Wrmo10Ds/W1VQbd737RpJ645/MCA/a9fof3OupEs/58I/APA5CIqoJv7eRj/VofZBX2/9eFXbK+WGvpfnSWN3d+rsvd1K+Ha9uUrbVb3+w2VVqwEH/wCcxwQAkqTeMxnd9Y9PaPrlnKaezx07CCSSnk58rE2n7+lSx6B9b6tyIdD/+6+L2lpqLOAAQFzY90kNYxK+p7G7OjV2V6c2potaea+g9emitpcrKmxUVC0FCqqBkumEkhlP7f2+2od89d6QUf9NWSXTdh5WV0qBXvn+ojZmSqZLAQBrEABQU9do+v0HB0VbuVDVaz9Y1tpE0XQpAGAVlgFGFL+3w20tlvXK/1jS1jJjfwDYi2WAkcXv7SALb+X1xv9eUaUYiG0FANfjFABipVyo6t1fbGjqNzzhDwAOQgBAbMy9uq2LP19TMdfEGxoAQEwRACJq/tVtVQpVnbyzXQPnMvIS7o6516eKuvTEulavcKEfABwVASCiqpVAC2/mtfBmXqn2hIY/3qbhj7Wp+1T0r9w/qsV38pp4dlOr4zR+ADguAkAMlLaqmnw+p8nnc8p0JzV0a1ZDt7Wp50zauvvwN6qYq2rhjW1N/ianrUWu7geAerEMMGby6xVNvJDTxAs5pdoT6j+bUf+5jPrPZpTpSpoury6l7aoW3sxr/vVtrVwuKOBNCwANYwIQY6WtquZe29bca9uSpI4hX303ZNRzOq2esbSyPXYGgkox0NpEUasTRa2OF7Q2WWzqg4oAANwHwCm5hYpyC1ua/M2WJCndmVD3aFpdw746TqTUOeyrrc8P9bRBcbOq3GJZW4tl5RZLWpsqaXO2tOcon/coADQbEwCHFTerWnw7r8W3P/yzRNJTtiepbF9Sbb1JZXuSSncklWpPKN2ekN/myU8nlPAlL+kpkfTkJXYuSqyWpaASqFoOVK3s/Fk5X1UxV1Upt/Pf4lZVxc2K8msVbS2VVS4wzwcAEwgAuEa1EmhrucztcwEg5hKmCwAAAOFjFQAAAA5iAgAAgIMIAAAAOCjcNV8AAMAKTAAAAHAQAQAAAAcRAAAAcBDLAAEAcBATAAAAHEQAAADAQQQAAAAcxOOAAQBwEBMAAAAcRAAAAMBBLAMEAMBBTAAAAHAQAQAAAAcRAAAAcBDLAAEAcBATAAAAHMQqAAAAHMQEAAAABxEAAABwEAEAAAAH+SwCAADAPUwAAABwEPcBAADAQSwDBADAQZwCAADAQQQAAAAcRAAAAMBBBAAAABxEAAAAwEGsAgAAwEHcBwAAAAdxCgAAAAcRAAAAcBABAAAABxEAAABwEAEAAAAHsQwQAAAHsQwQAAAHJUQCAADAOVwDAACAg3yO/wEAcA8TAAAAHEQAAADAQSwDBADAQUwAAABwEPcBAADAQbsTAFIAAADu8DgFAACAgwgAAAA4iFUAAAA4iAkAAAAOujoAcCEgAADx50ksAwQAwEmcAgAAwEEEAAAAHEQAAADAQXuXAXqSWBkIAEA8fXDhHxMAAAAcRAAAAMBBtQIA6wIBAIifa/o79wEAAMBBPv0fAAD3cA0AAAAO2u9pgCwHBAAgPq6b9zMBAADAQQQAAAAcdFAA4PJAAACir2Y/ZxkgAAAOOuwUAOkAAIDo2reP77cKAAAAxBgXAQIA4KCjBABOAwAAED0H9m8mAAAAOOioAYApAAAA0XFo32YCAACAg7gPAAAADjrOMkAeEAQAgP2OdGTPKQAAABx03ADA+QIAAOx15D7NBAAAAAfVEwCYAgAAYJ9j9Wefdg4AgHvqXQbIigAAAOxx7GbeyNMACQEAAJhX15E8FwECAOCgRgMAVxAAAGBO3X2YCQAAAA5qRgBgCgAAQPga6r/NmgAQAgAACE/DfbeRVQAAACCimvk4YJYFAgDQek1p3FwECACAg5odALgWAACA1mlan23FBIAQAABA8zW1v7bqFAAhAACA5ml6X+UaAAAAHNTKZYCsCgAAoHEtmao3cxlgLYQAAADq17ImHcYpAK4HAADg+FraP7kGAAAAB4UVAJgCAABwdC3vm2FOAAgBAAAcLpR+6YfclrkoEACA/YXWlU08DZAQAADA9UI9JDd1ESCnAwAA+FDofbHV9wEAAAAWMrkMkOQBAIChfmj6PgCEAACAy4z1QdMBQCIEAADcZLT/mVgFUAsrAwAALjF+8GvDBGCX8Y0BAEAIrOh3NgUAyZKNAgBAi1jT52xcBsjpAABAHFnVcH3TBexjdyMRBAAAUWdV499l2ymAvazcaAAAHJG1fcz2ACBZvPEAADiA1f3LlmWAh+G6AABAlFjd/KVoTAB2Wb8xAQBQRPqVrRcB7oeLAwEAtopE498VpQnA1SK1kQEAsRe5vmTjfQCOiusCAAA2iGQjjdopgL04JQAAMCWSjX+XH+3yP8A0AAAQpsh3z6gsAzwKQgAAIAyRb/5S9E8B7MUpAQBAq8Si8e+KWwDYRRAAADRLrBr/rqguAzyqWP7SAAChiW0fifIywKNiGgAAOK7YN8e4ngKohSAAADhM7Bv/rjitAjgqVgsAAGpxpvlLbk0ArsY0AACwy6nGv8vVALCLIAAA7nKy8e9yPQDsIggAgDucbvy7CADXuvpNQRgAgPig6e9BANgfUwEAiD4a/z5cuA9Ao5gKAEC00NiOwMVlgI1gKgAA9qLxHwOnAOrDVAAA7EDTrxMBoHF733wEAgBoHRp+kxAAmo/pAAA0F02/BQgArVXrTUsoAID90exDQgAIH6EAAHbQ7A36/25dFpKMjPJnAAAAAElFTkSuQmCC">
+<title>Jen's Life Quest V5 ✨</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#FDF6F0;--surface:#fff;--border:rgba(220,170,190,0.25);
+  --text:#2D1F2A;--mid:#7A5568;--dim:#B48FA0;--muted:#D4B8C5;
+  --rose:#F472B6;--rose-l:#FCE7F3;--rose-m:#F9A8D4;
+  --lav:#A78BFA;--lav-l:#EDE9FE;
+  --mint:#34D399;--mint-l:#D1FAE5;
+  --peach:#FB923C;--gold:#FBBF24;--gold-l:#FEF9C3;
+  --sky:#38BDF8;--sky-l:#E0F2FE;--coral:#F87171;
+}
+body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif;max-width:430px;margin:0 auto;min-height:100vh;padding-bottom:90px}
+::-webkit-scrollbar{display:none}
+
+/* NAV */
+.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;background:var(--surface);border-top:1px solid var(--border);display:flex;z-index:100;box-shadow:0 -4px 20px rgba(244,114,182,0.08)}
+.nb{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 6px;background:none;border:none;color:var(--muted);font-size:9px;font-weight:800;cursor:pointer;letter-spacing:.04em;text-transform:uppercase;font-family:'Nunito',sans-serif;transition:color .2s}
+.nb.on{color:var(--rose)}
+.nb svg{width:22px;height:22px}
+
+/* PANELS */
+.panel{display:none}.panel.on{display:block}
+
+/* HEADER */
+.hdr{background:linear-gradient(135deg,#FCE7F3,#EDE9FE,#E0F2FE);padding:24px 20px 20px;position:relative;overflow:hidden}
+.hdr-sub{font-size:11px;font-weight:800;color:var(--rose);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.hdr-ttl{font-family:'Quicksand',sans-serif;font-size:26px;font-weight:700;color:var(--text);line-height:1.2}
+.hdr-ttl span{color:var(--rose)}
+
+/* CARDS */
+.card{background:var(--surface);border-radius:20px;border:1px solid var(--border);padding:16px;margin:12px 16px 0}
+.sec{font-size:11px;font-weight:800;color:var(--dim);letter-spacing:.1em;text-transform:uppercase;padding:16px 20px 8px}
+
+/* HOROSCOPE */
+.horo-card{margin:14px 16px 0;background:linear-gradient(135deg,#FFF9C4,#FEF3E8);border:1px solid rgba(251,191,36,0.3);border-radius:22px;padding:18px;position:relative}
+.horo-sign{position:absolute;top:12px;right:14px;font-size:22px;opacity:.5}
+.horo-label{font-size:10px;font-weight:800;color:#B45309;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+.horo-text{font-family:'Quicksand',sans-serif;font-size:13.5px;color:var(--text);line-height:1.65}
+
+/* AFFIRMATION */
+.aff-card{margin:10px 16px 0;background:linear-gradient(135deg,#EDE9FE,#FCE7F3);border:1px solid rgba(167,139,250,0.25);border-radius:22px;padding:18px;position:relative}
+.aff-sign{position:absolute;top:12px;right:14px;font-size:20px;opacity:.4}
+.aff-label{font-size:10px;font-weight:800;color:var(--lav);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+.aff-text{font-family:'Quicksand',sans-serif;font-size:14px;color:var(--text);line-height:1.6}
+.aff-verse{font-size:11px;color:var(--dim);font-weight:700;margin-top:8px}
+
+/* PLAYER CARD */
+.avatar{width:50px;height:50px;border-radius:16px;background:linear-gradient(135deg,var(--rose),var(--lav));display:flex;align-items:center;justify-content:center;font-family:'Quicksand',sans-serif;font-size:22px;font-weight:700;color:#fff;flex-shrink:0}
+.streak-pill{background:linear-gradient(135deg,#FFF3E8,#FCE7F3);border:1px solid rgba(251,146,60,.3);color:var(--peach);font-size:12px;font-weight:800;padding:5px 12px;border-radius:20px;flex-shrink:0}
+.bar-bg{height:8px;background:var(--rose-l);border-radius:8px;overflow:hidden}
+.bar-fill{height:100%;border-radius:8px;background:linear-gradient(90deg,var(--rose-m),var(--rose));transition:width .7s ease}
+
+/* STAT CARDS */
+.stats-row{display:flex;gap:10px;margin:12px 16px 0}
+.stat-card{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:12px 10px;text-align:center}
+.stat-val{font-family:'Quicksand',sans-serif;font-size:24px;font-weight:700;color:var(--rose);line-height:1;margin-bottom:3px}
+.stat-lbl{font-size:10px;font-weight:700;color:var(--dim);text-transform:uppercase;letter-spacing:.05em}
+
+/* WEEK GRID */
+.week-grid{display:flex;gap:6px;margin:0 16px}
+.week-day{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:10px 4px}
+.week-day.today{background:var(--rose-l);border-color:rgba(244,114,182,.3)}
+.week-lbl{font-size:10px;font-weight:800;color:var(--dim);text-transform:uppercase}
+.week-num{font-family:'Quicksand',sans-serif;font-size:17px;font-weight:700}
+.week-day.today .week-num{color:var(--rose)}
+.week-dot{width:8px;height:8px;border-radius:50%;background:rgba(220,170,190,.25)}
+.week-dot.on{background:var(--rose)}
+
+/* HABITS */
+.habits-wrap{margin:0 16px;display:flex;flex-direction:column;gap:8px}
+.habit-row{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:11px 14px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:all .2s}
+.habit-row.done{background:var(--rose-l);border-color:rgba(244,114,182,.3)}
+.habit-row.streak-type.done{background:var(--mint-l);border-color:rgba(52,211,153,.35)}
+.habit-emoji{font-size:20px;flex-shrink:0}
+.habit-info{flex:1}
+.habit-name{font-size:13px;font-weight:700}
+.habit-sub{font-size:10px;color:var(--dim);font-weight:600;margin-top:2px}
+.streak-num{font-family:'Quicksand',sans-serif;font-size:22px;font-weight:700;color:var(--mint);flex-shrink:0}
+.chk{width:22px;height:22px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.habit-row.done .chk{background:var(--rose);border-color:var(--rose)}
+.habit-row.streak-type.done .chk{background:var(--mint);border-color:var(--mint)}
+
+/* PROTEIN */
+.protein-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:13px 14px;margin:0 16px;transition:all .2s}
+.protein-card.done{background:var(--rose-l);border-color:rgba(244,114,182,.3)}
+.protein-boxes{display:flex;gap:8px;margin-top:10px}
+.pbox{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;padding:8px 6px;border-radius:12px;background:var(--bg);border:1px solid rgba(220,170,190,.2);cursor:pointer;transition:all .2s}
+.pbox.done{background:var(--rose-l);border-color:rgba(244,114,182,.3)}
+.pbox-lbl{font-size:11px;font-weight:700;text-align:center}
+.pbox-chk{width:22px;height:22px;border-radius:50%;border:2px solid rgba(220,170,190,.4);display:flex;align-items:center;justify-content:center;transition:all .2s}
+.pbox.done .pbox-chk{background:var(--rose);border-color:var(--rose)}
+
+/* GIRL DATES */
+.girl-dates-wrap{margin:0 16px;background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:14px 16px}
+.girl-row{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:14px;border:1px solid var(--border);background:var(--bg);cursor:pointer;transition:all .2s;margin-bottom:8px}
+.girl-row:last-child{margin-bottom:0}
+.girl-chk{width:22px;height:22px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s}
+
+/* QUESTS */
+.quests-wrap{margin:0 16px;display:flex;flex-direction:column;gap:9px}
+.quest-row{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:13px 14px;display:flex;align-items:center;gap:11px;cursor:pointer;transition:all .2s}
+.quest-row.done{opacity:.4}
+.quest-row.done .quest-name{text-decoration:line-through}
+.quest-icon{width:40px;height:40px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
+.quest-name{font-size:13px;font-weight:700;line-height:1.3;margin-bottom:1px}
+.quest-cls{font-size:10px;font-weight:700;color:var(--dim)}
+.xp-badge{font-size:11px;font-weight:800;padding:4px 10px;border-radius:20px;flex-shrink:0;white-space:nowrap}
+.qchk{width:22px;height:22px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.quest-row.done .qchk{background:var(--rose);border-color:var(--rose)}
+
+/* CLASSES */
+.class-row{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:14px 16px;display:flex;align-items:center;gap:12px;margin:0 16px 10px}
+.class-icon{font-size:26px;flex-shrink:0}
+.class-info{flex:1}
+.class-name{font-size:14px;font-weight:800;margin-bottom:2px}
+.class-meta{font-size:11px;color:var(--dim);font-weight:600;margin-bottom:7px}
+.class-bar{height:6px;border-radius:6px;overflow:hidden}
+.class-fill{height:100%;border-radius:6px;transition:width .6s ease}
+.class-lv{width:36px;height:36px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:'Quicksand',sans-serif;font-size:15px;font-weight:700;flex-shrink:0}
+
+/* STATS */
+.stats-hero{margin:0 16px 14px;background:linear-gradient(135deg,#FCE7F3,#EDE9FE);border-radius:22px;padding:20px;border:1px solid rgba(244,114,182,.2)}
+.mini-chart{margin-top:16px;height:50px;display:flex;align-items:flex-end;gap:3px}
+.mini-bar{flex:1;border-radius:4px 4px 0 0;background:linear-gradient(180deg,var(--rose),var(--rose-m));opacity:.7;min-height:4px}
+.xp-rows{margin:0 16px;display:flex;flex-direction:column;gap:8px}
+.xp-row{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:10px 12px}
+.xp-icon{width:30px;height:30px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+.heatmap-card{margin:0 16px;background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:16px}
+.hm-grid{display:grid;grid-template-columns:repeat(21,1fr);gap:3px}
+.hm-cell{aspect-ratio:1;border-radius:3px;background:var(--rose-l)}
+.hm-cell.l1{background:#FBCFE8}.hm-cell.l2{background:#F9A8D4}.hm-cell.l3{background:#F472B6}.hm-cell.l4{background:#DB2777}
+
+/* VISION */
+.vision-hero{margin:0 16px 14px;background:linear-gradient(135deg,#FCE7F3,#FFF3E8);border-radius:22px;padding:20px;border:1px solid rgba(244,114,182,.15);text-align:center}
+.vision-grid{margin:0 16px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.vision-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:16px;text-align:center}
+.vision-card.hi{background:linear-gradient(135deg,#FCE7F3,#EDE9FE);border-color:rgba(244,114,182,.2)}
+.bucket-list{margin:0 16px;display:flex;flex-direction:column;gap:8px}
+.bucket-row{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:11px 14px}
+.mantra-card{margin:14px 16px 0;background:linear-gradient(135deg,var(--lav-l),var(--rose-l));border-radius:20px;padding:18px;text-align:center;border:1px solid rgba(167,139,250,.2)}
+
+/* TOAST */
+.toast{position:fixed;bottom:105px;left:50%;transform:translateX(-50%) translateY(20px);background:linear-gradient(135deg,var(--rose),var(--lav));color:#fff;font-size:13px;font-weight:800;padding:11px 22px;border-radius:30px;opacity:0;transition:all .3s;z-index:200;white-space:nowrap;pointer-events:none;box-shadow:0 4px 20px rgba(244,114,182,.4)}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* LEVEL UP */
+.lvlup{position:fixed;inset:0;background:rgba(253,246,240,.95);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:300;opacity:0;pointer-events:none;transition:opacity .3s}
+.lvlup.on{opacity:1;pointer-events:all}
+.lvlup-badge{width:110px;height:110px;border-radius:30px;background:linear-gradient(135deg,var(--rose),var(--lav));display:flex;align-items:center;justify-content:center;font-family:'Quicksand',sans-serif;font-size:48px;font-weight:700;color:#fff;margin-bottom:22px;box-shadow:0 10px 40px rgba(244,114,182,.4)}
+.lvlup-btn{background:linear-gradient(135deg,var(--rose),var(--lav));color:#fff;border:none;padding:15px 44px;border-radius:30px;font-size:15px;font-weight:800;font-family:'Nunito',sans-serif;cursor:pointer}
+</style>
+</head>
+<body>
+
+<div class="toast" id="toast"></div>
+<div class="lvlup" id="lvlup">
+  <div class="lvlup-badge" id="lvlup-num">8</div>
+  <div style="font-family:'Quicksand',sans-serif;font-size:30px;color:var(--rose);margin-bottom:8px">Level Up! 🎉</div>
+  <div style="font-size:14px;color:var(--mid);margin-bottom:32px;font-weight:600" id="lvlup-sub">You reached a new level!</div>
+  <button class="lvlup-btn" onclick="closeLvl()">Keep Going ✨</button>
+</div>
+
+<!-- TODAY -->
+<div class="panel on" id="p-today">
+  <div class="hdr">
+    <div class="hdr-sub" id="date-lbl"></div>
+    <div class="hdr-ttl">Good morning, <span>Jen</span> ✨</div>
+  </div>
+
+  <div class="horo-card">
+    <div class="horo-sign">♏</div>
+    <div class="horo-label">♏ Scorpio · Daily Horoscope</div>
+    <div class="horo-text" id="horo-text">Loading your stars...</div>
+  </div>
+
+  <div class="aff-card">
+    <div class="aff-sign">✨</div>
+    <div class="aff-label">✝️ Today's Affirmation</div>
+    <div class="aff-text" id="aff-text"></div>
+    <div class="aff-verse" id="aff-verse"></div>
+  </div>
+
+  <div class="card">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+      <div class="avatar">J</div>
+      <div style="flex:1">
+        <div style="font-family:'Quicksand',sans-serif;font-size:18px;font-weight:700">Jen ✨</div>
+        <div style="font-size:11px;color:var(--dim);margin-top:1px">Life Quest · Gilbert, AZ</div>
+      </div>
+      <div class="streak-pill" id="streak-pill">🔥 0 days</div>
+    </div>
+    <div style="display:flex;justify-content:space-between;margin-bottom:7px">
+      <span style="font-size:12px;font-weight:700;color:var(--mid)" id="lv-lbl">LV 7 → LV 8</span>
+      <span style="font-size:12px;font-weight:800;color:var(--rose)" id="xp-lbl">0 / 500 XP</span>
+    </div>
+    <div class="bar-bg"><div class="bar-fill" id="xp-bar" style="width:0%"></div></div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card"><div class="stat-val" id="s-streak">0</div><div class="stat-lbl">Quest Streak</div></div>
+    <div class="stat-card"><div class="stat-val" id="s-xp">0</div><div class="stat-lbl">Total XP</div></div>
+    <div class="stat-card"><div class="stat-val" id="s-q">0</div><div class="stat-lbl">Quests Done</div></div>
+  </div>
+
+  <div class="sec">📅 This Week</div>
+  <div class="week-grid" id="week-grid"></div>
+
+  <div class="sec">💖 Daily Non-Negotiables</div>
+  <div class="habits-wrap" id="habits-wrap"></div>
+
+  <!-- PROTEIN inside non-negotiables -->
+  <div style="margin:8px 16px 0;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:11px 14px;" id="protein-card">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="font-size:20px">🥩</div>
+        <div style="flex:1">
+          <div style="font-size:13px;font-weight:700">Hit protein goals</div>
+          <div style="font-size:10px;color:var(--dim);font-weight:600;margin-top:2px">Check all 3 meals = +60 XP 💪</div>
+        </div>
+        <div id="p-badge" style="display:none;font-size:11px;font-weight:800;color:var(--rose)">+60 XP ✓</div>
+      </div>
+      <div class="protein-boxes">
+        <div class="pbox" id="pb0" onclick="toggleProtein(0)">
+          <div class="pbox-lbl">🌅 Breakfast</div>
+          <div class="pbox-chk" id="pc0"></div>
+        </div>
+        <div class="pbox" id="pb1" onclick="toggleProtein(1)">
+          <div class="pbox-lbl">☀️ Lunch</div>
+          <div class="pbox-chk" id="pc1"></div>
+        </div>
+        <div class="pbox" id="pb2" onclick="toggleProtein(2)">
+          <div class="pbox-lbl">🌙 Dinner</div>
+          <div class="pbox-chk" id="pc2"></div>
+        </div>
+      </div>
+  </div>
+
+  <div class="sec">🌿 Streak Trackers</div>
+  <div class="habits-wrap" id="streaks-wrap"></div>
+
+  <div class="sec">💛 Monthly Dates with the Girls</div>
+  <div class="girl-dates-wrap">
+    <div style="font-size:11px;color:var(--dim);font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:.06em" id="month-lbl"></div>
+    <div id="girl-dates"></div>
+  </div>
+
+  <div class="sec" id="q-lbl">⚔️ Today's Quests</div>
+  <div class="quests-wrap" id="quests-wrap"></div>
+</div>
+
+<!-- CLASSES -->
+<div class="panel" id="p-classes">
+  <div class="hdr">
+    <div class="hdr-sub">Your life areas</div>
+    <div class="hdr-ttl">My <span>Classes</span> 💫</div>
+  </div>
+  <div style="margin:14px 16px;background:var(--rose-l);border:1px solid rgba(244,114,182,.2);border-radius:16px;padding:12px 16px;font-size:13px;color:var(--mid);font-weight:600;line-height:1.5">
+    💡 Complete quests in each area to earn XP and level it up!
+  </div>
+  <div id="classes-wrap"></div>
+</div>
+
+<!-- STATS -->
+<div class="panel" id="p-stats">
+  <div class="hdr">
+    <div class="hdr-sub">Your progress</div>
+    <div class="hdr-ttl">Stats <span>&amp; Growth</span> 📈</div>
+  </div>
+  <div style="height:14px"></div>
+  <div class="stats-hero">
+    <div style="font-size:11px;font-weight:800;color:var(--rose);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Total XP Earned</div>
+    <div style="font-family:'Quicksand',sans-serif;font-size:52px;font-weight:700;color:var(--text);line-height:1;margin-bottom:4px" id="big-xp">0</div>
+    <div style="font-size:12px;color:var(--mid);font-weight:600" id="big-sub">Start completing quests!</div>
+    <div class="mini-chart" id="mini-chart"></div>
+  </div>
+  <div class="sec">Where Your XP Went</div>
+  <div class="xp-rows" id="xp-rows"></div>
+  <div class="sec" style="margin-top:16px">Last 12 Weeks</div>
+  <div class="heatmap-card">
+    <div class="hm-grid" id="hm-grid"></div>
+    <div style="display:flex;justify-content:space-between;margin-top:8px;font-size:10px;color:var(--dim);font-weight:700">
+      <span>12 wks ago</span><span id="hm-streak">🔥 0-day streak</span>
+    </div>
+  </div>
+</div>
+
+<!-- VISION -->
+<div class="panel" id="p-vision">
+  <div class="hdr">
+    <div class="hdr-sub">Your north star</div>
+    <div class="hdr-ttl">Vision <span>Board</span> 🌸</div>
+  </div>
+  <div style="height:14px"></div>
+  <div class="vision-hero">
+    <div style="font-family:'Quicksand',sans-serif;font-size:20px;font-weight:700;margin-bottom:6px">You didn't need fixing.<br><span style="color:var(--rose)">You needed rebalancing.</span></div>
+    <div style="font-size:13px;color:var(--mid);line-height:1.6;font-weight:600">And you're doing it — one quest at a time. 💛</div>
+  </div>
+  <div class="sec">Big Dreams</div>
+  <div class="vision-grid">
+    <div class="vision-card hi"><div style="font-size:32px;margin-bottom:8px">🌊</div><div style="font-family:'Quicksand',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px">San Diego Condo</div><div style="font-size:11px;color:var(--dim);font-weight:600;line-height:1.4">Oceanside / Carlsbad · $600-650k · STR</div></div>
+    <div class="vision-card hi"><div style="font-size:32px;margin-bottom:8px">✝️</div><div style="font-family:'Quicksand',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px">Saved by Grace</div><div style="font-size:11px;color:var(--dim);font-weight:600;line-height:1.4">Nonprofit · Phoenix · Named after Grace</div></div>
+    <div class="vision-card"><div style="font-size:32px;margin-bottom:8px">👑</div><div style="font-family:'Quicksand',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px">Chief of Staff</div><div style="font-size:11px;color:var(--dim);font-weight:600;line-height:1.4">CEOs support it · You're already training</div></div>
+    <div class="vision-card"><div style="font-size:32px;margin-bottom:8px">❤️</div><div style="font-family:'Quicksand',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px">Real Partnership</div><div style="font-size:11px;color:var(--dim);font-weight:600;line-height:1.4">Safe · Dependable · Worth showing up for</div></div>
+    <div class="vision-card"><div style="font-size:32px;margin-bottom:8px">💰</div><div style="font-family:'Quicksand',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px">Passive Income</div><div style="font-size:11px;color:var(--dim);font-weight:600;line-height:1.4">Pinterest affiliate growing · More ahead</div></div>
+    <div class="vision-card"><div style="font-size:32px;margin-bottom:8px">🌍</div><div style="font-family:'Quicksand',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px">World Explorer</div><div style="font-size:11px;color:var(--dim);font-weight:600;line-height:1.4">Paris ✓ Mexico ✓ · Next TBD</div></div>
+  </div>
+  <div class="sec" style="margin-top:16px">2026 Bucket List</div>
+  <div class="bucket-list" id="bucket-list"></div>
+  <div class="mantra-card" style="margin-bottom:0">
+    <div style="font-size:28px;margin-bottom:10px">🙏</div>
+    <div style="font-family:'Quicksand',sans-serif;font-size:15px;color:var(--lav);line-height:1.6">"Do what you say you're going to do.<br>Say what you mean and mean what you say.<br>Show up when you say you will."<br><br><em style="color:var(--dim);font-size:13px">— What Jen deserves 💛</em></div>
+  </div>
+  <div style="height:16px"></div>
+</div>
+
+<!-- NAV -->
+<!-- READING -->
+<div class="panel" id="p-reading">
+  <div class="hdr">
+    <div class="hdr-sub">Your reading life</div>
+    <div class="hdr-ttl">My <span>Books</span> 📚</div>
+  </div>
+  <div style="margin:14px 16px;background:var(--gold-l);border:1px solid rgba(251,191,36,.3);border-radius:16px;padding:12px 16px;font-size:13px;color:#7A5568;font-weight:600;line-height:1.5">
+    📖 Tap a book when you've finished it to earn XP. These are curated specifically for your goals and life. Ask Claude to go deeper on any of them anytime!
+  </div>
+  <div style="margin:0 16px;display:flex;flex-direction:column;gap:10px;" id="books-wrap"></div>
+  <div style="height:16px"></div>
+</div>
+
+<!-- LISTEN MODE OVERLAY -->
+<div id="listen-overlay" role="dialog" aria-modal="true" aria-labelledby="listen-title" aria-hidden="true" style="display:none;position:fixed;inset:0;background:#1A1025;z-index:500;overflow-y:auto;padding:0 0 40px;">
+  <div style="position:sticky;top:0;background:#1A1025;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.1);">
+    <div>
+      <div style="font-size:10px;font-weight:800;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:.1em;margin-bottom:2px;">🎧 Listen Mode</div>
+      <div style="font-size:14px;font-weight:800;color:white;" id="listen-title"></div>
+    </div>
+    <button onclick="closeListenMode()" style="background:rgba(255,255,255,0.1);border:none;color:white;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;">×</button>
+  </div>
+  <div style="padding:24px 24px 0;background:#1A1025;">
+    <div style="background:rgba(255,255,255,0.06);border-radius:16px;padding:14px 16px;margin-bottom:20px;">
+      <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.5);margin-bottom:6px;">📱 How to listen on iPhone</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.7);line-height:1.6;">Go to <strong style="color:white">Settings → Accessibility → Spoken Content → Spoken Screen</strong>, then swipe down with two fingers anywhere on this screen. Your phone will read everything aloud.</div>
+    </div>
+  </div>
+  <div style="padding:0 24px;" id="listen-content"></div>
+</div>
+
+<!-- RISE & KNOW -->
+<div class="panel" id="p-rise">
+  <div class="hdr">
+    <div class="hdr-sub">Your daily spark</div>
+    <div class="hdr-ttl">Rise <span>&amp; Know</span> 🌤️</div>
+  </div>
+
+  <!-- NEWS BRIEF -->
+  <div class="sec">📰 Today's Brief</div>
+  <div style="margin:0 16px;">
+    <div id="news-card" style="background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:18px;min-height:120px;display:flex;flex-direction:column;gap:10px;">
+      <div id="news-content" style="font-size:13px;color:var(--mid);line-height:1.7;font-weight:600;">Tap refresh to get today's news brief ☀️</div>
+    </div>
+    <button onclick="fetchNews()" id="news-btn" style="width:100%;margin-top:10px;padding:12px;border-radius:14px;border:none;background:linear-gradient(135deg,var(--rose),var(--lav));color:white;font-size:13px;font-weight:800;font-family:'Nunito',sans-serif;cursor:pointer;">
+      🔄 Refresh Today's Brief
+    </button>
+    <div style="font-size:10px;color:var(--dim);font-weight:600;text-align:center;margin-top:6px;">Powered by Claude · Factual &amp; politically neutral</div>
+  </div>
+
+
+  <!-- QUOTE OF THE DAY -->
+  <div class="sec" style="margin-top:20px;">✨ Quote of the Day</div>
+  <div id="quote-card" style="margin:0 16px;background:linear-gradient(135deg,#FCE7F3,#EDE9FE);border:1px solid rgba(244,114,182,.2);border-radius:18px;padding:18px;"></div>
+
+  <!-- WORD OF THE DAY -->
+  <div class="sec" style="margin-top:4px;">💬 Word of the Day</div>
+  <div id="word-card" style="margin:0 16px;background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:16px;"></div>
+
+  <!-- THIS DAY IN HISTORY -->
+  <div class="sec" style="margin-top:4px;">🌸 This Day in History</div>
+  <div id="history-card" style="margin:0 16px;background:linear-gradient(135deg,#FEF9C3,#D1FAE5);border:1px solid rgba(251,191,36,.25);border-radius:18px;padding:16px;"></div>
+
+  <!-- DAILY CHALLENGE -->
+  <div class="sec" style="margin-top:4px;">🎯 Daily Challenge</div>
+  <div id="challenge-card" style="margin:0 16px;background:linear-gradient(135deg,#E0F2FE,#EDE9FE);border:1px solid rgba(56,189,248,.25);border-radius:18px;padding:16px;margin-bottom:4px;"></div>
+
+  <!-- TRUE OR FALSE -->
+  <div class="sec" style="margin-top:4px;">✅ True or False?</div>
+  <div style="margin:0 16px;background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:16px;">
+    <div style="font-size:11px;color:var(--dim);font-weight:700;margin-bottom:12px;">Tap your answer on each one, then reveal! 🤔</div>
+    <div id="tf-wrap" style="display:flex;flex-direction:column;gap:10px;"></div>
+    <button onclick="revealTF()" id="tf-reveal-btn" style="width:100%;margin-top:14px;padding:11px;border-radius:12px;border:none;background:linear-gradient(135deg,var(--mint-l),#D1FAE5);color:#065F46;font-size:13px;font-weight:800;font-family:'Nunito',sans-serif;cursor:pointer;">🔍 Reveal Answers</button>
+  </div>
+
+  <!-- BRAIN TEASER -->
+  <div class="sec" style="margin-top:4px;">🧩 Brain Teaser</div>
+  <div id="teaser-card" style="margin:0 16px;background:linear-gradient(135deg,#FFF3E8,#FCE7F3);border:1px solid rgba(251,146,60,.25);border-radius:18px;padding:16px;"></div>
+
+  <!-- DAD JOKE -->
+  <div class="sec" style="margin-top:4px;">😂 Dad Joke of the Day</div>
+  <div id="dadjoke-card" style="margin:0 16px;background:linear-gradient(135deg,#FEF9C3,#FFF3E8);border:1px solid rgba(251,191,36,.25);border-radius:18px;padding:16px;"></div>
+
+  <!-- FUN FACTS -->
+  <div class="sec" style="margin-top:4px;">💡 Today's Fun Facts</div>
+  <div style="margin:0 16px;display:flex;flex-direction:column;gap:10px;" id="facts-wrap"></div>
+
+  <div style="height:16px"></div>
+</div>
+
+<nav class="nav">
+  <button class="nb on" onclick="showTab('today',this)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2.5"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Today
+  </button>
+  <button class="nb" onclick="showTab('classes',this)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>Classes
+  </button>
+  <button class="nb" onclick="showTab('reading',this)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Reading
+  </button>
+  <button class="nb" onclick="showTab('rise',this)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>Rise & Know
+  </button>
+  <button class="nb" onclick="showTab('vision',this)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Vision
+  </button>
+</nav>
+
+<script>
+// ── DATA ─────────────────────────────────────────────────────
+const AFFIRMATIONS = [
+  {t:"I can do all things through Christ who strengthens me. Today I choose faith over fear.",v:"Philippians 4:13"},
+  {t:"God's plans for me are good — to give me hope and a future. I trust His timing.",v:"Jeremiah 29:11"},
+  {t:"I am fearfully and wonderfully made. My worth is not measured by the scale or anyone's opinion.",v:"Psalm 139:14"},
+  {t:"The Lord is my strength and my shield. I don't have to carry this alone.",v:"Psalm 28:7"},
+  {t:"I am a woman of purpose. Everything I've been through has been preparing me for where I'm going.",v:"Romans 8:28"},
+  {t:"I release guilt and walk in grace today. I am doing the best I can with what I have.",v:"Romans 8:1"},
+  {t:"I am the kind of woman who shows up — for herself, for her girls, for the people she loves.",v:"Proverbs 31:25"},
+  {t:"I will not be anxious about tomorrow. Today has enough goodness in it if I look for it.",v:"Matthew 6:34"},
+  {t:"God didn't bring me through the hard seasons to leave me. He is still working.",v:"Philippians 1:6"},
+  {t:"I am enough. Not when I lose the weight, not when I get the title — right now, as I am.",v:"2 Corinthians 12:9"},
+  {t:"My daughters are watching me live fully. That is one of the greatest gifts I can give them.",v:"Deuteronomy 6:6-7"},
+  {t:"I choose to be present today. Not in the past, not in the future — right here, right now.",v:"Psalm 118:24"},
+  {t:"I have survived everything that was meant to break me. That is not luck. That is God.",v:"Isaiah 43:2"},
+  {t:"I am building something beautiful — my life, my girls, my future. One day at a time.",v:"Habakkuk 2:3"},
+  {t:"Love is patient. I extend that patience to myself today as freely as I give it to others.",v:"1 Corinthians 13:4"},
+  {t:"I am not behind. I am exactly where God needs me to be, learning what I need to know.",v:"Ecclesiastes 3:1"},
+  {t:"My home is full of love. That is not an accident — I built that.",v:"Proverbs 14:1"},
+  {t:"I will be still and know that He is God. The peace I'm looking for is already available to me.",v:"Psalm 46:10"},
+  {t:"I forgive myself for the days I didn't show up perfectly. Grace covers those too.",v:"Lamentations 3:22-23"},
+  {t:"The same God who parted seas is with me in the ordinary Tuesday of my life. He is here.",v:"Exodus 14:14"},
+  {t:"I am raising girls who will know what a strong, faithful woman looks like because they live with one.",v:"Titus 2:7"},
+  {t:"I don't need someone to complete me. I need someone to stand beside a woman who is already whole.",v:"Proverbs 31:10"},
+  {t:"Today I choose joy — not because everything is perfect, but because God is good and that's enough.",v:"Nehemiah 8:10"},
+  {t:"Every good and perfect gift comes from above. The blessings in my life are not accidents.",v:"James 1:17"},
+  {t:"I am not the sum of my hardest days. I am the woman who kept going anyway.",v:"Isaiah 40:31"},
+  {t:"Saved by Grace isn't just my nonprofit — it's my story. I am saved by grace every single day.",v:"Ephesians 2:8"},
+  {t:"My body is strong and capable. I will fuel it, move it, and honor it today.",v:"1 Corinthians 6:19-20"},
+  {t:"I will seek first His kingdom, and everything else will be added. I don't have to chase — I have to trust.",v:"Matthew 6:33"},
+  {t:"The Lord fights for me. I need only to be still and let Him work.",v:"Exodus 14:14"},
+  {t:"I am becoming — not arriving. The journey IS the destination.",v:"Romans 5:3-4"},
+  {t:"I attract what I am. I am love, warmth, strength, and faith. That is what is coming.",v:"Proverbs 4:23"},
+];
+
+const HOROSCOPES = [
+  "The stars are aligned in your favor today, Scorpio. Trust your instincts — that gut feeling you've been ignoring is your intuition speaking.",
+  "Venus is energizing your relationships today. A conversation you've been putting off will go better than expected. Speak your truth with love.",
+  "Your natural magnetism is at a peak today. People are drawn to your energy — lean into it, especially in professional settings.",
+  "The moon highlights your home and family sector. A quiet evening with your girls will recharge you more than any social event could.",
+  "Mars fuels your ambition today. That goal you've been circling? Today is a good day to take one concrete step toward it.",
+  "Mercury sharpens your communication. Write that email, make that call — your words carry extra power today.",
+  "Pluto signals deep transformation. Something you're releasing is making room for something better. Trust the process.",
+  "The sun lights up your financial sector. Take a fresh look at your goals — an opportunity may be closer than it appears.",
+  "Today calls for self-care, Scorpio. Your body and spirit need tending. Even 20 minutes of stillness will shift your entire day.",
+  "Jupiter expands your vision today. Dream a little bigger. The San Diego condo, the nonprofit, the partnership — all within reach.",
+  "Your emotional depth is your superpower today. Someone needs your wisdom and presence — you'll know who when you see them.",
+  "A creative solution to something that's been bothering you will arrive today. Stay open and let it come.",
+  "The cosmos urge patience today. Not everything needs to be solved right now. Some things are unfolding on their own timeline.",
+  "Your confidence is magnetic today. Walk into every room like you belong there — because you do.",
+  "Today is excellent for planning and strategy. Your mind is sharp and focused. Use it.",
+  "Love is in your orbit, Scorpio. Your heart is open and ready for real connection.",
+  "The stars encourage you to let go of something that no longer serves you. Releasing it makes room for what's coming.",
+  "Your hard work is being noticed, even when it feels invisible. Keep going — the recognition is coming.",
+  "Today brings an opportunity disguised as an inconvenience. Look closer before you dismiss it.",
+  "The moon in your sector of joy says: do something just for you today. Not for anyone else. Just you.",
+  "Scorpio energy is building around you. Your power, your purpose, your passion — all intensifying. Channel it well.",
+  "An honest conversation today could shift a relationship significantly — for the better. Speak from the heart.",
+  "Your intuition about a person or situation is accurate. Trust what you already know.",
+  "Today favors bold moves, Scorpio. You've been playing it safe long enough. Take the step.",
+  "Rest is productive today. Your best ideas come when you slow down enough to hear them.",
+  "The universe is conspiring in your favor. Things you can't see are moving. Stay aligned with your purpose.",
+  "Your generosity will come back to you tenfold today. Give freely without expectation.",
+  "A moment of beauty today will remind you why life is so worth living fully. Let it land.",
+  "Today is a 10/10 for manifestation, Scorpio. Get clear on what you want and feel it as if it's already here.",
+  "You are more resilient than you know. Whatever today brings, you have already survived harder. You've got this.",
+  "Your depth and intensity are gifts. Today someone sees them for exactly what they are. Let yourself be seen.",
+];
+
+const CLASSES = [
+  {id:"health", name:"Health & Body",  emoji:"💪", color:"#F472B6", bg:"#FCE7F3", xpPL:200},
+  {id:"romance",name:"Love & Romance", emoji:"❤️", color:"#C084FC", bg:"#F3E8FF", xpPL:150},
+  {id:"career", name:"Career & CoS",   emoji:"👑", color:"#60A5FA", bg:"#DBEAFE", xpPL:200},
+  {id:"faith",  name:"Faith & Spirit", emoji:"✝️", color:"#A78BFA", bg:"#EDE9FE", xpPL:150},
+  {id:"joy",    name:"Joy & Social",   emoji:"🌟", color:"#FBBF24", bg:"#FEF9C3", xpPL:150},
+  {id:"family", name:"Family",         emoji:"🏡", color:"#34D399", bg:"#D1FAE5", xpPL:150},
+  {id:"passive",name:"Passive Income", emoji:"💰", color:"#FB923C", bg:"#FFEDD5", xpPL:200},
+  {id:"growth", name:"Mind & Growth",  emoji:"🧠", color:"#38BDF8", bg:"#E0F2FE", xpPL:175},
+];
+
+const HABITS = [
+  {id:"h_gym",     emoji:"🏋️", name:"Hit the gym",      cls:"health",  xp:80},
+  {id:"h_vit",     emoji:"💊", name:"Take vitamins",    cls:"health",  xp:30},
+  {id:"h_water",   emoji:"💧", name:"Drink 80oz water", cls:"health",  xp:30},
+  {id:"h_devote",  emoji:"📖", name:"Daily devotional", cls:"faith",   xp:50},
+  {id:"h_night",   emoji:"🌙", name:"Nightly routine",  cls:"health",  xp:40},
+];
+
+const STREAKS = [
+  {id:"h_alc",     emoji:"🌿", name:"Alcohol-free day", cls:"health",  xp:50, streak:true},
+  {id:"h_nospend", emoji:"💸", name:"No-spend day",     cls:"passive", xp:40, streak:true},
+];
+
+const GIRLS = [
+  {id:"lexi",   name:"Lexi",       emoji:"🩷", color:"#F472B6", bg:"#FCE7F3"},
+  {id:"desi",   name:"Desi",       emoji:"💜", color:"#A78BFA", bg:"#EDE9FE"},
+  {id:"grace",  name:"Grace",      emoji:"🩵", color:"#2DD4BF", bg:"#CCFBF1"},
+  {id:"family", name:"Family Date",emoji:"👩🏼‍🐰‍👩🏻👩🏼‍🐰‍👩🏻", color:"#FB923C", bg:"#FFEDD5"},
+];
+
+const BUCKET = [
+  {id:"bk1", done:true,  text:"♟️ Learn chess"},
+  {id:"bk2", done:true,  text:"✈️ Paris with the girls"},
+  {id:"bk3", done:true,  text:"🌮 Mexico City with Yvette"},
+  {id:"bk4", done:false, text:"📚 Read 6 books"},
+  {id:"bk5", done:false, text:"🎵 Olivia Dean concert — July"},
+  {id:"bk6", done:false, text:"🌊 San Diego condo research"},
+  {id:"bk7", done:false, text:"🌱 Try a new hobby"},
+  {id:"bk8", done:false, text:"❤️ Get back to dating"},
+  {id:"bk9", done:false, text:"👖 Fit into white pants"},
+  {id:"bk10",done:false, text:"🍷 Wine tasting"},
+  {id:"bk11",done:false, text:"💃 Take girls to a cultural Hispanic event"},
+  {id:"bk12",done:false, text:"🎷 Go to a live jazz bar"},
+  {id:"bk13",done:false, text:"💪 Hold a 3-minute plank"},
+  {id:"bk14",done:false, text:"🍛 Try Indian food"},
+];
+
+const ALL_QUESTS = [
+  {id:"q_cardio", cls:"health",  name:"Add cardio to your workout 🏃‍♀️",      emoji:"🏃‍♀️", xp:70},
+  {id:"q_sleep",  cls:"health",  name:"In bed by 10pm 😴",                  emoji:"😴", xp:40},
+  {id:"q_care",   cls:"health",  name:"Self care — bath, facial or massage", emoji:"🛁", xp:70},
+  {id:"q_date",   cls:"romance", name:"Go on a real date 🌹",               emoji:"🌹", xp:200},
+  {id:"q_claude", cls:"career",  name:"Use Claude for an EA task 🤖",       emoji:"🤖", xp:50},
+  {id:"q_cos",    cls:"career",  name:"Do something a CoS would do 👑",     emoji:"👑", xp:80},
+  {id:"q_pres",   cls:"career",  name:"Practice presenting or articulating", emoji:"🎤", xp:70},
+  {id:"q_401k",   cls:"career",  name:"Work on Solo 401k setup 💼",         emoji:"💼", xp:120},
+  {id:"q_church", cls:"faith",   name:"Attend church ⛪",                   emoji:"⛪", xp:100},
+  {id:"q_prayer", cls:"faith",   name:"Practice open prayer out loud 🙏",   emoji:"🙏", xp:70},
+  {id:"q_bible",  cls:"faith",   name:"Study a Bible passage with Claude ✝️",emoji:"✝️",xp:60},
+  {id:"q_grace",  cls:"faith",   name:"Plant a faith seed with Grace 🌱",   emoji:"🌱", xp:80},
+  {id:"q_social", cls:"joy",     name:"Reach out to expand social circle 👋",emoji:"👋",xp:70},
+  {id:"q_sat",    cls:"joy",     name:"Own a Saturday night out 🌙",        emoji:"🌙", xp:120},
+  {id:"q_meetup", cls:"joy",     name:"Attend a local meetup or event 🎉",  emoji:"🎉", xp:150},
+  {id:"q_hobby",  cls:"joy",     name:"Try a new hobby activity 🌸",        emoji:"🌸", xp:100},
+  {id:"q_dinner", cls:"family",  name:"No-phones Sunday family dinner 🍽️",  emoji:"🍽️",xp:80},
+  {id:"q_gma",    cls:"family",  name:"Visit grandma with love 🌸",         emoji:"🌸", xp:70},
+  {id:"q_vend",   cls:"passive", name:"Research vending machine business 🏧",   emoji:"🏧", xp:80},
+  {id:"q_party",  cls:"passive", name:"Research party rental business 🎪",      emoji:"🎪", xp:80},
+  {id:"q_aisite", cls:"passive", name:"Work on AI website idea 💻",             emoji:"💻", xp:90},
+  {id:"q_pin",    cls:"passive", name:"Post 5+ Pinterest pins 📌",          emoji:"📌", xp:60},
+  {id:"q_canva",  cls:"passive", name:"Create branded Canva pin designs 🎨", emoji:"🎨",xp:70},
+  {id:"q_broker", cls:"passive", name:"Work on San Diego condo plan 🌊",    emoji:"🌊", xp:80},
+  {id:"q_insure", cls:"passive", name:"Research life insurance options 🛡️", emoji:"🛡️",xp:80},
+];
+
+// Growth quests — one guaranteed daily, rotates through all of them
+const GROWTH_QUESTS = [
+  {id:"g_read1",  cls:"growth", name:"Read for 15+ mins 📚",                         emoji:"📚", xp:50},
+  {id:"g_read2",  cls:"growth", name:"Read before bed — even 15 mins 📖",            emoji:"📖", xp:50},
+  {id:"g_book",   cls:"growth", name:"Read a book summary (Headway style) 📗",       emoji:"📗", xp:60},
+  {id:"g_news1",  cls:"growth", name:"Catch up on today's current events 🌍",        emoji:"🌍", xp:50},
+  {id:"g_news2",  cls:"growth", name:"Read one full news article & form an opinion 📰",emoji:"📰",xp:50},
+  {id:"g_pod1",   cls:"growth", name:"Watch or listen to a personal growth podcast 🎙️",emoji:"🎙️",xp:60},
+  {id:"g_pod2",   cls:"growth", name:"Listen to a business or EA-focused podcast 🎧", emoji:"🎧", xp:60},
+  {id:"g_hist",   cls:"growth", name:"Study the history cheat sheet 📜",             emoji:"📜", xp:60},
+  {id:"g_art",    cls:"growth", name:"Practice articulation — explain something out loud 🗣️",emoji:"🗣️",xp:60},
+  {id:"g_ther",   cls:"growth", name:"Therapy session 🧠",                           emoji:"🧠", xp:100},
+  {id:"g_learn",  cls:"growth", name:"Learn something new — ask Claude anything 🤓",  emoji:"🤓", xp:40},
+  {id:"g_reflect",cls:"growth", name:"Spend 10 mins reflecting on your goals 🪞",    emoji:"🪞", xp:50},
+  {id:"g_bible",  cls:"growth", name:"Deep dive into a Bible passage with Claude ✝️", emoji:"✝️", xp:60},
+  {id:"g_vocab",  cls:"growth", name:"Learn 3 new words or facts today 💡",          emoji:"💡", xp:40},
+];
+
+const XP_PER_LEVEL = 500;
+const BASE_LV = 7;
+const KEY = 'lqv4';
+
+// ── STATE ─────────────────────────────────────────────────────
+let S = {};
+
+function loadState() {
+  try { S = JSON.parse(localStorage.getItem(KEY)) || {}; } catch(e) { S = {}; }
+  if (!S.xp)           S.xp = 0;
+  if (!S.level)        S.level = BASE_LV;
+  if (!S.qStreak)      S.qStreak = 0;
+  if (!S.totalQ)       S.totalQ = 0;
+  if (!S.classXP)      S.classXP = {};
+  if (!S.doneToday)    S.doneToday = {};
+  if (!S.habitDone)    S.habitDone = {};
+  if (!S.habitStr)     S.habitStr = {};
+  if (!S.protein)      S.protein = [false,false,false];
+  if (!S.heatmap)      S.heatmap = [];
+  if (!S.lastDate)     S.lastDate = '';
+  if (!S.history)      S.history = [];
+  if (!S.weekAct)      S.weekAct = {};
+  if (!S.girlDates)    S.girlDates = {};
+  if (!S.lastMonth)    S.lastMonth = '';
+  if (!S.booksDone)    S.booksDone = {};
+  if (!S.bucketDone)   S.bucketDone = {};
+
+  const todayStr = new Date().toDateString();
+  const thisMonth = new Date().toISOString().slice(0,7);
+
+  if (S.lastDate !== todayStr) {
+    if (S.lastDate) {
+      const count = Object.values(S.doneToday).filter(Boolean).length + Object.values(S.habitDone).filter(Boolean).length;
+      const lv = count===0?0:count<=2?1:count<=5?2:count<=9?3:4;
+      S.heatmap = [...S.heatmap, lv].slice(-147);
+      S.qStreak = Object.values(S.doneToday).some(Boolean) ? S.qStreak+1 : 0;
+      S.history = [...S.history, S.xp].slice(-30);
+      try { const d=new Date(S.lastDate); S.weekAct[d.toISOString().slice(0,10)]=count>0; } catch(e){}
+    }
+    S.doneToday = {};
+    S.habitDone = {};
+    S.protein = [false,false,false];
+    S.lastDate = todayStr;
+  }
+
+  if (S.lastMonth !== thisMonth) {
+    S.girlDates = {};
+    S.lastMonth = thisMonth;
+  }
+}
+
+function save() {
+  try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e) {}
+}
+
+function getClass(id) { return CLASSES.find(c=>c.id===id); }
+function classXP(id) { return S.classXP[id]||0; }
+function classLv(id) { const c=getClass(id); return Math.floor(classXP(id)/c.xpPL)+1; }
+function classProg(id) { const c=getClass(id); return (classXP(id)%c.xpPL)/c.xpPL; }
+
+function getDOY() {
+  const n=new Date(); return Math.floor((n-new Date(n.getFullYear(),0,0))/86400000);
+}
+
+function getDailyQuests() {
+  const n = new Date();
+  const isMonday = n.getDay()===1;
+  const seed = n.getFullYear()*10000+(n.getMonth()+1)*100+n.getDate();
+
+  // Pick one growth quest — rotates by day of year so it changes daily
+  const doy = Math.floor((n - new Date(n.getFullYear(),0,0))/86400000);
+  const growthQ = GROWTH_QUESTS[doy % GROWTH_QUESTS.length];
+
+  // Guaranteed quests
+  const guaranteed = [growthQ];
+  if (isMonday) guaranteed.push({id:"q_zep",cls:"health",name:"Take Zepbound shot 💉 (weekly)",emoji:"💉",xp:100});
+
+  // Fill remaining from pool
+  const usedIds = guaranteed.map(q=>q.id);
+  const shuffled = [...ALL_QUESTS].sort((a,b)=>((seed*17+a.id.charCodeAt(2)*13)%97)-((seed*17+b.id.charCodeAt(2)*13)%97));
+  const rest = shuffled.filter(q=>!usedIds.includes(q.id)).slice(0, 9-guaranteed.length);
+  return [...guaranteed, ...rest];
+}
+
+// ── RENDER ────────────────────────────────────────────────────
+// ── FUN FACTS ─────────────────────────────────────────────────
+const QUOTES = [
+  {q:"The most common form of despair is not being who you are.",a:"Søren Kierkegaard"},
+  {q:"She was a girl who knew how to be happy even when she was sad. And that's important.",a:"Marilyn Monroe"},
+  {q:"Do what you feel in your heart to be right — for you'll be criticized anyway.",a:"Eleanor Roosevelt"},
+  {q:"You don't have to be great to start, but you have to start to be great.",a:"Zig Ziglar"},
+  {q:"The question isn't who is going to let me. It's who is going to stop me.",a:"Ayn Rand"},
+  {q:"I am not afraid of storms, for I am learning how to sail my ship.",a:"Louisa May Alcott"},
+  {q:"The most courageous act is still to think for yourself. Aloud.",a:"Coco Chanel"},
+  {q:"A woman who doesn't ask for anything deserves everything.",a:"Unknown"},
+  {q:"Well-behaved women seldom make history.",a:"Laurel Thatcher Ulrich"},
+  {q:"She remembered who she was and the game changed.",a:"Lalah Delia"},
+  {q:"The secret of getting ahead is getting started.",a:"Mark Twain"},
+  {q:"One day or day one. You decide.",a:"Unknown"},
+  {q:"What you do today can improve all your tomorrows.",a:"Ralph Marston"},
+  {q:"You are enough. You have enough. You do enough.",a:"Unknown"},
+  {q:"Life is not measured by the number of breaths we take, but by the moments that take our breath away.",a:"Maya Angelou"},
+  {q:"Difficult roads often lead to beautiful destinations.",a:"Zig Ziglar"},
+  {q:"The only way out is through.",a:"Robert Frost"},
+  {q:"Comparison is the thief of joy.",a:"Theodore Roosevelt"},
+  {q:"Not all those who wander are lost.",a:"J.R.R. Tolkien"},
+  {q:"She who is brave is free.",a:"Seneca"},
+  {q:"If you're going through hell, keep going.",a:"Winston Churchill"},
+  {q:"Everything you've ever wanted is on the other side of fear.",a:"George Addair"},
+  {q:"Courage is not the absence of fear, but the triumph over it.",a:"Nelson Mandela"},
+  {q:"You are the CEO of your own life. Start making executive decisions.",a:"Unknown"},
+  {q:"The comeback is always stronger than the setback.",a:"Unknown"},
+  {q:"Be a voice, not an echo.",a:"Albert Einstein"},
+  {q:"The most powerful thing you can do is be exactly who you are.",a:"Unknown"},
+  {q:"Small steps in the right direction can turn out to be the biggest step of your life.",a:"Unknown"},
+  {q:"She built a life she loved.",a:"Unknown"},
+  {q:"Done is better than perfect.",a:"Sheryl Sandberg"},
+  {q:"I'd rather regret the things I've done than the things I haven't.",a:"Lucille Ball"},
+  {q:"Be so good they can't ignore you.",a:"Steve Martin"},
+  {q:"The best time to plant a tree was 20 years ago. The second best time is now.",a:"Chinese Proverb"},
+  {q:"You can't go back and change the beginning, but you can start where you are and change the ending.",a:"C.S. Lewis"},
+  {q:"What lies behind us and what lies before us are tiny matters compared to what lies within us.",a:"Ralph Waldo Emerson"},
+  {q:"You haven't come this far to only come this far.",a:"Unknown"},
+  {q:"A strong woman looks a challenge in the eye and gives it a wink.",a:"Gina Carey"},
+  {q:"The only person you should try to be better than is who you were yesterday.",a:"Unknown"},
+  {q:"Joy is not in things; it is in us.",a:"Richard Wagner"},
+  {q:"Be the energy you want to attract.",a:"Unknown"},
+];
+
+const WORDS = [
+  {word:"Sonder",ph:"/ˈsän-dər/",type:"n.",def:"The realization that each passerby has a life as vivid and complex as your own.",use:"She felt sonder looking around the coffee shop — every person there was the main character of their own story."},
+  {word:"Ephemeral",ph:"/i-ˈfe-mə-rəl/",type:"adj.",def:"Lasting for a very short time; transitory.",use:"The cherry blossoms are ephemeral, which is exactly what makes them so beautiful."},
+  {word:"Limerence",ph:"/ˈli-mə-rəns/",type:"n.",def:"The state of being infatuated with another person, involving obsessive thoughts and a longing for them to feel the same.",use:"What she felt in those first weeks wasn't love yet — it was limerence, intense and all-consuming."},
+  {word:"Serendipity",ph:"/ˌser-ən-ˈdi-pə-tē/",type:"n.",def:"The occurrence of events by chance in a happy or beneficial way.",use:"Finding her best friend at that job was pure serendipity — neither of them had planned to be there."},
+  {word:"Perspicacious",ph:"/ˌpər-spə-ˈkā-shəs/",type:"adj.",def:"Having a ready insight into things; shrewd and discerning.",use:"Her perspicacious reading of the situation saved the entire project."},
+  {word:"Equanimity",ph:"/ˌē-kwə-ˈni-mə-tē/",type:"n.",def:"Mental calmness and composure, especially in difficult situations.",use:"She handled the crisis with remarkable equanimity — steady while everyone else panicked."},
+  {word:"Mercurial",ph:"/mər-ˈkyur-ē-əl/",type:"adj.",def:"Subject to sudden or unpredictable changes of mood or mind.",use:"His mercurial temperament made him exciting to be around but exhausting to rely on."},
+  {word:"Alacrity",ph:"/ə-ˈla-krə-tē/",type:"n.",def:"Brisk and cheerful readiness.",use:"She accepted the new challenge with alacrity — this was exactly what she'd been waiting for."},
+  {word:"Ineffable",ph:"/i-ˈne-fə-bəl/",type:"adj.",def:"Too great or extreme to be expressed in words.",use:"The feeling of watching your child sleep is wholly ineffable."},
+  {word:"Liminal",ph:"/ˈli-mə-nəl/",type:"adj.",def:"Occupying a position at or on a boundary between two states or conditions.",use:"Starting over felt deeply liminal — she was no longer who she was, not yet who she was becoming."},
+  {word:"Proprioception",ph:"/ˌprō-prē-ō-ˈsep-shən/",type:"n.",def:"The sense of self-movement and body position — your body's awareness of where it is in space.",use:"Strength training improves proprioception, which is why athletes rarely trip over themselves."},
+  {word:"Magnanimous",ph:"/mag-ˈna-nə-məs/",type:"adj.",def:"Generous or forgiving, especially toward a rival or someone less powerful.",use:"The magnanimous response would be to wish him well. She wasn't quite there yet, but she was working on it."},
+  {word:"Tenacious",ph:"/tə-ˈnā-shəs/",type:"adj.",def:"Tending to keep a firm hold; not giving up easily.",use:"She was the most tenacious person in any room — not the loudest, just the one who never stopped."},
+  {word:"Mellifluous",ph:"/mə-ˈli-flü-əs/",type:"adj.",def:"Sweet or musical; pleasant to hear.",use:"His voice was mellifluous — the kind that made you want to keep listening even when he was saying nothing important."},
+  {word:"Autodidact",ph:"/ˌȯ-tō-ˈdī-dakt/",type:"n.",def:"A self-taught person.",use:"She never formally studied design, but as an autodidact with taste and determination, she outperformed people with degrees."},
+  {word:"Catalyst",ph:"/ˈka-tə-ləst/",type:"n.",def:"A person or thing that precipitates an event or change.",use:"The pandemic was the catalyst that finally made her evaluate what she actually wanted from her life."},
+  {word:"Resilient",ph:"/ri-ˈzil-yənt/",type:"adj.",def:"Able to recover quickly from difficult conditions.",use:"She didn't call herself resilient — she just kept going. Everyone else called it resilience."},
+  {word:"Cogent",ph:"/ˈkō-jənt/",type:"adj.",def:"Clear, logical, and convincing.",use:"Her argument was so cogent that the room had no choice but to agree with her."},
+  {word:"Audacious",ph:"/ȯ-ˈdā-shəs/",type:"adj.",def:"Showing a willingness to take surprisingly bold risks.",use:"Starting a nonprofit while raising three daughters alone was audacious. She preferred 'inevitable.'"},
+  {word:"Juxtaposition",ph:"/ˌjək-stə-pə-ˈzi-shən/",type:"n.",def:"The fact of two things being placed close together for contrasting effect.",use:"The juxtaposition of her quiet mornings and demanding career made each feel more vivid."},
+  {word:"Discern",ph:"/di-ˈzərn/",type:"v.",def:"To recognize or find out; to perceive with the mind or senses.",use:"She had learned to discern the difference between someone who was busy and someone who was unavailable."},
+  {word:"Fecund",type:"adj.",def:"Producing many ideas; highly productive.",use:"The conversation was fecund — they walked in with one plan and left with six better ones."},
+  {word:"Eloquent",ph:"/ˈe-lə-kwənt/",type:"adj.",def:"Fluent or persuasive in speaking or writing.",use:"She didn't need to speak loudly to be heard. She was simply eloquent."},
+  {word:"Perspicuity",type:"n.",def:"The quality of being clearly expressed and easily understood.",use:"What made her the best EA in the room was perspicuity — she said exactly what she meant, no more."},
+  {word:"Sovereignty",ph:"/ˈsä-v(ə-)rən-tē/",type:"n.",def:"Supreme power or authority; full control over oneself.",use:"She had spent years giving pieces of herself away. Reclaiming her sovereignty felt like coming home."},
+  {word:"Grit",ph:"/ˈgrit/",type:"n.",def:"Courage and resolve; strength of character.",use:"Talent gets you started. Grit is what keeps you going when nobody's watching."},
+  {word:"Deliberate",ph:"/di-ˈli-b(ə-)rət/",type:"adj.",def:"Done consciously and intentionally; fully considered.",use:"She was done with accidental living. Every decision going forward would be deliberate."},
+  {word:"Luminous",ph:"/ˈlü-mə-nəs/",type:"adj.",def:"Full of or shedding light; bright and shining; inspiring.",use:"There was something luminous about her when she talked about her daughters — a light that came from inside."},
+  {word:"Steadfast",ph:"/ˈsted-ˌfast/",type:"adj.",def:"Resolutely or dutifully firm and unwavering.",use:"She had always been steadfast — the one person you could count on to still be standing when everyone else sat down."},
+  {word:"Manifest",ph:"/ˈma-nə-ˌfest/",type:"v.",def:"To display or show a quality or feeling by one's acts or appearance; to make evident.",use:"Stop waiting to manifest it and start acting as though it's already on its way."},
+];
+
+const HISTORY = [
+  {date:"January 1",event:"New Year's Day officially adopted worldwide",year:"1600s",detail:"January 1st as the start of the new year wasn't universal until the Gregorian calendar spread across Europe. Scotland adopted it in 1600. England didn't until 1752."},
+  {date:"January 10",event:"The UN General Assembly holds its first meeting",year:"1946",detail:"51 nations gathered in London for the first time, just months after WWII ended. The goal: prevent another world war through international cooperation."},
+  {date:"January 15",event:"Martin Luther King Jr. is born",year:"1929",detail:"Born in Atlanta, Georgia. By age 26 he would be leading the Montgomery Bus Boycott. By 39, he would be dead. In between, he changed America forever."},
+  {date:"February 4",event:"Facebook launches",year:"2004",detail:"Mark Zuckerberg launched 'TheFacebook' from his Harvard dorm room. It had 1,500 users in 24 hours. Today it has 3 billion."},
+  {date:"February 14",event:"First telegraph message sent across the Atlantic",year:"1876",detail:"The same year Alexander Graham Bell patented the telephone, Cyrus Field's transatlantic telegraph cable was completing its first year of operation — connecting continents by wire."},
+  {date:"March 8",event:"International Women's Day recognized globally",year:"1975",detail:"First observed in 1911, the UN officially recognized it in 1975. The day grew out of labor movements demanding better conditions and voting rights for women."},
+  {date:"March 15",event:"Julius Caesar is assassinated",year:"44 BCE",detail:"Stabbed 23 times in the Roman Senate by a group including his friend Brutus. His death ended the Roman Republic and began the era of the Roman Empire. 'Et tu, Brute?' may or may not have been his actual words."},
+  {date:"April 4",event:"Martin Luther King Jr. is assassinated",year:"1968",detail:"Shot at the Lorraine Motel in Memphis, Tennessee. He was 39 years old, standing on the balcony of Room 306. The civil rights movement would never be the same."},
+  {date:"April 15",event:"The Titanic sinks",year:"1912",detail:"The 'unsinkable' ship hit an iceberg at 11:40 PM and sank 2 hours and 40 minutes later. Over 1,500 people died. It was the ship's maiden voyage."},
+  {date:"May 8",event:"World War II ends in Europe — VE Day",year:"1945",detail:"Germany surrendered unconditionally after nearly six years of war. An estimated 70-85 million people died in WWII — about 3% of the entire world's population at the time."},
+  {date:"May 29",event:"Edmund Hillary and Tenzing Norgay summit Everest",year:"1953",detail:"The first confirmed humans to reach the top of the world. Hillary described it simply: 'Well, George, we knocked the bastard off.'"},
+  {date:"June 6",event:"D-Day — Allied forces invade Normandy",year:"1944",detail:"Over 156,000 Allied troops landed on 5 beaches in Nazi-occupied France in the largest seaborne invasion in history. It was the beginning of the end of WWII in Europe."},
+  {date:"June 19",event:"Juneteenth — enslaved people in Texas learn they are free",year:"1865",detail:"Two months after the Civil War ended, Union soldiers arrived in Galveston, Texas to announce that slavery was abolished. It was June 19, 1865. Federal holiday since 2021."},
+  {date:"July 4",event:"The Declaration of Independence is signed",year:"1776",detail:"Fifty-six men signed a document declaring independence from Britain. They were technically committing treason. Most went on to lead the new nation. It worked."},
+  {date:"July 20",event:"Neil Armstrong walks on the moon",year:"1969",detail:"'One small step for man, one giant leap for mankind.' The entire mission took 8 days. Armstrong and Aldrin spent 2 hours and 31 minutes on the lunar surface."},
+  {date:"August 6",event:"The US drops an atomic bomb on Hiroshima",year:"1945",detail:"The bomb killed an estimated 70,000-80,000 people instantly. By the end of 1945, the death toll reached 90,000-166,000. It remains the only use of nuclear weapons in warfare."},
+  {date:"August 28",event:"Martin Luther King Jr. delivers 'I Have a Dream'",year:"1963",detail:"Delivered at the Lincoln Memorial to 250,000 people during the March on Washington. It was largely improvised — he departed from his prepared text halfway through when gospel singer Mahalia Jackson called out 'Tell them about the dream, Martin!'"},
+  {date:"September 11",event:"Terrorist attacks on the United States",year:"2001",detail:"Nearly 3,000 people died in coordinated attacks on the World Trade Center, the Pentagon, and a field in Pennsylvania. It remains the deadliest terrorist attack in history and reshaped American foreign policy for decades."},
+  {date:"October 12",event:"Christopher Columbus reaches the Americas",year:"1492",detail:"He landed in the Bahamas believing he had reached Asia. He never knew he had 'discovered' two continents entirely unknown to Europeans. He never set foot on North American soil."},
+  {date:"October 31",event:"Martin Luther posts his 95 Theses",year:"1517",detail:"A German monk nailed a document challenging the Catholic Church's practice of selling indulgences to the door of a church in Wittenberg. It ignited the Protestant Reformation and changed Christianity forever."},
+  {date:"November 9",event:"The Berlin Wall falls",year:"1989",detail:"After 28 years dividing East and West Berlin, the wall came down as the Cold War ended. Germans danced on top of it and chipped pieces off with hammers. Germany reunified the following year."},
+  {date:"November 19",event:"The Gettysburg Address is delivered",year:"1863",detail:"Abraham Lincoln's 272-word speech at the dedication of a Civil War cemetery. He thought it went poorly. It is now considered one of the greatest speeches in American history."},
+  {date:"December 1",event:"Rosa Parks refuses to give up her bus seat",year:"1955",detail:"A 42-year-old seamstress in Montgomery, Alabama refused to move to the back of the bus. Her arrest sparked the 381-day Montgomery Bus Boycott and a young reverend named Martin Luther King Jr. rose to national prominence leading it."},
+  {date:"December 7",event:"Japan attacks Pearl Harbor",year:"1941",detail:"The surprise attack killed 2,403 Americans and wounded 1,178 more. The next day, the US declared war on Japan. Four days later, Germany declared war on the US. America entered WWII."},
+  {date:"December 17",event:"The Wright Brothers make the first powered flight",year:"1903",detail:"Orville flew 120 feet in 12 seconds at Kitty Hawk, North Carolina. Wilbur's best flight that day was 852 feet in 59 seconds. 66 years later, humans landed on the moon."},
+  {date:"December 25",event:"Isaac Newton is born",year:"1642",detail:"Born on Christmas Day in England, Newton would go on to develop calculus, describe the laws of motion, and explain gravity — reportedly after watching an apple fall. He fundamentally changed how humans understand the universe."},
+  {date:"Any Day",event:"The first crossword puzzle is published",year:"1913",detail:"Arthur Wynne published a 'word-cross' puzzle in the New York World newspaper on December 21, 1913. It became an immediate sensation and sparked a craze that has never ended."},
+  {date:"Any Day",event:"Coca-Cola is invented",year:"1886",detail:"Pharmacist John Pemberton invented a syrup he thought would cure headaches and morphine addiction. He sold it at $0.05 a glass. The Coca-Cola Company is now worth over $250 billion."},
+  {date:"Any Day",event:"The first iPhone is announced",year:"2007",detail:"Steve Jobs introduced it by saying 'every once in a while, a revolutionary product comes along that changes everything.' He was right. The smartphone changed human civilization faster than almost any invention in history."},
+  {date:"Any Day",event:"The first email is sent",year:"1971",detail:"Computer engineer Ray Tomlinson sent the first networked email between two computers sitting next to each other. He chose the @ symbol to separate the user from the computer — a decision that shaped written communication forever."},
+  {date:"Any Day",event:"The Library of Alexandria burns",year:"48 BCE",detail:"One of the greatest libraries in the ancient world was destroyed, along with an unknown number of scrolls containing knowledge that was never recovered. Julius Caesar is often blamed, though the full story is more complicated."},
+];
+
+const CHALLENGES = [
+  {emoji:"🧠",challenge:"Name 5 countries that start with the letter A — without Googling.",hint:"There are 11. You've got this."},
+  {emoji:"💭",challenge:"Think of one thing you believe today that you didn't believe 5 years ago. What changed your mind?",hint:"This is harder than it sounds. Sit with it."},
+  {emoji:"📞",challenge:"Text one person you've been meaning to reach out to. Just 'thinking of you.'",hint:"You know exactly who it is."},
+  {emoji:"🌟",challenge:"Name 3 things you're genuinely proud of that have nothing to do with work or productivity.",hint:"Not what you did. Who you are."},
+  {emoji:"🤔",challenge:"Explain what you do for work to an imaginary 10-year-old. Out loud. 60 seconds.",hint:"This is actually a great executive presence exercise."},
+  {emoji:"💪",challenge:"Do 10 push-ups or a 60-second plank right now, before you scroll anything else.",hint:"You literally have 60 seconds. Go."},
+  {emoji:"✍️",challenge:"Write down your 3 most important priorities for this week in one sentence each.",hint:"If you can't say it in one sentence, you don't know what it is yet."},
+  {emoji:"🗣️",challenge:"Pick a topic — any topic — and talk about it out loud for 90 seconds without stopping.",hint:"Great articulation practice. Time yourself."},
+  {emoji:"🙏",challenge:"Name one person who made your life meaningfully better and think about why you've never told them.",hint:"Maybe today is the day."},
+  {emoji:"🌍",challenge:"Name the capitals of 5 different countries without looking them up.",hint:"Start with the ones you're confident about, then push yourself."},
+  {emoji:"📚",challenge:"What is the most important book you've ever read and what's the one thing it taught you?",hint:"Just one thing. The most important one."},
+  {emoji:"🎯",challenge:"Set a micro-goal for just today — something achievable by tonight — and write it down.",hint:"Small wins compound. This is how momentum starts."},
+  {emoji:"🌸",challenge:"Think of something you've been putting off for more than 30 days. What is the real reason?",hint:"Not the stated reason. The real one."},
+  {emoji:"💬",challenge:"Use today's Word of the Day in an actual sentence before the day is over.",hint:"Bonus: use it in a conversation with someone else."},
+  {emoji:"🦋",challenge:"Name something you were wrong about — and changed your mind — in the last year.",hint:"This is a superpower. Most people never do it."},
+  {emoji:"🔥",challenge:"Do something today that your future self will thank you for — and it can't be on your to-do list.",hint:"Something extra. Something kind. Something brave."},
+  {emoji:"🎵",challenge:"What song would be on the soundtrack of your life right now and why?",hint:"Think about it genuinely. The answer might surprise you."},
+  {emoji:"💛",challenge:"Write down 3 things you love about each of your daughters — right now, from memory.",hint:"Then consider sharing it with them."},
+  {emoji:"🌙",challenge:"What would you do differently if no one would find out either way?",hint:"That's usually the most honest version of what you actually want."},
+  {emoji:"⚡",challenge:"Spend the next 5 minutes on your biggest goal — just 5 minutes — and nothing else.",hint:"Set a timer. Five minutes of focus moves more than you think."},
+  {emoji:"🧩",challenge:"Name all 50 US states. How many can you get without looking?",hint:"Most people get stuck around 38-42. The ones people forget: Vermont, Delaware, Rhode Island, Connecticut."},
+  {emoji:"🌺",challenge:"What is one habit you have that you genuinely love about yourself?",hint:"Not one you're proud of. One you love. There's a difference."},
+  {emoji:"🏆",challenge:"Think of your biggest failure. What did it teach you that success never could have?",hint:"This is the question that separates people who grow from people who stagnate."},
+  {emoji:"💭",challenge:"If you could only keep 3 apps on your phone, which would they be and why?",hint:"What that answer reveals about your priorities is more interesting than the apps themselves."},
+  {emoji:"🌊",challenge:"Close your eyes for 60 seconds and just breathe. No phone, no thinking. Just present.",hint:"This is harder than any other challenge on this list. Prove yourself wrong."},
+  {emoji:"🎭",challenge:"What is something you pretend to know more about than you actually do?",hint:"Naming it is the first step to actually learning it."},
+  {emoji:"🌿",challenge:"Drink 20oz of water right now before you do anything else.",hint:"You're probably already behind for the day."},
+  {emoji:"🦁",challenge:"What is one thing you've been afraid to say out loud — to yourself or someone else?",hint:"You don't have to say it today. But name it."},
+  {emoji:"💡",challenge:"Explain the concept of compound interest to yourself out loud as if teaching someone else.",hint:"If you can't explain it simply, you don't fully understand it yet."},
+  {emoji:"🌙",challenge:"What would make today a 10 out of 10? What would need to happen?",hint:"Now pick one of those things and make it happen before tonight."},
+];
+
+
+const TRUE_FALSE = [
+  {s:"A group of crows is called a murder.",a:true,exp:"True! Other great ones: flamingos are a flamboyance, owls are a parliament, and jellyfish are a smack."},
+  {s:"Napoleon was shorter than the average Frenchman of his time.",a:false,exp:"False! Napoleon was about 5 feet 7 inches — average to tall for a Frenchman in the 1800s. The myth came from a mix-up between French and English measurement units."},
+  {s:"Honey never expires.",a:true,exp:"True! Archaeologists found 3,000-year-old honey in Egyptian tombs — still edible. Its low moisture and acidic pH make it essentially immune to spoilage."},
+  {s:"The Great Wall of China is visible from space with the naked eye.",a:false,exp:"False! This is one of the most persistent myths. The wall is only 15-30 feet wide — far too narrow to see from orbit without aid."},
+  {s:"Goldfish have a memory of only 3 seconds.",a:false,exp:"False! Goldfish can remember things for months. They can navigate mazes and recognize their owners. The 3-second myth has no scientific basis."},
+  {s:"Lightning never strikes the same place twice.",a:false,exp:"False! Lightning absolutely strikes the same place repeatedly. The Empire State Building gets hit about 20-25 times per year."},
+  {s:"Cleopatra was Egyptian.",a:false,exp:"False! Cleopatra was Greek — a descendant of Ptolemy I, one of Alexander the Great's generals. She was the first ruler of her dynasty to even learn the Egyptian language."},
+  {s:"Bats are blind.",a:false,exp:"False! All bat species can see. Many also use echolocation, but blind as a bat is simply wrong — some fruit bats have excellent vision."},
+  {s:"An octopus has blue blood.",a:true,exp:"True! Octopus blood contains hemocyanin (copper-based) instead of hemoglobin (iron-based). Copper turns it blue when oxygenated."},
+  {s:"The first computer bug was an actual insect.",a:true,exp:"True! In 1947, Grace Hopper's team found a moth stuck in a relay of the Harvard Mark II computer. They taped it in the logbook as the 'first actual case of bug being found.'"},
+  {s:"Bulls are attracted to the color red.",a:false,exp:"False! Bulls are colorblind to red. What agitates them is the movement of the cape — not the color. Red hides bloodstains."},
+  {s:"A day on Venus is longer than a year on Venus.",a:true,exp:"True! One Venusian day takes 243 Earth days. But it orbits the sun in just 225 Earth days. Its day outlasts its own year."},
+  {s:"The Eiffel Tower grows taller in summer.",a:true,exp:"True! Heat causes the iron to expand. The tower can grow up to 6 inches taller in hot weather and leans slightly away from the sun."},
+  {s:"Albert Einstein failed math as a child.",a:false,exp:"False! Einstein excelled at math and physics from an early age and mastered calculus by 15. Total myth."},
+  {s:"The unicorn is the national animal of Scotland.",a:true,exp:"True! Scotland adopted the unicorn as its national animal in the 12th century — representing purity, power, and independence."},
+  {s:"Sound travels faster in water than in air.",a:true,exp:"True! Sound travels about 4 times faster in water than in air because water molecules are much more tightly packed."},
+  {s:"Penguins propose to their mates with pebbles.",a:true,exp:"True! Male Gentoo penguins search for the perfect pebble to present to a female. If she places it in her nest, they are paired. Some steal pebbles from rivals."},
+  {s:"Carrots were originally purple, not orange.",a:true,exp:"True! Wild carrots were purple, white, or yellow. Orange carrots were developed by Dutch growers in the 17th century, possibly to honor William of Orange."},
+  {s:"Hawaii is moving toward Japan.",a:true,exp:"True! The Pacific Plate moves northwest about 2.5 inches per year. In roughly 85 million years, Hawaii will be where Japan is now."},
+  {s:"Oxford University is older than the Aztec Empire.",a:true,exp:"True! Oxford began teaching around 1096 AD. The Aztec Empire was not founded until 1428 — more than 300 years later."},
+  {s:"The tongue is the strongest muscle in the human body.",a:false,exp:"False! The tongue is actually several muscles working together. The masseter (jaw) exerts the most force. The heart works hardest over a lifetime."},
+  {s:"Lightning is hotter than the surface of the sun.",a:true,exp:"True! A bolt can reach about 30,000 Kelvin — roughly 5 times hotter than the sun's visible surface."},
+  {s:"A shrimp's heart is located in its head.",a:true,exp:"True! In shrimp, the heart is in the cephalothorax — the fused head-and-chest region. So technically, yes — its head."},
+  {s:"There are more possible chess games than atoms in the observable universe.",a:true,exp:"True! Possible chess games: roughly 10 to the power of 120. Atoms in the universe: about 10 to the power of 80. Chess is effectively infinite."},
+  {s:"Cashews grow inside a fruit.",a:true,exp:"True! The cashew nut grows at the bottom of the cashew apple. The shell contains a toxic oil, which is why raw cashews require careful processing."},
+];
+
+const TEASERS = [
+  {q:"I have hands but cannot clap. I have a face but no eyes. What am I?",a:"A clock."},
+  {q:"The more you take, the more you leave behind. What am I?",a:"Footsteps."},
+  {q:"I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?",a:"An echo."},
+  {q:"What has cities but no houses, mountains but no trees, and water but no fish?",a:"A map."},
+  {q:"If there are 3 apples and you take away 2, how many do you have?",a:"2. You took 2, so you have 2."},
+  {q:"What gets wetter the more it dries?",a:"A towel."},
+  {q:"I am tall when I'm young and short when I'm old. What am I?",a:"A candle."},
+  {q:"What has one eye but cannot see?",a:"A needle."},
+  {q:"What can travel around the world while staying in a corner?",a:"A stamp."},
+  {q:"What has 13 hearts but no other organs?",a:"A deck of cards."},
+  {q:"What room has no walls, no floor, no ceiling, and no doors?",a:"A mushroom."},
+  {q:"What has a bottom at the top?",a:"Your legs."},
+  {q:"If you drop me I will crack, but smile at me and I will smile back. What am I?",a:"A mirror."},
+  {q:"I have no life, but I can die. What am I?",a:"A battery."},
+  {q:"What is full of holes but still holds water?",a:"A sponge."},
+  {q:"You have a match. You enter a room with a candle, a wood stove, and a gas lamp. What do you light first?",a:"The match."},
+  {q:"A rooster lays an egg on the peak of a roof. Which way does it roll?",a:"Roosters do not lay eggs."},
+  {q:"In a year there are 12 months. Seven have 31 days. How many have 28 days?",a:"All 12. Every month has at least 28 days."},
+  {q:"What has keys but no locks, space but no room, and you can enter but cannot go inside?",a:"A keyboard."},
+  {q:"A plane crashes on the border of Canada and the US. Where do you bury the survivors?",a:"You do not bury survivors."},
+  {q:"What is always in front of you but cannot be seen?",a:"The future."},
+  {q:"Two fathers and two sons eat three eggs for breakfast. Each has exactly one egg. How?",a:"There are three people: a grandfather, a father, and a son. The father is both a father and a son."},
+  {q:"What can you catch but not throw?",a:"A cold."},
+  {q:"What word is spelled incorrectly in every single dictionary?",a:"The word incorrectly."},
+  {q:"What has branches but no fruit, trunk, or leaves?",a:"A bank."},
+  {q:"I have cities but no houses live there. I have roads but no cars travel them. What am I?",a:"A map."},
+  {q:"What comes once in a minute, twice in a moment, but never in a thousand years?",a:"The letter M."},
+  {q:"The more you remove from me, the bigger I become. What am I?",a:"A hole."},
+  {q:"What is so fragile that saying its name breaks it?",a:"Silence."},
+  {q:"A woman shoots her husband, then holds him underwater for five minutes. That evening they go to dinner. How?",a:"She is a photographer. She shot his photo and developed it in the darkroom."},
+  {q:"I run all day and night but never move. I have a mouth but cannot talk. What am I?",a:"A river."},
+  {q:"What is always coming but never arrives?",a:"Tomorrow."},
+  {q:"You throw away the outside and cook the inside. Then you eat the outside and throw away the inside. What is it?",a:"Corn on the cob."},
+  {q:"What five-letter word becomes shorter when you add two letters to it?",a:"Short. Add -er to get shorter."},
+];
+
+const DAD_JOKES = [
+  {setup:"Why do scientists not trust atoms?",punchline:"Because they make up everything."},
+  {setup:"I am reading a book about anti-gravity.",punchline:"It is impossible to put down."},
+  {setup:"Why did the scarecrow win an award?",punchline:"Because he was outstanding in his field."},
+  {setup:"I told my wife she was drawing her eyebrows too high.",punchline:"She looked surprised."},
+  {setup:"What do you call a fish without eyes?",punchline:"A fsh."},
+  {setup:"I used to hate facial hair.",punchline:"But then it grew on me."},
+  {setup:"What do you call cheese that is not yours?",punchline:"Nacho cheese."},
+  {setup:"Why did the math book look so sad?",punchline:"Because it had too many problems."},
+  {setup:"I told my doctor I broke my arm in two places.",punchline:"He told me to stop going to those places."},
+  {setup:"What do you call a sleeping dinosaur?",punchline:"A dino-snore."},
+  {setup:"Why don't eggs tell jokes?",punchline:"They would crack each other up."},
+  {setup:"What did the ocean say to the beach?",punchline:"Nothing, it just waved."},
+  {setup:"Why did the bicycle fall over?",punchline:"Because it was two-tired."},
+  {setup:"What do you call a bear with no teeth?",punchline:"A gummy bear."},
+  {setup:"Why can a nose not be 12 inches long?",punchline:"Because then it would be a foot."},
+  {setup:"What do you call a factory that makes okay products?",punchline:"A satisfactory."},
+  {setup:"Did you hear about the claustrophobic astronaut?",punchline:"He just needed a little space."},
+  {setup:"Why did the golfer bring an extra pair of pants?",punchline:"In case he got a hole in one."},
+  {setup:"What do you call a snowman with a six-pack?",punchline:"An abdominal snowman."},
+  {setup:"I am afraid for the calendar.",punchline:"Its days are numbered."},
+  {setup:"Why do cows wear bells?",punchline:"Because their horns do not work."},
+  {setup:"What do you call a fake noodle?",punchline:"An impasta."},
+  {setup:"Why did the coffee file a police report?",punchline:"It got mugged."},
+  {setup:"Why can you not trust the king of the jungle?",punchline:"Because he is always lion."},
+  {setup:"What do you call a dinosaur that crashes their car?",punchline:"Tyrannosaurus wrecks."},
+  {setup:"What is the best thing about Switzerland?",punchline:"I don't know, but the flag is a big plus."},
+  {setup:"Why did the invisible man turn down the job offer?",punchline:"He could not see himself doing it."},
+  {setup:"What do lawyers wear to court?",punchline:"Lawsuits."},
+  {setup:"How do you organize a space party?",punchline:"You planet."},
+  {setup:"What do you call a sad cup of coffee?",punchline:"Depresso."},
+  {setup:"Why did the gym close down?",punchline:"It just did not work out."},
+  {setup:"I only know 25 letters of the alphabet.",punchline:"I do not know y."},
+  {setup:"What do you call a pony with a cough?",punchline:"A little horse."},
+  {setup:"I told my son he was adopted.",punchline:"He said he knew all along — his real parents would never be this embarrassing."},
+  {setup:"How do you make a tissue dance?",punchline:"Put a little boogie in it."},
+];
+
+const FUN_FACTS = [
+  {emoji:"🐙",title:"An octopus has three hearts.",fact:"Two pump blood to the gills, one to the rest of the body. The main heart stops when it swims — which is why they prefer crawling."},
+  {emoji:"🍌",title:"Bananas are berries. Strawberries are not.",fact:"Botanically, a berry develops from a single flower with one ovary. Bananas qualify. Strawberries are actually classified as 'aggregate fruits.'"},
+  {emoji:"🦒",title:"Giraffes only sleep 30 minutes to 2 hours a day.",fact:"They nap in short bursts of minutes at a time, often standing. Lying down makes them vulnerable — so they've evolved to barely sleep at all."},
+  {emoji:"🐝",title:"A teaspoon of honey is the life's work of 12 bees.",fact:"A single bee produces only 1/12 of a teaspoon in its entire lifetime. A hive flies the equivalent of three times around Earth to make one pound."},
+  {emoji:"🧠",title:"Your brain uses 20% of your body's total energy.",fact:"Despite being just 2% of your body weight, it consumes 20% of your oxygen and calories — and works hardest when you're doing nothing."},
+  {emoji:"🦈",title:"Sharks are older than trees.",fact:"Sharks have existed for 450 million years. The oldest trees are only about 350 million years old. Sharks survived all five mass extinctions."},
+  {emoji:"🎵",title:"Music physically changes your brain.",fact:"Playing an instrument simultaneously engages almost every area of the brain. Musicians have measurably thicker nerve fibers between brain hemispheres."},
+  {emoji:"🐘",title:"Elephants perform rituals around their dead.",fact:"They gather around deceased family members, touch them gently, and stay for hours. They've been observed carrying bones of loved ones for miles."},
+  {emoji:"🌍",title:"There are more trees than stars in the Milky Way.",fact:"Earth has roughly 3 trillion trees. The Milky Way has an estimated 100-400 billion stars. We still lose 15 billion trees per year to deforestation."},
+  {emoji:"🌙",title:"The moon is slowly moving away from Earth.",fact:"It drifts 3.8 cm farther each year. When it first formed, it was 15x closer. Days on early Earth were only about 6 hours long."},
+  {emoji:"🍫",title:"Chocolate was once used as currency.",fact:"Aztecs valued cacao so highly they used beans as money. A turkey cost 100 beans. Montezuma reportedly kept 700 million beans in his treasury."},
+  {emoji:"👁️",title:"Your eyes can detect a single photon of light.",fact:"In ideal dark conditions, some people can see a candle from 30 miles away. The human eye is one of the most sensitive light detectors known."},
+  {emoji:"🐜",title:"Ants have been farming for 50 million years longer than humans.",fact:"Leafcutter ants cultivate underground fungus gardens — cutting leaves, weeding, and applying antibiotics. They've done this for 66 million years."},
+  {emoji:"🔬",title:"You share 60% of your DNA with a banana.",fact:"All life shares common ancestry. You share 98% with chimps, 85% with mice, 60% with bananas, and about 31% with yeast."},
+  {emoji:"⚡",title:"Lightning strikes Earth 100 times per second.",fact:"That's 3 billion times a year. A single bolt reaches temperatures five times hotter than the surface of the sun."},
+  {emoji:"🌺",title:"The smell of rain has a name — petrichor.",fact:"It's caused by geosmin from soil bacteria. The human nose can detect it at 5 parts per trillion — we're extraordinarily sensitive to it."},
+  {emoji:"🎭",title:"Cleopatra lived closer to us than to the pyramids.",fact:"The Great Pyramid was built ~2560 BCE. Cleopatra was born 69 BCE — 2,500 years after the pyramid. She died only 2,050 years ago."},
+  {emoji:"🦋",title:"Butterflies taste with their feet.",fact:"They have chemoreceptors on their feet. When they land on a leaf they immediately know if it's edible. Females use this to choose where to lay eggs."},
+  {emoji:"🐦",title:"A group of flamingos is called a flamboyance.",fact:"Other great group names: owls = a parliament, crows = a murder, cats = a clowder, jellyfish = a smack."},
+  {emoji:"🧊",title:"Hot water can freeze faster than cold water.",fact:"Called the Mpemba effect, discovered by a Tanzanian student in 1963. Scientists still don't fully agree why — a teenager stumped physicists for 60 years."},
+  {emoji:"🌵",title:"A saguaro cactus absorbs 200 gallons in one rainstorm.",fact:"Its roots are wide and shallow to capture every drop. After a storm, a saguaro can gain up to a ton of weight. That water sustains it for a year."},
+  {emoji:"🎨",title:"Van Gogh sold only one painting in his lifetime.",fact:"Despite 900+ paintings, he sold only 'The Red Vineyard' for ~$2,000 in today's money months before his death. His work now sells for $100M+."},
+  {emoji:"🧬",title:"Your DNA, uncoiled, would reach Pluto and back.",fact:"Each cell has ~6 feet of DNA. With 37 trillion cells, that's enough to stretch ~34 billion miles — roughly twice the distance from Earth to Pluto."},
+  {emoji:"🐬",title:"Dolphins have names for each other.",fact:"Each develops a unique 'signature whistle' that works as a name. Other dolphins remember and use each other's names for decades."},
+  {emoji:"🕰️",title:"A day on Venus is longer than a year on Venus.",fact:"Venus rotates so slowly that one day takes 243 Earth days. But it orbits the sun in only 225 Earth days. Its day is longer than its year."},
+  {emoji:"📚",title:"Oxford University is older than the Aztec Empire.",fact:"Teaching at Oxford began ~1096 AD. The Aztec Empire wasn't founded until 1428 AD. Oxford predates the Black Death and the printing press."},
+  {emoji:"🫀",title:"Your heart beats 100,000 times a day.",fact:"That's 35 million times a year, 2.5 billion in a lifetime — without being asked once. It generates enough pressure to squirt blood 30 feet."},
+  {emoji:"🌟",title:"More possible chess games exist than atoms in the universe.",fact:"Possible chess games: ~10 to the power of 120. Atoms in the universe: ~10 to the power of 80. Chess is effectively infinite."},
+  {emoji:"🏛️",title:"Rome wasn't built in a day — it took about 1,000 years.",fact:"Founded 753 BCE, still actively building at its peak ~117 CE — nearly 870 years of continuous construction. The saying undersells it significantly."},
+  {emoji:"💡",title:"Edison didn't invent the lightbulb — he made it practical.",fact:"Humphry Davy demonstrated electric light in 1802. Joseph Swan had a working bulb in 1879 — same year as Edison. Edison built the whole system to power them."},
+  {emoji:"🌊",title:"More ocean floor is unmapped than the surface of Mars.",fact:"Only ~20% of the ocean floor has been mapped with high resolution. Mars has been more thoroughly surveyed from orbit than our own ocean depths."},
+  {emoji:"🐳",title:"A blue whale's heart is the size of a small car.",fact:"It weighs ~400 pounds. Its heartbeat can be detected from 2 miles away. A human could crawl through its largest arteries."},
+  {emoji:"🦟",title:"Mosquitoes are the deadliest animal in human history.",fact:"They kill 700,000+ people annually through disease. Sharks kill ~10 per year. Mosquitoes have killed more humans than every war combined."},
+  {emoji:"🐚",title:"The sound in a seashell isn't the ocean.",fact:"It's ambient noise resonating in the shell's chamber. In a very quiet room, the sound nearly disappears. The 'ocean' is just wherever you happen to be."},
+  {emoji:"🍕",title:"The first pizza delivery was made to a queen.",fact:"In 1889, chef Esposito delivered pizza to Queen Margherita. Her favorite — tomato, mozzarella, basil — became the Margherita pizza we still order today."},
+  {emoji:"🌏",title:"Australia is wider than the moon.",fact:"Australia's east-to-west diameter is ~2,500 miles. The moon's diameter is 2,159 miles. Australia wins."},
+  {emoji:"🌿",title:"Grass is one of Earth's most successful plants.",fact:"Grasses cover ~40% of Earth's land. They evolved 66 million years ago — right after the dinosaur extinction — and conquered environments nothing else could."},
+  {emoji:"🎭",title:"The shortest war in history lasted 38-45 minutes.",fact:"The Anglo-Zanzibar War of 1896. Zanzibar surrendered so fast historians still debate the exact time. The British lost zero men. Zanzibar lost ~500."},
+  {emoji:"🧲",title:"Space isn't silent — it just sounds different.",fact:"NASA recorded pressure waves around black holes and converted them to audio. One black hole 'sings' in B-flat, 57 octaves below middle C."},
+  {emoji:"🌙",title:"You can't sneeze while sleeping.",fact:"During REM sleep, motor neurons are suppressed so you don't act out dreams. This paralysis also makes sneezing impossible — the reflex can't fire."},
+];
+
+
+function renderRise() {
+  const now = new Date();
+  const doy = Math.floor((now - new Date(now.getFullYear(),0,0))/86400000);
+
+  // Quote
+  const q = QUOTES[doy % QUOTES.length];
+  const qc = document.getElementById('quote-card');
+  if (qc) qc.innerHTML = `<div style="font-size:10px;font-weight:800;color:var(--rose);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;">Today's Quote</div><div style="font-family:'Quicksand',sans-serif;font-size:16px;font-weight:700;color:var(--text);line-height:1.6;margin-bottom:8px;">"${q.q}"</div><div style="font-size:12px;color:var(--dim);font-weight:700;">— ${q.a}</div>`;
+
+  // Word with phonetics
+  const w = WORDS[doy % WORDS.length];
+  const wc = document.getElementById('word-card');
+  if (wc) wc.innerHTML = `<div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:4px;"><div style="font-family:'Quicksand',sans-serif;font-size:24px;font-weight:700;color:var(--rose);">${w.word}</div><div style="font-size:12px;color:var(--lav);font-weight:700;">${w.ph||''}</div><div style="font-size:12px;color:var(--dim);font-style:italic;">${w.type}</div></div><div style="font-size:13px;color:var(--text);font-weight:600;line-height:1.6;margin-bottom:8px;">${w.def}</div><div style="font-size:12px;color:var(--mid);line-height:1.6;padding:8px 12px;background:var(--rose-l);border-radius:10px;font-style:italic;">"${w.use}"</div>`;
+
+  // History
+  const h = HISTORY[doy % HISTORY.length];
+  const hc = document.getElementById('history-card');
+  if (hc) hc.innerHTML = `<div style="font-size:10px;font-weight:800;color:#7A5A00;text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px;">📅 ${h.year}</div><div style="font-family:'Quicksand',sans-serif;font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px;line-height:1.4;">${h.event}</div><div style="font-size:13px;color:var(--mid);line-height:1.7;">${h.detail}</div>`;
+
+  // Challenge
+  const ch = CHALLENGES[doy % CHALLENGES.length];
+  const cc = document.getElementById('challenge-card');
+  if (cc) cc.innerHTML = `<div style="font-size:14px;font-weight:800;color:var(--text);line-height:1.5;margin-bottom:8px;">${ch.emoji} ${ch.challenge}</div><div style="font-size:12px;color:var(--dim);font-weight:600;padding:7px 12px;background:rgba(255,255,255,0.7);border-radius:10px;">💭 ${ch.hint}</div>`;
+
+  // True or False — 3 items
+  const tfWrap = document.getElementById('tf-wrap');
+  if (tfWrap) {
+    tfWrap.innerHTML = '';
+    const total = TRUE_FALSE.length;
+    const tfItems = [TRUE_FALSE[doy%total],TRUE_FALSE[(doy+11)%total],TRUE_FALSE[(doy+22)%total]];
+    tfWrap.dataset.items = JSON.stringify(tfItems);
+    tfItems.forEach((item,i) => {
+      const div = document.createElement('div');
+      div.id = `tf-${i}`;
+      div.style.cssText = 'border:1px solid var(--border);border-radius:14px;padding:12px 14px;background:var(--bg);margin-bottom:2px;';
+      div.innerHTML = `<div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:10px;line-height:1.5;">${i+1}. ${item.s}</div><div style="display:flex;gap:8px;"><button onclick="selectTF(${i},true)" id="tf-t-${i}" style="flex:1;padding:9px;border-radius:10px;border:2px solid var(--border);background:var(--surface);font-size:13px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;color:var(--text);">✅ True</button><button onclick="selectTF(${i},false)" id="tf-f-${i}" style="flex:1;padding:9px;border-radius:10px;border:2px solid var(--border);background:var(--surface);font-size:13px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;color:var(--text);">❌ False</button></div><div id="tf-exp-${i}" style="display:none;margin-top:10px;font-size:12px;color:var(--mid);line-height:1.6;padding:8px 12px;border-radius:10px;"></div>`;
+      tfWrap.appendChild(div);
+    });
+  }
+
+  // Brain Teaser
+  const t = TEASERS[doy % TEASERS.length];
+  const tc = document.getElementById('teaser-card');
+  if (tc) tc.innerHTML = `<div style="font-size:14px;font-weight:800;color:var(--text);line-height:1.6;margin-bottom:12px;">🧩 ${t.q}</div><button onclick="this.style.display='none';document.getElementById('teaser-ans').style.display='block'" style="width:100%;padding:10px;border-radius:12px;border:none;background:linear-gradient(135deg,#FFF3E8,#FCE7F3);color:var(--peach);font-size:13px;font-weight:800;font-family:'Nunito',sans-serif;cursor:pointer;">🔍 Show Answer</button><div id="teaser-ans" style="display:none;margin-top:10px;padding:10px 14px;background:rgba(255,255,255,0.8);border-radius:12px;font-size:14px;font-weight:700;color:var(--text);">💡 ${t.a}</div>`;
+
+  // Dad Joke
+  const dj = DAD_JOKES[doy % DAD_JOKES.length];
+  const dc = document.getElementById('dadjoke-card');
+  if (dc) dc.innerHTML = `<div style="font-size:14px;font-weight:700;color:var(--text);line-height:1.6;margin-bottom:12px;">😂 ${dj.setup}</div><button onclick="this.style.display='none';document.getElementById('dj-ans').style.display='block'" style="width:100%;padding:10px;border-radius:12px;border:none;background:linear-gradient(135deg,var(--gold-l),#FEF3E8);color:#92400E;font-size:13px;font-weight:800;font-family:'Nunito',sans-serif;cursor:pointer;">🥁 Show Punchline</button><div id="dj-ans" style="display:none;margin-top:10px;padding:10px 14px;background:rgba(255,255,255,0.8);border-radius:12px;font-size:15px;font-weight:800;color:var(--text);">😄 ${dj.punchline}</div>`;
+
+  // Fun Facts
+  const wrap = document.getElementById('facts-wrap');
+  if (!wrap) return;
+  wrap.innerHTML = '';
+  const colors = ['var(--rose-l)','var(--lav-l)','var(--gold-l)'];
+  const borders = ['rgba(244,114,182,.25)','rgba(167,139,250,.25)','rgba(251,191,36,.25)'];
+  [FUN_FACTS[doy%FUN_FACTS.length],FUN_FACTS[(doy+Math.floor(FUN_FACTS.length/3))%FUN_FACTS.length],FUN_FACTS[(doy+Math.floor(2*FUN_FACTS.length/3))%FUN_FACTS.length]].forEach((f,i)=>{
+    const div = document.createElement('div');
+    div.style.cssText = `background:${colors[i]};border:1px solid ${borders[i]};border-radius:18px;padding:14px 16px;`;
+    div.innerHTML = `<div style="font-size:14px;font-weight:800;color:var(--text);margin-bottom:6px;line-height:1.4;">${f.emoji} ${f.title}</div><div style="font-size:13px;color:var(--mid);line-height:1.7;font-weight:500;">${f.fact}</div>`;
+    wrap.appendChild(div);
+  });
+}
+
+async function fetchNews() {
+  const btn = document.getElementById('news-btn');
+  const content = document.getElementById('news-content');
+  btn.textContent = '⏳ Getting today\'s brief...';
+  btn.disabled = true;
+  content.innerHTML = '<div style="color:var(--dim);font-size:13px;font-style:italic;">Fetching today\'s news...</div>';
+  try {
+    const today = new Date().toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        messages: [{ role: 'user', content: `Today is ${today}. Give me a morning briefing with two sections. Section 1: Today's News — 4 factual, politically neutral bullet points covering major world events, economy, science, or anything significant affecting everyday Americans. Skip partisan drama. Section 2: Sports Pulse — 3-4 bullet points covering the most recent NFL and NBA highlights, scores, and storylines from the past 48 hours. Write casually like a friend texting me. Start NFL bullets with 🏈 and NBA with 🏀. If a sport is in offseason say so briefly. For news bullets start each with a relevant emoji. Keep everything concise — one sentence per bullet. Total response under 250 words.` }]
+      })
+    });
+    const data = await resp.json();
+    const text = data.content.map(b => b.text || '').join('').trim();
+    if (text) {
+      const lines = text.split('\n').map(l => l.trim()).filter(l => l && l.length > 3);
+      content.innerHTML = lines.map(l => {
+        if (l.startsWith('Section') || l.startsWith('**') || l.startsWith('##') || l.startsWith('Today') || l.startsWith('Sports')) {
+          return `<div style="font-size:10px;font-weight:800;color:var(--rose);text-transform:uppercase;letter-spacing:.08em;padding:10px 0 4px;">${l.replace(/[*#]/g,'').trim()}</div>`;
+        }
+        return `<div style="padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;color:var(--text);line-height:1.65;font-weight:500;">${l.replace(/^[-•*]\s*/,'')}</div>`;
+      }).join('') + `<div style="font-size:10px;color:var(--dim);margin-top:8px;font-weight:700;">Updated ${new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})}</div>`;
+    } else {
+      content.innerHTML = '<div style="color:var(--dim);font-size:13px;">Couldn\'t load right now — try again in a moment.</div>';
+    }
+  } catch(e) {
+    content.innerHTML = '<div style="color:var(--dim);font-size:13px;">Couldn\'t connect — try again in a moment.</div>';
+    console.error('fetch error:', e);
+  }
+  btn.textContent = '🔄 Refresh Today\'s Brief';
+  btn.disabled = false;
+}
+
+const tfSelections = {};
+function selectTF(i, val) {
+  tfSelections[i] = val;
+  const tb = document.getElementById('tf-t-'+i);
+  const fb = document.getElementById('tf-f-'+i);
+  if (!tb||!fb) return;
+  // Highlight chosen button in rose, clear the other
+  tb.style.background = val ? 'var(--rose-l)' : 'var(--surface)';
+  tb.style.borderColor = val ? 'var(--rose)' : 'var(--border)';
+  tb.style.color = val ? 'var(--rose)' : 'var(--text)';
+  fb.style.background = !val ? 'var(--rose-l)' : 'var(--surface)';
+  fb.style.borderColor = !val ? 'var(--rose)' : 'var(--border)';
+  fb.style.color = !val ? 'var(--rose)' : 'var(--text)';
+}
+
+function revealTF() {
+  const wrap = document.getElementById('tf-wrap');
+  if (!wrap) return;
+  const items = JSON.parse(wrap.dataset.items||'[]');
+  items.forEach((item,i) => {
+    const selected = tfSelections[i];
+    const correct = selected === item.a;
+    const exp = document.getElementById('tf-exp-'+i);
+    const tb = document.getElementById('tf-t-'+i);
+    const fb = document.getElementById('tf-f-'+i);
+    if (tb&&fb) {
+      tb.disabled=true; fb.disabled=true;
+      // Reset both first
+      tb.style.background='var(--surface)'; tb.style.borderColor='var(--border)'; tb.style.color='var(--text)';
+      fb.style.background='var(--surface)'; fb.style.borderColor='var(--border)'; fb.style.color='var(--text)';
+      // Green = correct answer
+      if (item.a===true) { tb.style.background='var(--mint-l)'; tb.style.borderColor='var(--mint)'; tb.style.color='#065F46'; }
+      else { fb.style.background='var(--mint-l)'; fb.style.borderColor='var(--mint)'; fb.style.color='#065F46'; }
+      // If they chose wrong — show their wrong choice in red
+      if (selected !== undefined && !correct) {
+        const wrongBtn = selected===true ? tb : fb;
+        wrongBtn.style.background='#FEE2E2'; wrongBtn.style.borderColor='var(--coral)'; wrongBtn.style.color='var(--coral)';
+      }
+      // If they chose right — add checkmark to their button
+      if (selected !== undefined && correct) {
+        const rightBtn = selected===true ? tb : fb;
+        rightBtn.style.fontWeight='900';
+      }
+    }
+    if (exp) {
+      exp.style.display='block';
+      exp.style.background = correct ? 'var(--mint-l)' : '#FEE2E2';
+      exp.style.border = `1px solid ${correct ? 'rgba(52,211,153,.3)' : 'rgba(248,113,113,.3)'}`;
+      exp.innerHTML = `<strong>${selected===undefined?'⏭️ Skipped —':correct?'✅ You got it! —':'❌ Not quite —'}</strong> ${item.exp}`;
+    }
+  });
+  const btn = document.getElementById('tf-reveal-btn');
+  if (btn) { btn.textContent='✨ Answers revealed!'; btn.disabled=true; }
+}
+
+function renderAll() {
+  renderToday();
+  renderClasses();
+  renderStats();
+  renderReading();
+  renderRise();
+  renderVision();
+}
+
+function renderToday() {
+  const now = new Date();
+  const doy = getDOY();
+
+  document.getElementById('date-lbl').textContent = now.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'});
+  document.getElementById('horo-text').textContent = HOROSCOPES[doy%HOROSCOPES.length];
+  document.getElementById('aff-text').textContent = AFFIRMATIONS[doy%AFFIRMATIONS.length].t;
+  document.getElementById('aff-verse').textContent = '— '+AFFIRMATIONS[doy%AFFIRMATIONS.length].v;
+
+  const xpInLv = S.xp % XP_PER_LEVEL;
+  document.getElementById('xp-bar').style.width = (xpInLv/XP_PER_LEVEL*100)+'%';
+  document.getElementById('lv-lbl').textContent = 'LV '+S.level+' → LV '+(S.level+1);
+  document.getElementById('xp-lbl').textContent = xpInLv+' / '+XP_PER_LEVEL+' XP';
+  document.getElementById('streak-pill').textContent = '🔥 '+S.qStreak+' day streak';
+  document.getElementById('s-streak').textContent = S.qStreak;
+  document.getElementById('s-xp').textContent = S.xp>=1000?(S.xp/1000).toFixed(1)+'k':S.xp;
+  document.getElementById('s-q').textContent = S.totalQ;
+  document.getElementById('month-lbl').textContent = now.toLocaleDateString('en-US',{month:'long',year:'numeric'})+' — tap when done 💛';
+
+  // Week grid
+  const wg = document.getElementById('week-grid');
+  wg.innerHTML = '';
+  for (let i=6;i>=0;i--) {
+    const d=new Date(); d.setDate(d.getDate()-i);
+    const isToday=i===0;
+    const key=d.toISOString().slice(0,10);
+    const active=S.weekAct[key]||(isToday&&(Object.values(S.doneToday).some(Boolean)||Object.values(S.habitDone).some(Boolean)));
+    const el=document.createElement('div');
+    el.className='week-day'+(isToday?' today':'');
+    el.innerHTML='<div class="week-lbl">'+('SMTWTFS'[d.getDay()])+'</div><div class="week-num">'+d.getDate()+'</div><div class="week-dot'+(active?' on':'')+'"></div>';
+    wg.appendChild(el);
+  }
+
+  // Habits (non-negotiables)
+  const hw = document.getElementById('habits-wrap');
+  hw.innerHTML = '';
+  HABITS.forEach(h=>{
+    const done=!!S.habitDone[h.id];
+    const str=S.habitStr[h.id]||0;
+    const el=document.createElement('div');
+    el.className='habit-row'+(done?' done':'');
+    el.innerHTML='<div class="habit-emoji">'+h.emoji+'</div><div class="habit-info"><div class="habit-name">'+h.name+'</div><div class="habit-sub">🔥 '+str+' day streak · +'+h.xp+' XP</div></div><div class="chk">'+(done?'<svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="white" stroke-width="2.5"><polyline points="2,5.5 4.5,8 9,3"/></svg>':'')+'</div>';
+    el.onclick=()=>toggleHabit(h);
+    hw.appendChild(el);
+  });
+
+  // Streak trackers
+  const sw = document.getElementById('streaks-wrap');
+  sw.innerHTML = '';
+  STREAKS.forEach(h=>{
+    const done=!!S.habitDone[h.id];
+    const str=S.habitStr[h.id]||0;
+    const el=document.createElement('div');
+    el.className='habit-row streak-type'+(done?' done':'');
+    el.innerHTML='<div class="habit-emoji">'+h.emoji+'</div><div class="habit-info"><div class="habit-name">'+h.name+'</div><div class="habit-sub">+'+h.xp+' XP · Tap to log</div></div><div class="streak-num">'+str+'</div><div class="chk">'+(done?'<svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="white" stroke-width="2.5"><polyline points="2,5.5 4.5,8 9,3"/></svg>':'')+'</div>';
+    el.onclick=()=>toggleHabit(h);
+    sw.appendChild(el);
+  });
+
+  // Protein
+  renderProtein();
+
+  // Girl dates
+  const gd = document.getElementById('girl-dates');
+  gd.innerHTML = '';
+  GIRLS.forEach(g=>{
+    const done=!!S.girlDates[g.id];
+    const el=document.createElement('div');
+    el.className='girl-row';
+    el.style.cssText='display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:14px;border:1px solid '+(done?g.color+'55':'var(--border)')+';background:'+(done?g.bg:'var(--bg)')+';cursor:pointer;transition:all .2s;margin-bottom:8px';
+    el.innerHTML='<div style="font-size:20px">'+g.emoji+'</div><div style="flex:1"><div style="font-size:13px;font-weight:700;color:'+(done?g.color:'var(--text)')+'">'+g.name+'</div><div style="font-size:11px;color:var(--dim);font-weight:600;margin-top:1px">'+(done?'✅ Date done this month! +100 XP':'No date yet this month')+'</div></div><div style="width:22px;height:22px;border-radius:50%;'+(done?'background:'+g.color+';border:2px solid '+g.color:'border:2px solid var(--border)')+';display:flex;align-items:center;justify-content:center;flex-shrink:0">'+(done?'<svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="white" stroke-width="2.5"><polyline points="2,5.5 4.5,8 9,3"/></svg>':'')+'</div>';
+    el.onclick=()=>toggleGirlDate(g);
+    gd.appendChild(el);
+  });
+
+  // Quests
+  const quests = getDailyQuests();
+  const remaining = quests.filter(q=>!S.doneToday[q.id]).length;
+  document.getElementById('q-lbl').textContent = '⚔️ Today\'s Quests ('+remaining+' remaining)';
+  const qw = document.getElementById('quests-wrap');
+  qw.innerHTML = '';
+  quests.forEach(q=>{
+    const done=!!S.doneToday[q.id];
+    const c=getClass(q.cls);
+    const el=document.createElement('div');
+    el.className='quest-row'+(done?' done':'');
+    el.innerHTML='<div class="quest-icon" style="background:'+c.bg+'">'+q.emoji+'</div><div style="flex:1"><div class="quest-name">'+q.name+'</div><div class="quest-cls">'+c.name+'</div></div><div class="xp-badge" style="background:'+c.bg+';color:'+c.color+'">+'+q.xp+' XP</div><div class="qchk">'+(done?'<svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="white" stroke-width="2.5"><polyline points="2,5.5 4.5,8 9,3"/></svg>':'')+'</div>';
+    el.onclick=()=>completeQuest(q);
+    qw.appendChild(el);
+  });
+}
+
+function renderProtein() {
+  const all = S.protein.every(Boolean);
+  const card = document.getElementById('protein-card');
+  if (card) card.className='protein-card'+(all?' done':'');
+  document.getElementById('p-badge').style.display = all?'block':'none';
+  S.protein.forEach((done,i)=>{
+    const pb=document.getElementById('pb'+i);
+    const pc=document.getElementById('pc'+i);
+    if(pb) pb.className='pbox'+(done?' done':'');
+    if(pc) {
+      pc.style.background=done?'var(--rose)':'transparent';
+      pc.style.border=done?'none':'2px solid rgba(220,170,190,.4)';
+      pc.innerHTML=done?'<svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="white" stroke-width="2.5"><polyline points="2,5.5 4.5,8 9,3"/></svg>':'';
+    }
+  });
+}
+
+const BOOKS = [
+  {
+    id:"b1", cls:"health", title:"The Menopause Brain", author:"Dr. Lisa Mosconi", emoji:"💪",
+    color:"#F472B6", bg:"#FCE7F3", xp:150, area:"Health & Body",
+    summary:"Dr. Lisa Mosconi is a neuroscientist at Weill Cornell who spent decades studying the female brain. This isn't a symptom checklist — it's a deep explanation of WHY your brain and body change during perimenopause, and what you can actually do about it. She covers why weight redistributes to your midsection, why sleep changes, why brain fog hits, and why your mood fluctuates. Most importantly, she explains why the fear around hormone therapy was based on deeply flawed 1990s research — and what the current science actually says. It reads like a brilliant doctor friend telling you the truth.",
+    chapters:[
+      {title:"The Female Brain Is Different", summary:"Women's brains are not just smaller male brains — they're wired differently and react differently to hormonal shifts. Estrogen is literally a brain fuel, not just a reproductive hormone."},
+      {title:"What Perimenopause Does to the Brain", summary:"The drop in estrogen during perimenopause directly affects memory, mood, sleep architecture, and metabolism. Brain fog is real and neurologically explainable — not in your head."},
+      {title:"The Weight Question", summary:"Weight gain during perimenopause — especially around the midsection — is hormonal, not a failure of willpower. Cortisol from stress accelerates it. This chapter explains the mechanism and the interventions."},
+      {title:"Sleep & the Perimenopausal Brain", summary:"Sleep architecture changes significantly — you spend less time in deep restorative sleep. Poor sleep worsens every other symptom. Fixing sleep is often the highest-leverage intervention."},
+      {title:"The HRT Controversy — What Science Actually Says", summary:"The 2002 Women's Health Initiative study caused a generation of women to avoid hormone therapy based on flawed methodology. Mosconi walks through exactly what that study got wrong and what the current evidence actually supports."},
+      {title:"Food as Brain Medicine", summary:"Mediterranean-style eating — olive oil, fish, vegetables, whole grains — is specifically neuroprotective during this transition. Your Southwest-leaning diet is closer to this than you think."},
+      {title:"Movement & the Perimenopausal Brain", summary:"Strength training is the single most protective exercise for the perimenopausal brain and body. Cardio helps too, but resistance training is irreplaceable. You're already doing the right thing."},
+    ],
+    onething:"Your brain is changing, not failing. Perimenopause is a neurological transition — understanding it removes the self-blame and gives you the right tools.",
+    tips:[
+      "Strength training + protein is the #1 intervention — you're already doing both, don't stop even one week",
+      "Ask your doctor specifically about HRT — not 'what do you think' but 'can you walk me through the current research on bioidentical HRT'",
+      "Sleep quality impacts weight, hormones, and cognitive function more than most people realize — protect it like you protect your gym time",
+      "Cortisol from stress directly accelerates midline weight gain — stress management is not a luxury during perimenopause, it's medical",
+      "You're in perimenopause, not menopause — you still have time to get ahead of this with the right interventions now"
+    ]
+  },
+  {
+    id:"b2", cls:"romance", title:"Attached", author:"Amir Levine & Rachel Heller", emoji:"❤️",
+    color:"#C084FC", bg:"#F3E8FF", xp:150, area:"Love & Romance",
+    summary:"Two researchers break down the science of attachment theory — why we love the way we do, why certain relationship dynamics keep repeating, and why we're drawn to specific people. There are three adult attachment styles: secure, anxious, and avoidant. Most people have no idea which they are, which means they keep replaying the same patterns without understanding why. This book makes those patterns visible. It's not self-help fluff — it's grounded in decades of psychological research and reads like someone finally explaining what you've always sensed but couldn't name.",
+    chapters:[
+      {title:"The Science of Adult Attachment", summary:"Attachment theory started with children but applies equally to adults. Your attachment style was shaped early but can be understood and worked with consciously."},
+      {title:"The Three Styles — Secure, Anxious, Avoidant", summary:"Secure: comfortable with closeness and independence. Anxious: craves closeness, fears abandonment, hypervigilant to cues. Avoidant: values independence, uncomfortable with too much closeness. Most people are one of these."},
+      {title:"Why Anxious and Avoidant Find Each Other", summary:"The most common painful pairing. Anxious people find avoidant people exciting; avoidant people find anxious people's need for reassurance overwhelming. They trigger each other's deepest fears."},
+      {title:"Recognizing Attachment Styles Early", summary:"Practical ways to identify someone's attachment style in the first few dates — before you're emotionally invested. Avoidant people send specific signals most people ignore until it's too late."},
+      {title:"Secure Attachment — What It Actually Looks Like", summary:"Secure people are often dismissed as 'boring' because the relationship doesn't feel like a rollercoaster. This chapter reframes what safety and consistency actually feel like."},
+      {title:"Becoming More Secure", summary:"Attachment styles aren't fixed. Working with a therapist, choosing a secure partner, and recognizing your own patterns can move you toward greater security over time."},
+    ],
+    onething:"Secure attachment doesn't feel like butterflies — it feels like safety. And safety, after what you've been through, is actually the most romantic thing in the world.",
+    tips:[
+      "Take an attachment style quiz before reading — it reframes everything and takes 5 minutes",
+      "Learn to spot avoidant behavior early — they're often the most charming at first and most consistently unavailable over time",
+      "A secure man may not fight past your defenses — not because he doesn't care, but because he's never had to prove himself that way. Don't mistake calm for indifference",
+      "When you feel the urge to offer someone an exit — pause and name what you're actually feeling underneath that. That feeling is what needs addressing, not the relationship",
+      "The 'spark' you might be used to can sometimes be anxiety dressed up as chemistry — secure relationships often feel different at first and better over time"
+    ]
+  },
+  {
+    id:"b3", cls:"career", title:"The First 90 Days", author:"Michael Watkins", emoji:"👑",
+    color:"#60A5FA", bg:"#DBEAFE", xp:150, area:"Career & CoS",
+    summary:"Considered the definitive playbook for leaders stepping into new roles — used in onboarding programs at Google, Amazon, McKinsey, and beyond. Watkins breaks down exactly what to do in the critical first 90 days of any leadership transition: how to assess your situation, build credibility fast, create early wins, align with key stakeholders, and avoid the most career-ending mistakes. It's purely tactical — what to do, in what order, and why. Nothing fluffy.",
+    chapters:[
+      {title:"Prepare Yourself", summary:"The mental shift required before taking a leadership role. Stop thinking like an executor and start thinking like a strategist. What got you here won't get you there."},
+      {title:"Accelerate Your Learning", summary:"How to learn an organization fast — structured listening, identifying where the real power lives, what's working vs what people just tolerate. Don't change things before you understand why they are the way they are."},
+      {title:"Match Strategy to Situation", summary:"The STARS framework: Start-up, Turnaround, Accelerated Growth, Realignment, Sustaining Success. Each situation requires a completely different leadership approach."},
+      {title:"Negotiate Success", summary:"How to align with your key stakeholders — your bosses — on what success looks like before you're in the role. Get clarity on expectations, resources, and style early."},
+      {title:"Secure Early Wins", summary:"Identify something you can visibly improve in the first 90 days. Early wins build credibility, create momentum, and signal that you're the right person for this level."},
+      {title:"Achieve Alignment", summary:"Understand the real priorities — not the stated ones. What do your leaders actually lose sleep over? Align your work to those things."},
+      {title:"Build Your Team", summary:"Assess the people around you quickly. Who can you develop, who needs to be moved, who is essential? Make those calls early — waiting makes it harder."},
+      {title:"Create Alliances", summary:"Map the stakeholders — who has influence, who are the skeptics, who are the natural allies. Build relationships before you need them."},
+    ],
+    onething:"The transition to leadership doesn't start when you get the title. It starts with how you show up today. Your CEOs are already watching.",
+    tips:[
+      "Identify one thing you can improve visibly and quickly for your CEOs right now — early wins build the credibility you'll need for the CoS title",
+      "Understand your CEOs' real priorities — not what they say, but what you've observed. What do they actually lose sleep over?",
+      "Build alliances before you need them — your relationships with other key people in the organization are your most valuable currency",
+      "Don't come in changing things before you've fully understood why they exist — listen first, act second",
+      "Start the CoS conversation with your CEOs now — not to ask for it, but to get aligned on what success in that role would look like for them"
+    ]
+  },
+  {
+    id:"b4", cls:"faith", title:"Uninvited", author:"Lysa TerKeurst", emoji:"✝️",
+    color:"#A78BFA", bg:"#EDE9FE", xp:150, area:"Faith & Spirit",
+    summary:"Lysa TerKeurst writes about rejection, loss, and the experience of being left out or left behind — and how to build a security that doesn't collapse when people or circumstances disappoint you. She draws deeply from scripture but writes the way real women actually think — honest, sometimes funny, never performatively spiritual. This isn't a feel-good book. It's a book about real pain, real healing, and what it means to have your identity rooted in something that can't be taken away.",
+    chapters:[
+      {title:"The Sting of Rejection", summary:"Rejection wounds at the identity level — it doesn't just hurt, it tells us something false about our worth. Lysa names that wound specifically and meets it with scripture."},
+      {title:"What We Do With Rejection", summary:"Three common responses: we let it define us, we let it destroy us, or we let it develop us. Only one is sustainable. The others keep us circling."},
+      {title:"Empty Into God", summary:"The practice of bringing our hurt to God before we process it with others. Emptying into God first means we're less likely to make reactive, wounded decisions."},
+      {title:"When Our Identity Isn't Rooted in God", summary:"Where we find our worth determines how devastated we are when things go wrong. If it's in a relationship, a job, or another person's approval — those things will eventually fail us."},
+      {title:"What God Says About You", summary:"A chapter-by-chapter excavation of what scripture says about our identity. Not as platitudes — as grounding truths that Lysa applies to specific kinds of pain."},
+      {title:"The Fully Surrendered Yes", summary:"Moving from a life driven by fear of rejection to one of full surrender to God's plan. Not passive — active trust that His direction is better than our control."},
+      {title:"Living Loved", summary:"What it looks like to live from a place of being loved rather than constantly seeking love and approval. This is the shift the whole book builds toward."},
+    ],
+    onething:"Your worth isn't determined by who stays or who leaves. You were chosen before any of them arrived — and that cannot be taken away.",
+    tips:[
+      "Where you find your identity determines how devastated you are when things go wrong — root it in God, not in a relationship, a title, or anyone's approval",
+      "The pain you've survived is often the exact equipment you need for your purpose — Saved by Grace wouldn't exist without everything you've been through",
+      "Processing hurt with God — in prayer, in scripture — is more transformative than processing it alone or purely intellectually",
+      "Rejection is often redirection — your history backs this up more than most people's does",
+      "Living loved is a daily practice, not a feeling that arrives — start each morning by reading one thing scripture says about who you are"
+    ]
+  },
+  {
+    id:"b5", cls:"passive", title:"Start With Why", author:"Simon Sinek", emoji:"🌟",
+    color:"#FBBF24", bg:"#FEF9C3", xp:150, area:"Saved by Grace",
+    summary:"Sinek's central observation is deceptively simple: the most inspiring leaders, companies, and movements communicate from the inside out. They start with WHY — why they exist, why they do what they do — before ever talking about what or how. Most organizations do the opposite. His Golden Circle framework (Why → How → What) explains why Apple inspires while other tech companies don't, why Martin Luther King drew 250,000 people to the National Mall, and why some causes attract passionate followers while similar ones fall flat. One of the most-watched TED talks in history for a reason.",
+    chapters:[
+      {title:"Assume You Know vs Start From Why", summary:"Most leaders and organizations lead with what they do. The ones who inspire lead with why they exist. That single shift changes everything about how people respond to you."},
+      {title:"The Golden Circle", summary:"Three concentric circles: What (outermost) — How (middle) — Why (center). Most communicate from outside in. Inspiring leaders communicate from inside out. Why → How → What."},
+      {title:"The Biology of Why It Works", summary:"The limbic brain — the part that drives behavior and decision-making — doesn't understand language. It responds to feelings. WHY speaks to the limbic brain. WHAT speaks to the neocortex. Decisions are made emotionally, justified rationally."},
+      {title:"How Great Leaders Inspire Action", summary:"Case studies of leaders who led with WHY — MLK, Steve Jobs, the Wright Brothers. What they had in common was clarity of purpose, not superior resources or intelligence."},
+      {title:"The Tipping Point Is About Belief", summary:"When enough people who share your WHY find you, you reach a tipping point. The early adopters of any movement are people who believe what you believe — not people who were sold on your features."},
+      {title:"When WHY Goes Fuzzy", summary:"What happens when organizations scale and lose touch with their WHY. The cautionary tale of companies that succeeded and then stopped inspiring. Staying connected to WHY requires intentional discipline."},
+      {title:"The Origin of WHY", summary:"Your WHY almost always comes from your past — your experiences, your losses, what shaped you. It's not invented. It's discovered by looking backward."},
+    ],
+    onething:"People don't give to what you do. They give to why you do it. Your WHY — a woman who survived the unsurvivable and wants to help others rebuild — is already one of the most powerful nonprofit stories imaginable.",
+    tips:[
+      "Always lead with your WHY in fundraising, volunteer recruiting, and donor conversations — not your program list or your services",
+      "Your WHY has to be authentic — nobody can copy a story as real as yours, which means your biggest competitive advantage is simply being honest about why you're doing this",
+      "The WHAT and HOW of Saved by Grace will evolve. Your WHY never changes. Keep it front and center always",
+      "Your CEOs already believe in you — the WHY conversation is how you invite them to support the mission without it feeling like a formal ask",
+      "Write your WHY statement this week: start with 'I started Saved by Grace because...' and don't edit it — the raw version is usually the best one"
+    ]
+  },
+  {
+    id:"b6", cls:"growth", title:"The Power of Now", author:"Eckhart Tolle", emoji:"🌅",
+    color:"#34D399", bg:"#D1FAE5", xp:150, area:"Mind & Peace",
+    summary:"Tolle's central teaching: most human suffering comes not from what's happening right now but from the mind's obsessive thinking about the past or the future. The antidote is radical presence — fully inhabiting the current moment, where pain cannot exist in the same form. The book is structured as a dialogue between Tolle and a seeker, making it more accessible than most spiritual texts. Read it slowly, a few pages at a time. It's not designed to be consumed — it's designed to shift something. This book is also deeply compatible with Christian faith — the presence Tolle describes maps beautifully onto what scripture calls 'the peace that surpasses understanding.'",
+    chapters:[
+      {title:"You Are Not Your Mind", summary:"The mind is a tool. Most people are enslaved by it — identified with the constant stream of thought as if it IS them. But you are the awareness observing the thoughts. That distinction changes everything."},
+      {title:"Consciousness: The Way Out of Pain", summary:"The pain body — accumulated emotional pain from the past — gets activated by present triggers. Recognizing it when it fires is 80% of the work. You can't think your way out of it; you have to become aware of it."},
+      {title:"Moving Deeply Into the Now", summary:"Practical entry points into presence: breath, body sensation, the space between thoughts. Even 60 seconds of genuine presence shifts the nervous system."},
+      {title:"Mind Strategies for Avoiding the Now", summary:"The mind uses past and future to avoid the present. Worry is future-orientation. Guilt and resentment are past-orientation. Both are forms of pain avoidance that actually create more pain."},
+      {title:"The State of Presence", summary:"What it actually feels like to be fully present — not emptiness, but aliveness. This is the state athletes call flow, mystics call union, and scripture calls peace."},
+      {title:"The Inner Body", summary:"Using awareness of the physical body as an anchor to presence. You can always feel your hands. You can always feel your breath. These are doorways."},
+      {title:"Portals Into the Unmanifested", summary:"Silence, space, stillness — these aren't absence of things. They're the field from which everything arises. Learning to rest in them is the deepest practice."},
+    ],
+    onething:"You are not your thoughts. You are the one observing your thoughts. That gap — between the thought and the observer — is where peace actually lives.",
+    tips:[
+      "When anxiety hits, ask yourself one question: 'Is there actually a problem right now, in this exact moment?' Almost always the answer is no — the suffering is in the anticipation",
+      "Your no-phones Sunday dinner is already a presence practice — you built it instinctively because you knew something was there. This book names what you already know",
+      "The guilt about grandma, the worry about the girls, the uncertainty about dating — these almost entirely live in mental time travel. Presence dissolves them temporarily and repeated practice weakens them permanently",
+      "Read this slowly — 2-3 pages at a time, not chapters. Let it work on you rather than trying to extract information from it",
+      "This book is fully compatible with your faith — 'Be still and know that I am God' is a presence practice. Tolle and scripture are pointing at the same thing from different angles"
+    ]
+  },
+  {
+    id:"b7", cls:"growth", title:"Think Again", author:"Adam Grant", emoji:"🧠",
+    color:"#38BDF8", bg:"#E0F2FE", xp:150, area:"Mind & Growth",
+    summary:"Organizational psychologist Adam Grant makes the case that the most valuable cognitive skill in the modern world isn't knowing things — it's being willing and able to rethink them. Most people default to three unhelpful modes when challenged: the preacher (defending beliefs), the prosecutor (attacking others' beliefs), or the politician (saying what people want to hear). The antidote is thinking like a scientist — forming hypotheses, staying curious, and updating views when evidence warrants it. Packed with research and stories, never preachy. Directly useful for holding your own in any conversation.",
+    chapters:[
+      {title:"A Preacher, Prosecutor, Politician, or Scientist?", summary:"We all slip into these modes when our beliefs are challenged. The scientist is the only one who can actually update. Recognizing which mode you're in is the first step to getting out of it."},
+      {title:"The Armor of Armchair Quarterback", summary:"The more expertise people gain, the more confident they become — and confidence often outpaces accuracy. Knowing what you don't know is a skill, not a weakness."},
+      {title:"The Joy of Being Wrong", summary:"The most intellectually alive people are genuinely excited to discover they were wrong — because it means they've learned something. This reframe changes how disagreement feels."},
+      {title:"The Good Fight Club", summary:"Having people in your life who challenge your thinking — a 'challenge network' — is one of the strongest predictors of good decision-making. You already value this."},
+      {title:"Dances With Foes — How to Win Debates and Lose Arguments", summary:"The most persuasive people in experiments aren't the ones with the most confident arguments — they're the ones who ask the most questions and acknowledge complexity."},
+      {title:"Bad Blood on the Diamond", summary:"How groups get locked into cycles of conflict that make both sides more extreme. And how one question — 'what would it take to change your mind?' — can break the cycle."},
+      {title:"Escaping Tunnel Vision", summary:"Career and life decisions suffer when we stop rethinking our assumptions about ourselves. What we've always done, what we think we're good at, what we assume we want — all worth revisiting periodically."},
+    ],
+    onething:"The smartest person in the room isn't the one with the most confident opinions. It's the one asking the best questions and staying genuinely curious.",
+    tips:[
+      "In any political or charged conversation, lead with 'what would change your mind about that?' — it immediately shifts the dynamic from debate to dialogue",
+      "Saying 'I used to think X but now I think Y because of Z' is one of the most persuasive and credible things you can say — it signals honesty and intellectual growth",
+      "The most persuasive people ask questions, they don't lecture — two good questions beat ten confident statements every time",
+      "Confidence and certainty are not the same thing — you can speak confidently about what you don't know, and doing so is actually more impressive than pretending certainty",
+      "Build your own challenge network — people who will tell you when you're wrong. You already told me to do this for you. Apply it everywhere."
+    ]
+  },
+  {
+    id:"b8", cls:"faith", title:"How to Read the Bible (Bible Project)", author:"Tim Mackie & Jon Collins", emoji:"📖",
+    color:"#A78BFA", bg:"#EDE9FE", xp:150, area:"Faith & Spirit",
+    summary:"Tim Mackie is a biblical scholar and theologian who spent years making the ancient world of scripture accessible to modern readers. The Bible Project started as a YouTube channel and became one of the most-watched biblical education resources in the world. This isn't a devotional — it's an intellectual and spiritual deep dive into how the Bible was written, what genre each book belongs to, how the Hebrew and Greek originals work, and how all 66 books form one unified narrative. If you've ever felt confused reading the Bible — felt like you were missing context, like the Old Testament doesn't connect to the New, like certain passages feel contradictory — this is the resource that unlocks it. Mackie teaches with the rigor of an academic and the heart of someone who deeply loves scripture. By the end you will understand the Bible differently — not as a rulebook or a collection of unrelated stories, but as a single, stunning narrative about God's love for humanity and His plan to restore what was broken. The YouTube channel is free and the book summaries pair perfectly with each video series.",
+    chapters:[
+      {title:"What Kind of Book Is the Bible?", summary:"The Bible isn't one book — it's a library of 66 books written across 1,500 years in three languages by 40+ authors. Understanding what genre each book is (poetry, prophecy, history, letter) completely changes how you read it. Reading Psalms the same way you read Acts will confuse you every time."},
+      {title:"The Story of the Bible in One Arc", summary:"Creation → Fall → Redemption → New Creation. Every single book of the Bible fits into this four-part arc. Once you see it you can't unsee it. The Old Testament is the setup; the New Testament is the fulfillment. Jesus is the hinge point of the entire story."},
+      {title:"How to Read Old Testament Narrative", summary:"Stories in the Old Testament aren't just history — they're theology. The authors are making specific claims about God, humanity, and how the world works. Learning to read with ancient eyes (what did this mean to the original audience?) unlocks layers most modern readers completely miss."},
+      {title:"The Psalms — Ancient Israel's Prayer Book", summary:"The Psalms are poems and songs, not theology essays. They express the full range of human emotion — joy, grief, anger, doubt, worship. They show that honest, raw prayer is welcomed by God. The Psalms gave Jesus his words on the cross."},
+      {title:"The Prophets — Not Fortune Tellers", summary:"Old Testament prophets aren't primarily predicting the future — they're confronting the present. They're calling Israel back to covenant faithfulness. When they do speak of the future, they're describing what will happen if the people continue their current trajectory. Understanding this changes everything about how you read Isaiah, Jeremiah, and Ezekiel."},
+      {title:"The Gospels — Four Portraits of One Person", summary:"Matthew, Mark, Luke, and John are not biographies in the modern sense. Each is a literary portrait emphasizing different aspects of Jesus for a different audience. Reading all four together gives you a far fuller picture than any one alone could."},
+      {title:"Paul's Letters — Context Is Everything", summary:"Paul's letters were written to specific communities facing specific problems in specific cultural contexts. Reading Romans without knowing why Paul wrote it is like reading someone else's text messages without knowing who they're texting or why. Historical and cultural context is the master key."},
+    ],
+    onething:"The Bible is not a collection of isolated verses to extract quotes from. It's one unified story — and once you see the whole story, every individual part of it makes dramatically more sense.",
+    tips:[
+      "Start with The Bible Project on YouTube — watch the book overview video before you read each book and it will completely transform your comprehension",
+      "Read the Gospels first if you're building your foundation — Mark is the shortest and fastest; Luke is the most detailed and the most human",
+      "When a passage confuses you, come back and ask Claude to explain the historical and cultural context — that's almost always what's missing",
+      "Don't read scripture hunting for verses to memorize in isolation — read to understand what's happening, why, and what it reveals about God's character",
+      "The Old Testament makes far more sense after you've read the New — consider reading them in conversation with each other rather than working through them sequentially"
+    ]
+  },
+  {
+    id:"b9", cls:"faith", title:"Mere Christianity", author:"C.S. Lewis", emoji:"✝️",
+    color:"#7B5EA7", bg:"#EDE9FE", xp:150, area:"Faith & Spirit",
+    summary:"C.S. Lewis was one of the most brilliant minds of the 20th century — an Oxford professor of literature, a former committed atheist, and eventually one of the most articulate and widely read defenders of Christian faith in history. Mere Christianity started as a series of BBC radio broadcasts during World War II — Lewis was asked to explain Christianity to a nation in crisis — and became one of the most influential Christian books ever written. It's intentionally non-denominational: Lewis focuses on what all Christians share in common, the 'mere' essentials, not what divides different traditions. He argues for the existence of God from the existence of moral law, walks through the core claims of Christianity, and explains the Christian understanding of who Jesus was and what He came to do. If you've ever wanted to understand WHY Christians believe what they believe — not just what they believe — this is the book. Lewis writes with extraordinary clarity, wit, and a complete absence of condescension. He came to faith through reason and argument, not emotion, and he gives you full permission to bring all your questions and doubts to the examination. He was a skeptic before he was a believer, and he never forgot what that felt like.",
+    chapters:[
+      {title:"Right and Wrong as a Clue to the Meaning of the Universe", summary:"Every human culture in recorded history has had a sense of right and wrong — a moral law that seems to exist beyond individual preference. Lewis argues this universal moral intuition points to something beyond us. We all know we ought to behave a certain way even when we don't — and that word 'ought' is deeply mysterious in a purely material universe. Where does it come from?"},
+      {title:"What Christians Believe", summary:"A clear, jargon-free explanation of the core Christian claims: that God made the world good, humans rebelled against their design and broke something, and God has been working ever since to restore what was broken. The whole Bible is that story. Jesus is God entering His own creation to fix it from the inside."},
+      {title:"The Shocking Alternative — Who Is Jesus?", summary:"Lewis's famous 'trilemma' argument: Jesus of Nazareth made explicit claims to be God. Either He was deliberately lying, He was sincerely deluded about His own identity, or He was telling the truth. Lewis argues there is no comfortable fourth option — 'great moral teacher who wasn't God' — because great moral teachers don't make the specific claims Jesus made."},
+      {title:"Christian Behaviour", summary:"What does Christianity actually ask of us in practice? Lewis covers the classical virtues, sexuality, marriage, forgiveness, charity, and justice — not as an arbitrary rulebook imposed from outside but as a description of what a fully functioning, fully alive human being actually looks like. The rules describe the design."},
+      {title:"Beyond Personality — What God Is Like and What He Wants", summary:"Lewis attempts to explain the Trinity — the most intellectually demanding concept in Christianity — using the best analogies human language can offer. More importantly, he describes what it means to become a child of God rather than merely a creature of God. The difference between those two relationships is everything."},
+      {title:"The Great Sin", summary:"Pride is the root of every other sin, Lewis argues — not as a religious cliché but as a carefully reasoned observation. Pride is the only vice that is entirely competitive, entirely about comparison. It is the anti-God state of mind. And the antidote — humility — is not thinking less of yourself. It's not thinking about yourself as much."},
+    ],
+    onething:"Christianity makes a specific, falsifiable claim: that Jesus of Nazareth was God in human form, who died and rose again. You don't have to feel it to examine it — and Lewis shows it deserves to be examined with full intellectual seriousness.",
+    tips:[
+      "Read it slowly — Lewis packs more into one paragraph than most authors put in a chapter. This is a book that rewards underlining and rereading",
+      "The moral law chapter is the foundation for everything that follows — if that argument lands for you, the rest of the book becomes much more accessible",
+      "His chapter on Pride is one of the most practically useful pieces of writing in the book — apply it to your own life and relationships immediately",
+      "Lewis was a former atheist who came to faith through reason not emotion — his journey is full permission for you to bring every question and doubt you have",
+      "After Mere Christianity, read The Problem of Pain or Surprised by Joy — both are shorter and go deeper into specific questions Lewis raises here"
+    ]
+  },
+  {
+    id:"b10", cls:"faith", title:"Jesus and the Disinherited", author:"Howard Thurman", emoji:"🕊️",
+    color:"#2A7A6E", bg:"#D1FAE5", xp:150, area:"Faith & Spirit",
+    summary:"Howard Thurman was a theologian, philosopher, and mystic who served as a mentor to Martin Luther King Jr. — who carried this book with him throughout the entire civil rights movement. It is one of the most spiritually profound and practically urgent books in the Christian tradition, and it is far less widely read than it deserves to be. Thurman's central question is deceptively simple: what does the religion of Jesus have to say to people who have their backs against the wall? He argues that Jesus himself was a member of a marginalized, occupied minority — a poor Jew living under Roman imperial power — and that the teachings of Jesus were therefore addressed from a position of suffering to people in a position of suffering. This is the context most Western Christianity has buried. Thurman identifies three forces that destroy people living under sustained oppression or difficulty: fear, deception, and hatred. And he shows, with extraordinary clarity and compassion, how the teachings of Jesus offer a practical, interior pathway through each of them — not escape, but transformation. This book is foundational for your work with Saved by Grace. It's the theological grounding for why serving the marginalized is not optional, charitable, or supplemental to the Gospel — it IS the Gospel. It is also deeply personal — about what it means to live without the internal corruption that fear, deception, and hatred inevitably cause in any human soul.",
+    chapters:[
+      {title:"Jesus — A Poor Jew Under Occupation", summary:"Jesus was not born into comfort or power. He was born into a people who were colonized, economically exploited, and considered inferior by the empire surrounding them. Understanding this historical reality transforms the meaning of everything He taught. He knew — from the inside — what it meant to have no structural power."},
+      {title:"Fear", summary:"Fear is the first and most foundational of the three internal enemies. Thurman distinguishes between healthy, situational fear and the chronic, pervasive fear that comes from sustained powerlessness and vulnerability — the fear that narrows a person's world, poisons their relationships, and makes it impossible to act with full integrity. Jesus offers a different foundation for security that fear cannot touch."},
+      {title:"Deception", summary:"When people cannot speak truth to power without serious personal consequence, deception — strategic misdirection, performance, saying what's expected — becomes a survival mechanism. But Thurman argues with great care that it corrodes the soul of the person who practices it, even when it's justified by circumstance. Jesus calls people to a radical, costly inner integrity."},
+      {title:"Hatred", summary:"Hatred is the most seductive and the most ultimately destructive of the three forces. It provides real psychological benefits — energy, clarity, community, purpose, the satisfaction of righteous anger. And it hollows out the soul from the inside. Thurman carefully distinguishes hatred from righteous anger, and argues that love — not as a warm feeling but as a committed, willed orientation toward the humanity of every person — is the only alternative that doesn't eventually destroy the one who holds it."},
+      {title:"Love as a Social and Spiritual Force", summary:"The final movement of the book is about love as something more than sentiment — as a social force, a political force, and a spiritual discipline. The deliberate choice to see and affirm the full humanity in every person, including those who have wronged you or who hold power over you. This is the most demanding and the most liberating thing Jesus asks of us."},
+    ],
+    onething:"Jesus was not speaking to the comfortable from a position of comfort. He was speaking to the suffering from inside suffering. His message was specifically designed for people whose backs are against the wall — and it still works.",
+    tips:[
+      "Read this as you begin planning Saved by Grace — it will give your mission theological depth that transforms it from charity work to justice work rooted in the Gospel",
+      "The chapter on Fear is personally relevant to you right now in ways beyond Saved by Grace — Thurman's framework applies to the fear of vulnerability in love, in loss, in uncertainty",
+      "His distinction between hatred and righteous anger is one of the most practically and spiritually useful things in the book — understand it and return to it",
+      "Martin Luther King Jr. carried this book with him through the civil rights movement. Read it knowing it shaped one of the greatest moral leaders in American history",
+      "After this, read King's Letter from Birmingham Jail — it is the practical, lived application of everything Thurman teaches here, and it is one of the greatest pieces of American writing"
+    ]
+  },
+];
+
+function renderReading() {
+  const wrap = document.getElementById('books-wrap');
+  if (!wrap) return;
+  wrap.innerHTML = '';
+  BOOKS.forEach(b => {
+    const done = !!(S.booksDone && S.booksDone[b.id]);
+    const el = document.createElement('div');
+    el.style.cssText = 'background:var(--surface);border:1px solid var(--border);border-radius:20px;overflow:hidden;';
+    el.innerHTML = `
+      <div onclick="toggleBookExpand('${b.id}')" style="display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;">
+        <div style="width:44px;height:58px;border-radius:8px;background:linear-gradient(135deg,${b.bg},${b.color}33);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">${b.emoji}</div>
+        <div style="flex:1;">
+          <div style="font-size:14px;font-weight:800;margin-bottom:2px;${done?'text-decoration:line-through;color:var(--dim)':''}">${b.title}</div>
+          <div style="font-size:11px;color:var(--dim);font-weight:600;margin-bottom:6px;">${b.author} · ${b.area}</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <span style="font-size:10px;padding:2px 8px;border-radius:20px;background:${b.bg};color:${b.color};font-weight:700;">+${b.xp} XP</span>
+            ${done?'<span style="font-size:10px;padding:2px 8px;border-radius:20px;background:var(--mint-l);color:var(--mint);font-weight:700;">✓ Read!</span>':'<span style="font-size:10px;padding:2px 8px;border-radius:20px;background:var(--bg);color:var(--dim);font-weight:700;">Not yet</span>'}
+          </div>
+        </div>
+        <div id="arr-${b.id}" style="font-size:20px;color:var(--dim);transition:transform .2s;">›</div>
+      </div>
+      <div id="bexp-${b.id}" style="display:none;padding:0 16px 16px;border-top:1px solid var(--border);">
+        <div style="padding-top:14px;display:flex;flex-direction:column;gap:14px;">
+
+          <button onclick="openListenMode('${b.id}')" style="width:100%;padding:13px;border-radius:14px;border:none;background:linear-gradient(135deg,#EDE9FE,#FCE7F3);color:var(--lav);font-size:13px;font-weight:800;font-family:'Nunito',sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;">
+            🎧 Listen Mode — optimized for Spoken Screen
+          </button>
+
+          <div>
+            <div style="font-size:10px;font-weight:800;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">📖 What it's about</div>
+            <div style="font-size:13px;color:var(--mid);line-height:1.75;">${b.summary}</div>
+          </div>
+
+          <div>
+            <div style="font-size:10px;font-weight:800;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">📑 Chapter by chapter</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              ${b.chapters.map(c=>`
+                <div style="padding:10px 12px;border-radius:12px;background:var(--bg);border-left:3px solid ${b.color};">
+                  <div style="font-size:12px;font-weight:800;color:var(--text);margin-bottom:4px;">${c.title}</div>
+                  <div style="font-size:12px;color:var(--mid);line-height:1.6;">${c.summary}</div>
+                </div>`).join('')}
+            </div>
+          </div>
+
+          <div style="background:${b.bg};border-radius:12px;padding:12px 14px;">
+            <div style="font-size:10px;font-weight:800;color:${b.color};margin-bottom:4px;text-transform:uppercase;letter-spacing:.08em;">⭐ The one thing to remember</div>
+            <div style="font-size:13px;color:var(--text);line-height:1.6;font-weight:600;">${b.onething}</div>
+          </div>
+
+          <div>
+            <div style="font-size:10px;font-weight:800;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">💡 Practical takeaways</div>
+            ${b.tips.map(t=>`<div style="font-size:13px;color:var(--mid);line-height:1.6;padding:7px 12px;border-left:3px solid ${b.color};margin-bottom:6px;border-radius:0 8px 8px 0;background:var(--bg);">${t}</div>`).join('')}
+          </div>
+
+          <button onclick="toggleBookDone('${b.id}')" style="width:100%;padding:12px;border-radius:14px;border:none;background:${done?'var(--rose-l)':'linear-gradient(135deg,'+b.color+','+b.color+'cc)'};color:${done?'var(--rose)':'white'};font-size:13px;font-weight:800;font-family:'Nunito',sans-serif;cursor:pointer;">
+            ${done?'↩️ Mark as unread':'✅ I finished this book! +'+b.xp+' XP'}
+          </button>
+        </div>
+      </div>`;
+    wrap.appendChild(el);
+  });
+}
+
+function openListenMode(id) {
+  const b = BOOKS.find(x=>x.id===id);
+  if (!b) return;
+  document.getElementById('listen-title').textContent = b.title+' — '+b.author;
+  const content = document.getElementById('listen-content');
+  content.innerHTML = `
+    <div style="display:flex;flex-direction:column;gap:24px;padding-bottom:40px;">
+      <div>
+        <div style="font-size:13px;font-weight:800;color:${b.color};text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;">What This Book Is About</div>
+        <div style="font-size:18px;color:rgba(255,255,255,0.9);line-height:1.85;">${b.summary}</div>
+      </div>
+      <div style="height:1px;background:rgba(255,255,255,0.08)"></div>
+      <div>
+        <div style="font-size:13px;font-weight:800;color:${b.color};text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px;">Chapter by Chapter</div>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          ${b.chapters.map((c,i)=>`
+            <div>
+              <div style="font-size:14px;font-weight:800;color:white;margin-bottom:8px;">Chapter ${i+1}. ${c.title}</div>
+              <div style="font-size:17px;color:rgba(255,255,255,0.8);line-height:1.85;">${c.summary}</div>
+            </div>`).join('<div style="height:1px;background:rgba(255,255,255,0.06)"></div>')}
+        </div>
+      </div>
+      <div style="height:1px;background:rgba(255,255,255,0.08)"></div>
+      <div style="background:${b.color}22;border:1px solid ${b.color}44;border-radius:16px;padding:20px;">
+        <div style="font-size:13px;font-weight:800;color:${b.color};text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;">The One Thing to Remember</div>
+        <div style="font-size:20px;color:white;line-height:1.7;font-weight:600;">${b.onething}</div>
+      </div>
+      <div style="height:1px;background:rgba(255,255,255,0.08)"></div>
+      <div>
+        <div style="font-size:13px;font-weight:800;color:${b.color};text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px;">Practical Takeaways</div>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          ${b.tips.map((t,i)=>`
+            <div style="display:flex;gap:14px;align-items:flex-start;">
+              <div style="width:28px;height:28px;border-radius:50%;background:${b.color};display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:white;flex-shrink:0;margin-top:2px;">${i+1}</div>
+              <div style="font-size:17px;color:rgba(255,255,255,0.85);line-height:1.75;">${t}</div>
+            </div>`).join('')}
+        </div>
+      </div>
+    </div>`;
+
+  // Show overlay
+  const overlay = document.getElementById('listen-overlay');
+  overlay.style.display = 'block';
+  overlay.removeAttribute('aria-hidden');
+
+  // Hide ALL background content from screen reader
+  document.querySelectorAll('body > *:not(#listen-overlay)').forEach(el => {
+    el.setAttribute('aria-hidden', 'true');
+    el.setAttribute('data-listen-hidden', 'true');
+  });
+
+  document.body.style.overflow = 'hidden';
+
+  // Move focus into overlay so screen reader starts there
+  const closeBtn = overlay.querySelector('button');
+  if (closeBtn) setTimeout(() => closeBtn.focus(), 50);
+}
+
+function closeListenMode() {
+  const overlay = document.getElementById('listen-overlay');
+  overlay.style.display = 'none';
+  overlay.setAttribute('aria-hidden', 'true');
+
+  // Restore background content to screen reader
+  document.querySelectorAll('[data-listen-hidden="true"]').forEach(el => {
+    el.removeAttribute('aria-hidden');
+    el.removeAttribute('data-listen-hidden');
+  });
+
+  document.body.style.overflow = '';
+}
+
+function toggleBookExpand(id) {
+  const exp = document.getElementById('bexp-'+id);
+  const arr = document.getElementById('arr-'+id);
+  const isOpen = exp.style.display === 'block';
+  exp.style.display = isOpen ? 'none' : 'block';
+  arr.style.transform = isOpen ? '' : 'rotate(90deg)';
+}
+
+function toggleBookDone(id) {
+  if (!S.booksDone) S.booksDone = {};
+  const done = !!S.booksDone[id];
+  S.booksDone[id] = !done;
+  const book = BOOKS.find(b=>b.id===id);
+  if (book) {
+    const delta = done ? -book.xp : book.xp;
+    S.xp = Math.max(0, S.xp + delta);
+    // Use book's class, not hardcoded growth
+    const bookClass = book.cls || 'growth';
+    S.classXP[bookClass] = Math.max(0, (S.classXP[bookClass]||0) + delta);
+    if (!done) {
+      const newLv = Math.floor(S.xp/XP_PER_LEVEL)+BASE_LV;
+      if (newLv > S.level) { S.level=newLv; save(); renderAll(); renderReading(); showLvl(newLv); return; }
+      toast('+'+book.xp+' XP — "'+book.title+'" finished! 📚🎉');
+    }
+  }
+  save();
+  renderAll();
+  renderReading();
+}
+
+const QUICK_IDEAS = {
+  health:[
+    {name:"Add 10 mins of cardio after your workout",xp:40},
+    {name:"Drink an extra 20oz of water right now",xp:15},
+    {name:"Do a 5-min stretch or mobility session",xp:25},
+    {name:"Go to bed 30 mins earlier tonight",xp:30},
+    {name:"Prep your meals for tomorrow",xp:40},
+    {name:"Take a 20-min walk outside",xp:35},
+    {name:"Do a face mask or skin care routine",xp:30},
+    {name:"Log your food for the day",xp:20},
+    {name:"Take your vitamins right now",xp:15},
+    {name:"Dry brush and moisturize head to toe",xp:30},
+  ],
+  romance:[
+    {name:"Send a thoughtful first message to someone",xp:50},
+    {name:"Update one photo on your dating profile",xp:40},
+    {name:"Spend 15 mins actively browsing the app",xp:40},
+    {name:"Read a chapter of Attached",xp:50},
+    {name:"Journal about what you want in a partner",xp:35},
+    {name:"Say yes to a date you might normally overthink",xp:80},
+    {name:"Ask a trusted friend for honest dating feedback",xp:40},
+  ],
+  career:[
+    {name:"Prep your CEOs for tomorrow's meetings",xp:60},
+    {name:"Use Claude for one EA task right now",xp:40},
+    {name:"Organize your inbox to zero",xp:50},
+    {name:"Read one article about leadership or strategy",xp:40},
+    {name:"Draft one message you've been putting off",xp:45},
+    {name:"Ask your CEO what their biggest priority is this week",xp:60},
+    {name:"Spend 15 mins working on your Solo 401k setup",xp:80},
+    {name:"Write down 3 things a CoS would handle differently than an EA",xp:50},
+    {name:"Research one AI tool that could help your CEOs",xp:60},
+  ],
+  faith:[
+    {name:"Read one Psalm out loud — any one",xp:40},
+    {name:"Spend 5 mins in silent prayer right now",xp:50},
+    {name:"Watch one Bible Project video on YouTube",xp:50},
+    {name:"Write a prayer for someone you love",xp:45},
+    {name:"Text someone you know is struggling — just check in",xp:40},
+    {name:"Read one chapter of Mere Christianity",xp:50},
+    {name:"Practice open prayer out loud — even 2 minutes",xp:60},
+    {name:"Ask Grace one genuine question about what she believes",xp:70},
+    {name:"Find a local Bible study to attend this week",xp:60},
+    {name:"Read today's devotional if you haven't yet",xp:40},
+  ],
+  joy:[
+    {name:"Text Yvette something fun right now",xp:30},
+    {name:"Look up one local meetup or event this week",xp:40},
+    {name:"Book that jazz bar night — even tentatively",xp:60},
+    {name:"Plan your Saturday night — don't leave it blank",xp:50},
+    {name:"Watch a stand-up special or something purely fun",xp:25},
+    {name:"Look up a wine tasting near Gilbert",xp:40},
+    {name:"Reach out to one person you've been meaning to reconnect with",xp:50},
+    {name:"Try one thing on your hobby list — even for 20 mins",xp:60},
+    {name:"Sign up for that Pinot's Palette class",xp:70},
+  ],
+  family:[
+    {name:"Text all three girls something personal right now",xp:40},
+    {name:"Plan your next date with Lexi — put it on the calendar",xp:50},
+    {name:"Plan your next date with Desi — put it on the calendar",xp:50},
+    {name:"Plan your next date with Grace — put it on the calendar",xp:50},
+    {name:"Visit grandma this week — schedule it now",xp:60},
+    {name:"Plan a family outing for this month",xp:50},
+    {name:"Cook Sunday dinner together — let the girls help",xp:60},
+    {name:"Share something from your faith journey with the girls",xp:50},
+  ],
+  passive:[
+    {name:"Create 5 new Canva Pinterest pins right now",xp:60},
+    {name:"Research one vending machine location in Gilbert",xp:70},
+    {name:"Look up party rental profit margins for Arizona",xp:70},
+    {name:"Spend 20 mins on your AI website idea",xp:80},
+    {name:"Check your Pinterest analytics and note what's working",xp:50},
+    {name:"Research one life insurance quote online",xp:60},
+    {name:"Call your mortgage broker for a San Diego update",xp:80},
+    {name:"Post 3 new affiliate pins to Pinterest",xp:50},
+    {name:"Research one new Amazon affiliate product in your niche",xp:50},
+  ],
+  growth:[
+    {name:"Read 15 mins of your current book right now",xp:50},
+    {name:"Watch one current events video to catch up",xp:40},
+    {name:"Ask Claude to explain something you've been curious about",xp:40},
+    {name:"Listen to 20 mins of a growth or business podcast",xp:50},
+    {name:"Practice explaining your job to a stranger out loud",xp:50},
+    {name:"Open the history cheat sheet and read one era",xp:50},
+    {name:"Write down 3 things you learned this week",xp:40},
+    {name:"Read one chapter of Think Again",xp:50},
+    {name:"Listen Mode on one of your book summaries",xp:40},
+  ],
+};
+
+function renderClasses() {
+  const wrap = document.getElementById('classes-wrap');
+  wrap.innerHTML = '';
+
+  // Sort highest XP first
+  const sorted = [...CLASSES].sort((a,b) => classXP(b.id) - classXP(a.id));
+
+  sorted.forEach(c=>{
+    const lv=classLv(c.id);
+    const prog=classProg(c.id);
+    const xp=classXP(c.id);
+    const ideas = QUICK_IDEAS[c.id] || [];
+
+    const el=document.createElement('div');
+    el.style.cssText='background:var(--surface);border:1px solid var(--border);border-radius:18px;overflow:hidden;margin:0 16px 10px;';
+
+    el.innerHTML=`
+      <div onclick="toggleClassDrawer('cd-${c.id}')" style="display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;">
+        <div class="class-icon">${c.emoji}</div>
+        <div class="class-info" style="flex:1">
+          <div class="class-name">${c.name}</div>
+          <div class="class-meta">Level ${lv} · ${xp} XP · ${Math.round(prog*100)}% to next</div>
+          <div class="class-bar" style="background:${c.bg}"><div class="class-fill" style="width:${prog*100}%;background:${c.color}"></div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px;flex-shrink:0;">
+          <div class="class-lv" style="background:${c.bg};color:${c.color}">${lv}</div>
+          <div style="font-size:9px;font-weight:700;color:var(--dim);">IDEAS ›</div>
+        </div>
+      </div>
+      <div id="cd-${c.id}" style="display:none;border-top:1px solid var(--border);padding:12px 16px;">
+        <div style="font-size:10px;font-weight:800;color:${c.color};text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;">⚡ Quick XP ideas — tap to earn</div>
+        <div style="display:flex;flex-direction:column;gap:7px;">
+          ${ideas.map(idea=>`
+            <div onclick="earnQuickXP('${c.id}','${idea.name.replace(/'/g,"\\'")}',${idea.xp})" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:12px;background:${c.bg};border:1px solid ${c.color}22;cursor:pointer;transition:all .2s;">
+              <div style="flex:1;font-size:12px;font-weight:600;color:var(--text);line-height:1.4;">${idea.name}</div>
+              <div style="font-size:11px;font-weight:800;padding:3px 9px;border-radius:20px;background:${c.color};color:white;white-space:nowrap;flex-shrink:0;">+${idea.xp} XP</div>
+            </div>`).join('')}
+        </div>
+        <div style="font-size:10px;color:var(--dim);font-weight:600;margin-top:8px;text-align:center;">Tap any idea to log it and earn XP instantly</div>
+      </div>`;
+    wrap.appendChild(el);
+  });
+}
+
+function toggleClassDrawer(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const isOpen = el.style.display === 'block';
+  // Close all other drawers first
+  document.querySelectorAll('[id^="cd-"]').forEach(d => d.style.display = 'none');
+  el.style.display = isOpen ? 'none' : 'block';
+}
+
+function earnQuickXP(clsId, name, xp) {
+  S.xp += xp;
+  S.classXP[clsId] = (S.classXP[clsId]||0) + xp;
+  S.totalQ++;
+  save(); renderAll();
+  if (!checkLevelUp()) toast('+'+xp+' XP — '+name.substring(0,30)+'! 🌸');
+}
+
+function renderStats() {
+  document.getElementById('big-xp').textContent = S.xp.toLocaleString();
+  document.getElementById('big-sub').textContent = S.xp>0?"You're building real momentum, Jen! 🌸":"Start completing quests! ✨";
+  document.getElementById('hm-streak').textContent = '🔥 '+S.qStreak+'-day quest streak';
+
+  const chart = document.getElementById('mini-chart');
+  chart.innerHTML = '';
+  const hist=[...S.history,S.xp].slice(-14);
+  const max=Math.max(...hist,1);
+  hist.forEach(v=>{const b=document.createElement('div');b.className='mini-bar';b.style.height=Math.max(4,(v/max)*50)+'px';chart.appendChild(b);});
+
+  const rows = document.getElementById('xp-rows');
+  rows.innerHTML = '';
+  const maxXP = Math.max(...CLASSES.map(c=>classXP(c.id)),1);
+  [...CLASSES].map(c=>({...c,xp:classXP(c.id)})).sort((a,b)=>b.xp-a.xp).forEach(c=>{
+    const el=document.createElement('div');
+    el.className='xp-row';
+    el.innerHTML='<div class="xp-icon" style="background:'+c.bg+'">'+c.emoji+'</div><div style="font-size:13px;font-weight:700;flex:1">'+c.name+'</div><div style="width:70px;height:5px;background:var(--bg);border-radius:5px;overflow:hidden"><div style="height:100%;border-radius:5px;background:'+c.color+';width:'+((c.xp/maxXP)*100)+'%"></div></div><div style="font-size:12px;color:var(--dim);font-weight:700;white-space:nowrap">'+c.xp+' XP</div>';
+    rows.appendChild(el);
+  });
+
+  const hm=document.getElementById('hm-grid');
+  hm.innerHTML='';
+  const cells=[...S.heatmap];
+  while(cells.length<147) cells.unshift(0);
+  cells.slice(-147).forEach(v=>{const el=document.createElement('div');el.className='hm-cell'+(v>0?' l'+Math.min(v,4):'');hm.appendChild(el);});
+}
+
+function renderVision() {
+  const bl=document.getElementById('bucket-list');
+  bl.innerHTML='';
+  BUCKET.forEach(g=>{
+    const isDone = !!(S.bucketDone && S.bucketDone[g.id]) || g.done;
+    const el=document.createElement('div');
+    el.className='bucket-row';
+    el.style.cssText='display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:11px 14px;cursor:pointer;transition:all .2s;opacity:'+(isDone?'0.55':'1');
+    el.innerHTML='<div style="width:22px;height:22px;border-radius:50%;'+(isDone?'background:var(--rose);border:2px solid var(--rose)':'border:2px solid var(--border)')+';display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s">'+(isDone?'<svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="white" stroke-width="2.5"><polyline points="2,5.5 4.5,8 9,3"/></svg>':'')+'</div><div style="font-size:13px;font-weight:700;'+(isDone?'text-decoration:line-through;color:var(--dim)':'')+'">'+g.text+'</div>';
+    if (!g.done) {
+      el.onclick = () => {
+        if (!S.bucketDone) S.bucketDone = {};
+        S.bucketDone[g.id] = !S.bucketDone[g.id];
+        if (S.bucketDone[g.id]) { S.xp += 75; S.classXP.joy = Math.max(0,(S.classXP.joy||0)+75); toast('+75 XP — Bucket list item checked! 🎉'); }
+        else { S.xp = Math.max(0,S.xp-75); S.classXP.joy = Math.max(0,(S.classXP.joy||0)-75); }
+        save(); renderAll();
+      };
+    }
+    bl.appendChild(el);
+  });
+}
+
+// ── INTERACTIONS ──────────────────────────────────────────────
+function checkLevelUp() {
+  const newLv = Math.floor(S.xp/XP_PER_LEVEL)+BASE_LV;
+  if (newLv > S.level) { S.level=newLv; showLvl(newLv); return true; }
+  return false;
+}
+
+function completeQuest(q) {
+  const done = !!S.doneToday[q.id];
+  const delta = done ? -q.xp : q.xp;
+  S.doneToday[q.id] = !done;
+  S.xp = Math.max(0, S.xp+delta);
+  S.classXP[q.cls] = Math.max(0,(S.classXP[q.cls]||0)+delta);
+  if (!done) S.totalQ++; else S.totalQ=Math.max(0,S.totalQ-1);
+  save(); renderAll();
+  if (!done) { if (!checkLevelUp()) toast('+'+q.xp+' XP! Keep going! 🌸'); }
+}
+
+function toggleHabit(h) {
+  const done=!!S.habitDone[h.id];
+  S.habitDone[h.id]=!done;
+  const delta=done?-h.xp:h.xp;
+  S.xp=Math.max(0,S.xp+delta);
+  S.classXP[h.cls]=Math.max(0,(S.classXP[h.cls]||0)+delta);
+  S.habitStr[h.id]=Math.max(0,(S.habitStr[h.id]||0)+(done?-1:1));
+  save(); renderAll();
+  if (!done) { if (!checkLevelUp()) toast('+'+h.xp+' XP — '+h.name+' done! 💖'); }
+}
+
+function toggleProtein(i) {
+  const prev=S.protein.every(Boolean);
+  S.protein[i]=!S.protein[i];
+  const now=S.protein.every(Boolean);
+  if (now&&!prev) { S.xp+=60; S.classXP.health=(S.classXP.health||0)+60; toast('+60 XP — All 3 protein goals hit! 💪'); }
+  if (prev&&!now) { S.xp=Math.max(0,S.xp-60); S.classXP.health=Math.max(0,(S.classXP.health||0)-60); }
+  save(); renderAll();
+}
+
+function toggleGirlDate(g) {
+  const done=!!S.girlDates[g.id];
+  S.girlDates[g.id]=!done;
+  const delta=done?-100:100;
+  S.xp=Math.max(0,S.xp+delta);
+  S.classXP.family=Math.max(0,(S.classXP.family||0)+delta);
+  if (!done) toast('+100 XP — Date with '+g.name+' logged! 💛');
+  save(); renderAll();
+}
+
+function showTab(id, btn) {
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('on'));
+  document.getElementById('p-'+id).classList.add('on');
+  btn.classList.add('on');
+}
+
+function toast(msg) {
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.classList.add('on');
+  clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove('on'),2800);
+}
+
+function showLvl(lv) {
+  document.getElementById('lvlup-num').textContent=lv;
+  document.getElementById('lvlup-sub').textContent='You reached Level '+lv+'! Keep going! 🌸';
+  document.getElementById('lvlup').classList.add('on');
+}
+
+function closeLvl() { document.getElementById('lvlup').classList.remove('on'); }
+
+// ── INIT ──────────────────────────────────────────────────────
+loadState();
+renderAll();
+</script>
+</body>
+</html>
