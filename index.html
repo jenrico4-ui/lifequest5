@@ -374,6 +374,15 @@ body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif;max-
     <div style="font-size:10px;color:var(--dim);font-weight:600;text-align:center;margin-top:6px;">Powered by Claude · Factual &amp; politically neutral</div>
   </div>
 
+  <!-- SPORTS PULSE -->
+  <div class="sec" style="margin-top:16px;">🏈🏀 Sports Pulse</div>
+  <div style="margin:0 16px;">
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:18px;min-height:80px;">
+      <div id="sports-content" style="font-size:13px;color:var(--mid);line-height:1.7;font-weight:600;">Tap refresh for today's NFL &amp; NBA highlights 🏀</div>
+    </div>
+    <button onclick="fetchSports()" id="sports-btn" style="width:100%;margin-top:10px;padding:12px;border-radius:14px;border:none;background:linear-gradient(135deg,#DBEAFE,#D1FAE5);color:#1E40AF;font-size:13px;font-weight:800;font-family:'Nunito',sans-serif;cursor:pointer;">🔄 Refresh Sports</button>
+    <div style="font-size:10px;color:var(--dim);font-weight:600;text-align:center;margin-top:6px;">NFL &amp; NBA only · Just enough to hold a conversation 😄</div>
+  </div>
 
   <!-- QUOTE OF THE DAY -->
   <div class="sec" style="margin-top:20px;">✨ Quote of the Day</div>
@@ -1037,6 +1046,36 @@ function renderRise() {
   });
 }
 
+async function callClaude(payload) {
+  const resp = await fetch('/.netlify/functions/claude', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  });
+  if (!resp.ok) {
+    const errText = await resp.text();
+    throw new Error('HTTP ' + resp.status + ': ' + errText.slice(0, 200));
+  }
+  const data = await resp.json();
+  let text = '';
+  (data.content || []).forEach(block => {
+    if (block.type === 'text') text += block.text || '';
+    if (block.type === 'tool_result' && Array.isArray(block.content)) {
+      block.content.forEach(b => { if (b.type === 'text') text += b.text || ''; });
+    }
+  });
+  return text.trim();
+}
+
+function formatBullets(text, containerId) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  const lines = text.split('\n').map(l => l.trim()).filter(l => l && l.length > 4);
+  el.innerHTML = lines.map(l =>
+    `<div style="padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;color:var(--text);line-height:1.65;font-weight:500;">${l.replace(/^[-•*]\s*/,'')}</div>`
+  ).join('') + `<div style="font-size:10px;color:var(--dim);margin-top:8px;font-weight:700;">Updated ${new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})}</div>`;
+}
+
 async function fetchNews() {
   const btn = document.getElementById('news-btn');
   const content = document.getElementById('news-content');
@@ -1045,33 +1084,43 @@ async function fetchNews() {
   content.innerHTML = '<div style="color:var(--dim);font-size:13px;font-style:italic;">Fetching today\'s news...</div>';
   try {
     const today = new Date().toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
-    const resp = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
-        messages: [{ role: 'user', content: `Today is ${today}. Give me a morning briefing with two sections. Section 1: Today's News — 4 factual, politically neutral bullet points covering major world events, economy, science, or anything significant affecting everyday Americans. Skip partisan drama. Section 2: Sports Pulse — 3-4 bullet points covering the most recent NFL and NBA highlights, scores, and storylines from the past 48 hours. Write casually like a friend texting me. Start NFL bullets with 🏈 and NBA with 🏀. If a sport is in offseason say so briefly. For news bullets start each with a relevant emoji. Keep everything concise — one sentence per bullet. Total response under 250 words.` }]
-      })
+    const text = await callClaude({
+      model: 'claude-sonnet-4-20250514',
+      max_tokens: 1000,
+      tools: [{ type: 'web_search_20250305', name: 'web_search' }],
+      messages: [{ role: 'user', content: `Today is ${today}. Search for today's top news. Give me 4-5 factual, completely politically neutral bullet points. Focus on economy, major world events, science, health, things affecting everyday Americans. Skip partisan drama. Start each bullet with a relevant emoji then one clear sentence. Under 150 words total. Write like a calm trusted friend.` }]
     });
-    const data = await resp.json();
-    const text = data.content.map(b => b.text || '').join('').trim();
-    if (text) {
-      const lines = text.split('\n').map(l => l.trim()).filter(l => l && l.length > 3);
-      content.innerHTML = lines.map(l => {
-        if (l.startsWith('Section') || l.startsWith('**') || l.startsWith('##') || l.startsWith('Today') || l.startsWith('Sports')) {
-          return `<div style="font-size:10px;font-weight:800;color:var(--rose);text-transform:uppercase;letter-spacing:.08em;padding:10px 0 4px;">${l.replace(/[*#]/g,'').trim()}</div>`;
-        }
-        return `<div style="padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;color:var(--text);line-height:1.65;font-weight:500;">${l.replace(/^[-•*]\s*/,'')}</div>`;
-      }).join('') + `<div style="font-size:10px;color:var(--dim);margin-top:8px;font-weight:700;">Updated ${new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})}</div>`;
-    } else {
-      content.innerHTML = '<div style="color:var(--dim);font-size:13px;">Couldn\'t load right now — try again in a moment.</div>';
-    }
+    if (text) formatBullets(text, 'news-content');
+    else content.innerHTML = '<div style="color:var(--dim);font-size:13px;">Couldn\'t load — try again.</div>';
   } catch(e) {
-    content.innerHTML = '<div style="color:var(--dim);font-size:13px;">Couldn\'t connect — try again in a moment.</div>';
-    console.error('fetch error:', e);
+    content.innerHTML = '<div style="color:var(--coral);font-size:12px;">Error: ' + e.message + '</div>';
+    console.error('News error:', e);
   }
   btn.textContent = '🔄 Refresh Today\'s Brief';
+  btn.disabled = false;
+}
+
+async function fetchSports() {
+  const btn = document.getElementById('sports-btn');
+  const content = document.getElementById('sports-content');
+  btn.textContent = '⏳ Loading scores...';
+  btn.disabled = true;
+  content.innerHTML = '<div style="color:var(--dim);font-size:13px;font-style:italic;">Fetching latest games...</div>';
+  try {
+    const today = new Date().toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
+    const text = await callClaude({
+      model: 'claude-sonnet-4-20250514',
+      max_tokens: 800,
+      tools: [{ type: 'web_search_20250305', name: 'web_search' }],
+      messages: [{ role: 'user', content: `Today is ${today}. Search for the latest NFL and NBA scores and highlights from the last 48 hours. Give me 4-5 bullets max. Casual — like a friend texting before a date. Who won, scores, anything talk-worthy. Start NFL bullets with 🏈 and NBA with 🏀. If offseason say so. No jargon. Under 150 words.` }]
+    });
+    if (text) formatBullets(text, 'sports-content');
+    else content.innerHTML = '<div style="color:var(--dim);font-size:13px;">Couldn\'t load — try again.</div>';
+  } catch(e) {
+    content.innerHTML = '<div style="color:var(--coral);font-size:12px;">Sports error: ' + e.message + '</div>';
+    console.error('Sports error:', e);
+  }
+  btn.textContent = '🔄 Refresh Sports';
   btn.disabled = false;
 }
 
