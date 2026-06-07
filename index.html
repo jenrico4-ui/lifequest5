@@ -225,6 +225,7 @@ body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif;max-
         <div style="font-size:20px">🥩</div>
         <div style="flex:1">
           <div style="font-size:13px;font-weight:700">Hit protein goals</div>
+          <div id="protein-streak" style="font-size:11px;font-weight:700;color:var(--rose);margin-top:2px;">🔥 0 day streak</div>
           <div style="font-size:10px;color:var(--dim);font-weight:600;margin-top:2px">Check all 3 meals = +60 XP 💪</div>
         </div>
         <div id="p-badge" style="display:none;font-size:11px;font-weight:800;color:var(--rose)">+60 XP ✓</div>
@@ -617,6 +618,7 @@ function loadState() {
   if (!S.xp)           S.xp = 0;
   if (!S.level)        S.level = BASE_LV;
   if (!S.qStreak)      S.qStreak = 0;
+  if (!S.quickDone)    S.quickDone = {};
   if (!S.totalQ)       S.totalQ = 0;
   if (!S.classXP)      S.classXP = {};
   if (!S.doneToday)    S.doneToday = {};
@@ -637,15 +639,26 @@ function loadState() {
 
   if (S.lastDate !== todayStr) {
     if (S.lastDate) {
-      const count = Object.values(S.doneToday).filter(Boolean).length + Object.values(S.habitDone).filter(Boolean).length;
+      const questsDone = Object.values(S.doneToday).filter(Boolean).length;
+      const habitsDone = Object.values(S.habitDone).filter(Boolean).length;
+      const count = questsDone + habitsDone;
       const lv = count===0?0:count<=2?1:count<=5?2:count<=9?3:4;
       S.heatmap = [...S.heatmap, lv].slice(-147);
-      S.qStreak = Object.values(S.doneToday).some(Boolean) ? S.qStreak+1 : 0;
+      // Streak counts if ANY quest OR habit was done yesterday
+      const anythingDone = questsDone > 0 || habitsDone > 0;
+      S.qStreak = anythingDone ? S.qStreak + 1 : 0;
+      // Protein streak — all 3 meals = streak day
+      const proteinDone = S.protein && S.protein.every(Boolean);
+      S.proteinStreak = proteinDone ? (S.proteinStreak || 0) + 1 : 0;
       S.history = [...S.history, S.xp].slice(-30);
       try { const d=new Date(S.lastDate); S.weekAct[d.toISOString().slice(0,10)]=count>0; } catch(e){}
+    } else {
+      // First time loading — don't reset streak to 0, preserve any existing value
+      S.qStreak = S.qStreak || 0;
     }
     S.doneToday = {};
     S.habitDone = {};
+    S.quickDone = {};
     S.protein = [false,false,false];
     S.lastDate = todayStr;
   }
@@ -1057,13 +1070,16 @@ async function callClaude(payload) {
     throw new Error('HTTP ' + resp.status + ': ' + errText.slice(0, 200));
   }
   const data = await resp.json();
+  if (data.error) throw new Error(data.error);
+  // Server now returns { text: '...' } with pre-extracted content
+  if (data.text) return data.text;
+  // Fallback: try to extract from raw_content if present
   let text = '';
-  (data.content || []).forEach(block => {
-    if (block.type === 'text') text += block.text || '';
-    if (block.type === 'tool_result' && Array.isArray(block.content)) {
-      block.content.forEach(b => { if (b.type === 'text') text += b.text || ''; });
-    }
-  });
+  if (data.raw_content && Array.isArray(data.raw_content)) {
+    data.raw_content.forEach(block => {
+      if (block.type === 'text') text += block.text || '';
+    });
+  }
   return text.trim();
 }
 
@@ -1295,6 +1311,9 @@ function renderProtein() {
       pc.innerHTML=done?'<svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="white" stroke-width="2.5"><polyline points="2,5.5 4.5,8 9,3"/></svg>':'';
     }
   });
+  // Update protein streak pill
+  const ps = document.getElementById('protein-streak');
+  if (ps) ps.textContent = '🔥 '+(S.proteinStreak||0)+' day streak';
 }
 
 const BOOKS = [
@@ -1783,10 +1802,32 @@ function renderClasses() {
     const lv=classLv(c.id);
     const prog=classProg(c.id);
     const xp=classXP(c.id);
-    const ideas = QUICK_IDEAS[c.id] || [];
+    const allIdeas = QUICK_IDEAS[c.id] || [];
+
+    // Pick 3 ideas rotating by day
+    const doy = Math.floor((new Date() - new Date(new Date().getFullYear(),0,0))/86400000);
+    const total = allIdeas.length;
+    const dailyIdeas = total <= 3 ? allIdeas : [
+      allIdeas[doy % total],
+      allIdeas[(doy + Math.floor(total/3)) % total],
+      allIdeas[(doy + Math.floor(2*total/3)) % total],
+    ];
 
     const el=document.createElement('div');
     el.style.cssText='background:var(--surface);border:1px solid var(--border);border-radius:18px;overflow:hidden;margin:0 16px 10px;';
+
+    const ideasHtml = dailyIdeas.map((idea, i) => {
+      const ideaId = `qi-${c.id}-${i}`;
+      const done = !!(S.quickDone && S.quickDone[ideaId]);
+      return `<div onclick="earnQuickXP('${c.id}','${idea.name.replace(/'/g,"\\'")}',${idea.xp},'${ideaId}')"
+        id="${ideaId}"
+        style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:12px;background:${done?'var(--bg)':c.bg};border:1px solid ${done?'var(--border)':c.color+'22'};cursor:${done?'default':'pointer'};opacity:${done?'0.5':'1'};transition:all .2s;">
+        <div style="flex:1;font-size:12px;font-weight:600;color:${done?'var(--dim)':'var(--text)'};line-height:1.4;${done?'text-decoration:line-through':''}">${idea.name}</div>
+        ${done
+          ? '<div style="font-size:11px;font-weight:800;padding:3px 9px;border-radius:20px;background:var(--border);color:var(--dim);white-space:nowrap;flex-shrink:0;">✓ Done</div>'
+          : `<div style="font-size:11px;font-weight:800;padding:3px 9px;border-radius:20px;background:${c.color};color:white;white-space:nowrap;flex-shrink:0;">+${idea.xp} XP</div>`}
+      </div>`;
+    }).join('');
 
     el.innerHTML=`
       <div onclick="toggleClassDrawer('cd-${c.id}')" style="display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;">
@@ -1802,15 +1843,8 @@ function renderClasses() {
         </div>
       </div>
       <div id="cd-${c.id}" style="display:none;border-top:1px solid var(--border);padding:12px 16px;">
-        <div style="font-size:10px;font-weight:800;color:${c.color};text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;">⚡ Quick XP ideas — tap to earn</div>
-        <div style="display:flex;flex-direction:column;gap:7px;">
-          ${ideas.map(idea=>`
-            <div onclick="earnQuickXP('${c.id}','${idea.name.replace(/'/g,"\\'")}',${idea.xp})" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:12px;background:${c.bg};border:1px solid ${c.color}22;cursor:pointer;transition:all .2s;">
-              <div style="flex:1;font-size:12px;font-weight:600;color:var(--text);line-height:1.4;">${idea.name}</div>
-              <div style="font-size:11px;font-weight:800;padding:3px 9px;border-radius:20px;background:${c.color};color:white;white-space:nowrap;flex-shrink:0;">+${idea.xp} XP</div>
-            </div>`).join('')}
-        </div>
-        <div style="font-size:10px;color:var(--dim);font-weight:600;margin-top:8px;text-align:center;">Tap any idea to log it and earn XP instantly</div>
+        <div style="font-size:10px;font-weight:800;color:${c.color};text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;">⚡ Today's ideas — tap to earn · refreshes tomorrow</div>
+        <div style="display:flex;flex-direction:column;gap:7px;">${ideasHtml}</div>
       </div>`;
     wrap.appendChild(el);
   });
@@ -1820,12 +1854,14 @@ function toggleClassDrawer(id) {
   const el = document.getElementById(id);
   if (!el) return;
   const isOpen = el.style.display === 'block';
-  // Close all other drawers first
   document.querySelectorAll('[id^="cd-"]').forEach(d => d.style.display = 'none');
   el.style.display = isOpen ? 'none' : 'block';
 }
 
-function earnQuickXP(clsId, name, xp) {
+function earnQuickXP(clsId, name, xp, ideaId) {
+  if (!S.quickDone) S.quickDone = {};
+  if (S.quickDone[ideaId]) return; // already done today
+  S.quickDone[ideaId] = true;
   S.xp += xp;
   S.classXP[clsId] = (S.classXP[clsId]||0) + xp;
   S.totalQ++;
