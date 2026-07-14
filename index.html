@@ -312,7 +312,7 @@ body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif;max-
     <div class="vision-card hi"><div style="font-size:32px;margin-bottom:8px">✝️</div><div style="font-family:'Quicksand',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px">Saved by Grace</div><div style="font-size:11px;color:var(--dim);font-weight:600;line-height:1.4">Nonprofit · Phoenix · Named after Grace</div></div>
     <div class="vision-card"><div style="font-size:32px;margin-bottom:8px">👑</div><div style="font-family:'Quicksand',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px">Chief of Staff</div><div style="font-size:11px;color:var(--dim);font-weight:600;line-height:1.4">CEOs support it · You're already training</div></div>
     <div class="vision-card"><div style="font-size:32px;margin-bottom:8px">❤️</div><div style="font-family:'Quicksand',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px">Real Partnership</div><div style="font-size:11px;color:var(--dim);font-weight:600;line-height:1.4">Safe · Dependable · Worth showing up for</div></div>
-    <div class="vision-card"><div style="font-size:32px;margin-bottom:8px">💰</div><div style="font-family:'Quicksand',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px">Passive Income</div><div style="font-size:11px;color:var(--dim);font-weight:600;line-height:1.4">Pinterest affiliate growing · More ahead</div></div>
+    <div class="vision-card"><div style="font-size:32px;margin-bottom:8px">💰</div><div style="font-family:'Quicksand',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px">Passive Income</div><div style="font-size:11px;color:var(--dim);font-weight:600;line-height:1.4">Vending machine · Party rental · Work bonuses</div></div>
     <div class="vision-card"><div style="font-size:32px;margin-bottom:8px">🌍</div><div style="font-family:'Quicksand',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px">World Explorer</div><div style="font-size:11px;color:var(--dim);font-weight:600;line-height:1.4">Paris ✓ Mexico ✓ · Next TBD</div></div>
   </div>
   <div class="sec" style="margin-top:16px">2026 Bucket List</div>
@@ -565,7 +565,6 @@ const ALL_QUESTS = [
   {id:"q_sleep",  cls:"health",  name:"In bed by 10pm 😴",                  emoji:"😴", xp:40},
   {id:"q_care",   cls:"health",  name:"Self care — bath, facial or massage", emoji:"🛁", xp:70},
   {id:"q_date",   cls:"romance", name:"Go on a real date 🌹",               emoji:"🌹", xp:200},
-  {id:"q_claude", cls:"career",  name:"Use Claude for an EA task 🤖",       emoji:"🤖", xp:50},
   {id:"q_cos",    cls:"career",  name:"Do something a CoS would do 👑",     emoji:"👑", xp:80},
   {id:"q_pres",   cls:"career",  name:"Practice presenting or articulating", emoji:"🎤", xp:70},
   {id:"q_401k",   cls:"career",  name:"Work on Solo 401k setup 💼",         emoji:"💼", xp:120},
@@ -577,13 +576,12 @@ const ALL_QUESTS = [
   {id:"q_sat",    cls:"joy",     name:"Own a Saturday night out 🌙",        emoji:"🌙", xp:120},
   {id:"q_meetup", cls:"joy",     name:"Attend a local meetup or event 🎉",  emoji:"🎉", xp:150},
   {id:"q_hobby",  cls:"joy",     name:"Try a new hobby activity 🌸",        emoji:"🌸", xp:100},
+  {id:"q_volunteer",cls:"joy",   name:"Volunteer your time somewhere 🤲",   emoji:"🤲", xp:120},
   {id:"q_dinner", cls:"family",  name:"No-phones Sunday family dinner 🍽️",  emoji:"🍽️",xp:80},
   {id:"q_gma",    cls:"family",  name:"Visit grandma with love 🌸",         emoji:"🌸", xp:70},
   {id:"q_vend",   cls:"passive", name:"Research vending machine business 🏧",   emoji:"🏧", xp:80},
   {id:"q_party",  cls:"passive", name:"Research party rental business 🎪",      emoji:"🎪", xp:80},
-  {id:"q_aisite", cls:"passive", name:"Work on AI website idea 💻",             emoji:"💻", xp:90},
-  {id:"q_pin",    cls:"passive", name:"Post 5+ Pinterest pins 📌",          emoji:"📌", xp:60},
-  {id:"q_canva",  cls:"passive", name:"Create branded Canva pin designs 🎨", emoji:"🎨",xp:70},
+  {id:"q_bonus",  cls:"career",  name:"Do something today to earn a bonus 💰",  emoji:"💰", xp:100},
   {id:"q_broker", cls:"passive", name:"Work on San Diego condo plan 🌊",    emoji:"🌊", xp:80},
   {id:"q_insure", cls:"passive", name:"Research life insurance options 🛡️", emoji:"🛡️",xp:80},
 ];
@@ -644,16 +642,24 @@ function loadState() {
       const count = questsDone + habitsDone;
       const lv = count===0?0:count<=2?1:count<=5?2:count<=9?3:4;
       S.heatmap = [...S.heatmap, lv].slice(-147);
-      // Streak counts if ANY quest OR habit was done yesterday
+      // Quest streak counts if ANY quest OR habit was done yesterday
       const anythingDone = questsDone > 0 || habitsDone > 0;
       S.qStreak = anythingDone ? S.qStreak + 1 : 0;
       // Protein streak — all 3 meals = streak day
       const proteinDone = S.protein && S.protein.every(Boolean);
       S.proteinStreak = proteinDone ? (S.proteinStreak || 0) + 1 : 0;
+      // Streak-type habits (alcohol-free, no-spend) — if NOT checked yesterday, break the streak
+      HABITS.forEach(h => {
+        if (h.streak) {
+          const wasChecked = !!S.habitDone[h.id];
+          if (!wasChecked) {
+            S.habitStr[h.id] = 0; // missed day — reset streak
+          }
+        }
+      });
       S.history = [...S.history, S.xp].slice(-30);
       try { const d=new Date(S.lastDate); S.weekAct[d.toISOString().slice(0,10)]=count>0; } catch(e){}
     } else {
-      // First time loading — don't reset streak to 0, preserve any existing value
       S.qStreak = S.qStreak || 0;
     }
     S.doneToday = {};
@@ -1024,7 +1030,7 @@ function renderRise() {
   if (tfWrap) {
     tfWrap.innerHTML = '';
     const total = TRUE_FALSE.length;
-    const tfItems = [TRUE_FALSE[doy%total],TRUE_FALSE[(doy+11)%total],TRUE_FALSE[(doy+22)%total]];
+    const tfItems = [TRUE_FALSE[doy%total],TRUE_FALSE[(doy*7+3)%total],TRUE_FALSE[(doy*13+9)%total]];
     tfWrap.dataset.items = JSON.stringify(tfItems);
     tfItems.forEach((item,i) => {
       const div = document.createElement('div');
@@ -1051,7 +1057,7 @@ function renderRise() {
   wrap.innerHTML = '';
   const colors = ['var(--rose-l)','var(--lav-l)','var(--gold-l)'];
   const borders = ['rgba(244,114,182,.25)','rgba(167,139,250,.25)','rgba(251,191,36,.25)'];
-  [FUN_FACTS[doy%FUN_FACTS.length],FUN_FACTS[(doy+Math.floor(FUN_FACTS.length/3))%FUN_FACTS.length],FUN_FACTS[(doy+Math.floor(2*FUN_FACTS.length/3))%FUN_FACTS.length]].forEach((f,i)=>{
+  [FUN_FACTS[doy%FUN_FACTS.length],FUN_FACTS[(doy*7+5)%FUN_FACTS.length],FUN_FACTS[(doy*17+11)%FUN_FACTS.length]].forEach((f,i)=>{
     const div = document.createElement('div');
     div.style.cssText = `background:${colors[i]};border:1px solid ${borders[i]};border-radius:18px;padding:14px 16px;`;
     div.innerHTML = `<div style="font-size:14px;font-weight:800;color:var(--text);margin-bottom:6px;line-height:1.4;">${f.emoji} ${f.title}</div><div style="font-size:13px;color:var(--mid);line-height:1.7;font-weight:500;">${f.fact}</div>`;
@@ -1534,6 +1540,50 @@ const BOOKS = [
       "After this, read King's Letter from Birmingham Jail — it is the practical, lived application of everything Thurman teaches here, and it is one of the greatest pieces of American writing"
     ]
   },
+  {
+    id:"b11", cls:"romance", title:"Attached", author:"Amir Levine & Rachel Heller", emoji:"💗",
+    color:"#C084FC", bg:"#F3E8FF", xp:150, area:"Love & Dating",
+    summary:"Two researchers — one a psychiatrist, one a psychologist — break down the science of adult attachment theory in the most practical, readable way it has ever been written. The core idea: every adult has an attachment style — secure, anxious, or avoidant — shaped by early relationships and carried into every romantic relationship thereafter. Most people have no idea which they are. This book makes the invisible visible. It explains why you feel the way you do when someone doesn't text back, why certain people feel immediately electric and others feel safe but bland, why you sometimes offer people exits or test whether they'll stay, why reassurance feels like oxygen in some relationships. Most importantly it explains what to actually do with all of that — not to hide it or white-knuckle past it, but to understand it and choose more wisely. You are in the middle of your re-entry into dating after real loss. This book is your most important read right now, for this exact season.",
+    chapters:[
+      {title:"The Science of Adult Attachment", summary:"Attachment theory began with John Bowlby studying infants, but later research confirmed the same patterns govern adult romantic relationships. We all have a biological need for a secure base — a person we can depend on. When that security feels threatened, we react in patterned, predictable ways."},
+      {title:"Secure, Anxious, Avoidant — Which Are You?", summary:"Secure: comfortable with closeness and independence. Doesn't overthink texts. Assumes good intent. Anxious: craves closeness, hypervigilant to signs of withdrawal, activated by uncertainty. Avoidant: values independence above all, discomfort with too much need or closeness, often mistakes distance for maturity. Most people are one of these."},
+      {title:"Why Anxious and Avoidant Find Each Other", summary:"The most painful and most common pairing. Anxious people find avoidant people fascinating — the inconsistency triggers the nervous system in a way that mimics passion. Avoidant people initially enjoy the anxious person's intensity. The cycle is predictable: pursue, withdraw, pursue harder, withdraw further. It feels like love. It's actually the attachment system in overdrive."},
+      {title:"Recognizing Avoidant Behavior Early", summary:"Avoidant partners send specific signals most people rationalize away until they're deeply invested. They future-fake (mention plans they don't make), they pull away after closeness, they describe past partners as 'too needy' or 'too intense', they idealize independence as a virtue. The book gives you a specific list to recognize before you're in too deep."},
+      {title:"Activating Strategies — What Your Nervous System Does", summary:"Anxious attachment activates through specific behaviors: obsessive checking of phones, imagining worst-case scenarios, replaying conversations for hidden meaning, the urge to test whether someone will stay by offering them an out. These are not personality flaws. They are the nervous system trying to resolve uncertainty. Naming them is 80% of the work."},
+      {title:"What Secure Attachment Actually Looks Like", summary:"Secure people are often dismissed as boring because the relationship doesn't feel like a rollercoaster. There's no chase, no hot-and-cold, no decoding. Secure partners are consistent, clear, and available. They don't create urgency. This chapter reframes what safety and consistency actually feel like — and why they're not the same as settling."},
+      {title:"Choosing More Wisely", summary:"The practical application: using what you know about attachment styles to screen earlier, communicate more honestly, and recognize the difference between chemistry-as-anxiety and chemistry-as-genuine-connection. Secure people are out there — they just don't always create the same initial fireworks."},
+    ],
+    onething:"The 'spark' you've been taught to chase is often anxiety dressed up as chemistry. Secure love feels different at first — steadier, calmer, safer — and then dramatically better over time.",
+    tips:[
+      "Take the attachment style quiz before or while reading — it reframes your entire dating history in about 10 minutes",
+      "The urge to offer someone an exit ('you probably don't want to deal with this') is an anxious attachment pattern — notice it the next time it surfaces and name it instead of acting on it",
+      "A man who doesn't fight past your defenses isn't necessarily uninterested — a secure person trusts you to open when you're ready rather than forcing the door",
+      "Consistency, reliability, and emotional availability are the actual green flags — not the intensity of early feelings, which can be the nervous system responding to uncertainty",
+      "You can move toward secure attachment — through therapy (you're already doing this), through choosing secure partners, and through recognizing your own patterns in real time. You are actively doing all three."
+    ]
+  },
+  {
+    id:"b12", cls:"romance", title:"Attachment Exercises for Anxious Lovers", author:"Jen Rico's Practice", emoji:"🌸",
+    color:"#F472B6", bg:"#FCE7F3", xp:100, area:"Love & Healing",
+    summary:"You've identified anxious attachment patterns in yourself and you're actively working on them — in therapy, in dating, in the way you're showing up to this new season of your life. This isn't a published book. It's a personal practice guide I've written specifically for you — exercises drawn from attachment research, CBT, and somatic therapy that you can actually use right now while you're navigating re-entry into dating after real loss. The goal isn't to be perfect. The goal is to catch the pattern earlier each time, pause before acting from it, and gradually build the internal security that makes external reassurance less necessary. This is the work. You are already doing it.",
+    chapters:[
+      {title:"Name It to Tame It", summary:"When you feel the activation — the spiral, the urge to check your phone, the catastrophizing — stop and name it out loud or in writing: 'My attachment system is activated right now.' Research shows that naming the emotional state reduces its intensity by engaging the prefrontal cortex. You don't have to stop the feeling. Just name it."},
+      {title:"The 20-Minute Rule", summary:"When you feel the urge to send a follow-up text, check a profile, or reach out to ease anxiety — wait 20 minutes first. Do something physical: a walk, a stretch, make tea. The urge often passes. If it doesn't, at least you're responding from a calmer place. This isn't about playing games — it's about not leading with the anxious part."},
+      {title:"Secure Base Journaling", summary:"Each morning, write one sentence completing this prompt: 'I am a person who ___.' Fill it with something true and grounding — not about a man, not about your role, not about what you do. About who you are. 'I am a person who rebuilt her life from nothing and made it beautiful.' Your internal secure base comes from the relationship you have with yourself."},
+      {title:"The Exit Offer Audit", summary:"When you notice yourself offering someone a way out ('you probably don't want to deal with this,' 'I understand if this is too much'), pause and ask: what am I actually afraid of right now? Write it down. The exit offer is not self-protection — it's preemptive rejection. Name the fear underneath it instead of acting it out."},
+      {title:"Green Flag Practice", summary:"After every date or interaction, write down one concrete green flag you noticed — not about how he made you feel, but about who he actually showed up as. Consistency, follow-through, emotional availability, respect for your time. Training your nervous system to notice what's actually there rather than only scanning for what's missing."},
+      {title:"The Secure Attachment Visualization", summary:"Before a date or difficult conversation, take 3 minutes to breathe and visualize someone in your life who has been completely reliable and safe — Yvette, your girls, your faith. Let that feeling settle in your body. You carry secure attachment with you — it doesn't only come from the person across the table."},
+      {title:"Progress Tracking", summary:"Anxious attachment doesn't disappear in a season. It gets quieter over time with consistent practice. Track your progress: How quickly did I catch the pattern this week? Did I pause before acting? Did I ask for what I needed directly instead of testing? Small wins compound. You are already doing better than you think."},
+    ],
+    onething:"You are not your attachment style. You are the person who recognized it, named it, got into therapy over it, and is actively choosing differently. That is not a small thing.",
+    tips:[
+      "Practice the 20-minute rule the next time you feel the urge to double-text or check his profile — just 20 minutes, then reassess",
+      "Start the Secure Base journal tomorrow morning — one sentence, who you are independent of any relationship",
+      "After your next date, write down one genuine green flag you observed. Train your brain to notice what's real, not just what's uncertain",
+      "The exit offer pattern ('you probably don't want to deal with me') — commit to catching it once before you act on it this week",
+      "Bring the Exit Offer Audit to your next therapy session — your therapist will have a lot to work with there"
+    ]
+  },
 ];
 
 function renderReading() {
@@ -1732,7 +1782,7 @@ const QUICK_IDEAS = {
     {name:"Ask your CEO what their biggest priority is this week",xp:60},
     {name:"Spend 15 mins working on your Solo 401k setup",xp:80},
     {name:"Write down 3 things a CoS would handle differently than an EA",xp:50},
-    {name:"Research one AI tool that could help your CEOs",xp:60},
+    {name:"Send a proactive update to your CEOs before they ask",xp:60},
   ],
   faith:[
     {name:"Read one Psalm out loud — any one",xp:40},
@@ -1768,15 +1818,15 @@ const QUICK_IDEAS = {
     {name:"Share something from your faith journey with the girls",xp:50},
   ],
   passive:[
-    {name:"Create 5 new Canva Pinterest pins right now",xp:60},
     {name:"Research one vending machine location in Gilbert",xp:70},
     {name:"Look up party rental profit margins for Arizona",xp:70},
-    {name:"Spend 20 mins on your AI website idea",xp:80},
-    {name:"Check your Pinterest analytics and note what's working",xp:50},
+    {name:"Look up rental equipment suppliers near Gilbert",xp:60},
+    {name:"Research how to get a work performance bonus",xp:70},
+    {name:"Go above and beyond for a CEO today — something extra",xp:80},
     {name:"Research one life insurance quote online",xp:60},
     {name:"Call your mortgage broker for a San Diego update",xp:80},
-    {name:"Post 3 new affiliate pins to Pinterest",xp:50},
-    {name:"Research one new Amazon affiliate product in your niche",xp:50},
+    {name:"Read one article about vending machine ROI",xp:50},
+    {name:"Price out starter inventory for a vending machine",xp:70},
   ],
   growth:[
     {name:"Read 15 mins of your current book right now",xp:50},
@@ -1943,7 +1993,12 @@ function toggleHabit(h) {
   const delta=done?-h.xp:h.xp;
   S.xp=Math.max(0,S.xp+delta);
   S.classXP[h.cls]=Math.max(0,(S.classXP[h.cls]||0)+delta);
-  S.habitStr[h.id]=Math.max(0,(S.habitStr[h.id]||0)+(done?-1:1));
+  if (h.streak) {
+    // Streak habits: increment when checked, decrement back if unchecked same day (undo)
+    S.habitStr[h.id]=Math.max(0,(S.habitStr[h.id]||0)+(done?-1:1));
+  } else {
+    S.habitStr[h.id]=Math.max(0,(S.habitStr[h.id]||0)+(done?-1:1));
+  }
   save(); renderAll();
   if (!done) { if (!checkLevelUp()) toast('+'+h.xp+' XP — '+h.name+' done! 💖'); }
 }
