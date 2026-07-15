@@ -303,8 +303,8 @@ body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif;max-
   </div>
   <div style="height:14px"></div>
   <div class="vision-hero">
-    <div style="font-family:'Quicksand',sans-serif;font-size:20px;font-weight:700;margin-bottom:6px">You didn't need fixing.<br><span style="color:var(--rose)">You needed rebalancing.</span></div>
-    <div style="font-size:13px;color:var(--mid);line-height:1.6;font-weight:600">And you're doing it — one quest at a time. 💛</div>
+    <div style="font-family:'Quicksand',sans-serif;font-size:20px;font-weight:700;margin-bottom:6px">Paris. Mexico. Hawaii.<br><span style="color:var(--rose)">She's just getting started.</span></div>
+    <div style="font-size:13px;color:var(--mid);line-height:1.6;font-weight:600">Back in your body, back in your faith, back in your heart. This season is yours. 💛</div>
   </div>
   <div class="sec">Big Dreams</div>
   <div class="vision-grid">
@@ -313,7 +313,7 @@ body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif;max-
     <div class="vision-card"><div style="font-size:32px;margin-bottom:8px">👑</div><div style="font-family:'Quicksand',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px">Chief of Staff</div><div style="font-size:11px;color:var(--dim);font-weight:600;line-height:1.4">CEOs support it · You're already training</div></div>
     <div class="vision-card"><div style="font-size:32px;margin-bottom:8px">❤️</div><div style="font-family:'Quicksand',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px">Real Partnership</div><div style="font-size:11px;color:var(--dim);font-weight:600;line-height:1.4">Safe · Dependable · Worth showing up for</div></div>
     <div class="vision-card"><div style="font-size:32px;margin-bottom:8px">💰</div><div style="font-family:'Quicksand',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px">Passive Income</div><div style="font-size:11px;color:var(--dim);font-weight:600;line-height:1.4">Vending machine · Party rental · Work bonuses</div></div>
-    <div class="vision-card"><div style="font-size:32px;margin-bottom:8px">🌍</div><div style="font-family:'Quicksand',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px">World Explorer</div><div style="font-size:11px;color:var(--dim);font-weight:600;line-height:1.4">Paris ✓ Mexico ✓ · Next TBD</div></div>
+    <div class="vision-card"><div style="font-size:32px;margin-bottom:8px">🌍</div><div style="font-family:'Quicksand',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px">World Explorer</div><div style="font-size:11px;color:var(--dim);font-weight:600;line-height:1.4">Paris ✓ Mexico City ✓ Hawaii ✓ · Next TBD</div></div>
   </div>
   <div class="sec" style="margin-top:16px">2026 Bucket List</div>
   <div class="bucket-list" id="bucket-list"></div>
@@ -551,13 +551,18 @@ const BUCKET = [
   {id:"bk5", done:false, text:"🎵 Olivia Dean concert — July"},
   {id:"bk6", done:false, text:"🌊 San Diego condo research"},
   {id:"bk7", done:false, text:"🌱 Try a new hobby"},
-  {id:"bk8", done:false, text:"❤️ Get back to dating"},
+  {id:"bk8", done:true,  text:"❤️ Get back to dating"},
   {id:"bk9", done:false, text:"👖 Fit into white pants"},
   {id:"bk10",done:false, text:"🍷 Wine tasting"},
   {id:"bk11",done:false, text:"💃 Take girls to a cultural Hispanic event"},
   {id:"bk12",done:false, text:"🎷 Go to a live jazz bar"},
   {id:"bk13",done:false, text:"💪 Hold a 3-minute plank"},
   {id:"bk14",done:false, text:"🍛 Try Indian food"},
+  {id:"bk15",done:true,  text:"🌺 Hawaii"},
+  {id:"bk16",done:true,  text:"❤️ Get back to dating"},
+  {id:"bk17",done:false, text:"🌍 International trip in 2026"},
+  {id:"bk18",done:false, text:"⛪ Find a Bible study or small group"},
+  {id:"bk19",done:false, text:"🙏 Develop a consistent daily prayer practice"},
 ];
 
 const ALL_QUESTS = [
@@ -565,12 +570,15 @@ const ALL_QUESTS = [
   {id:"q_sleep",  cls:"health",  name:"In bed by 10pm 😴",                  emoji:"😴", xp:40},
   {id:"q_care",   cls:"health",  name:"Self care — bath, facial or massage", emoji:"🛁", xp:70},
   {id:"q_date",   cls:"romance", name:"Go on a real date 🌹",               emoji:"🌹", xp:200},
+  {id:"q_pause",  cls:"romance", name:"Check in with yourself — how do you actually feel?",emoji:"🪞",xp:50},
+  {id:"q_attach", cls:"romance", name:"Practice one attachment exercise 💗",   emoji:"💗", xp:70},
   {id:"q_cos",    cls:"career",  name:"Do something a CoS would do 👑",     emoji:"👑", xp:80},
   {id:"q_pres",   cls:"career",  name:"Practice presenting or articulating", emoji:"🎤", xp:70},
-  {id:"q_401k",   cls:"career",  name:"Work on Solo 401k setup 💼",         emoji:"💼", xp:120},
   {id:"q_church", cls:"faith",   name:"Attend church ⛪",                   emoji:"⛪", xp:100},
   {id:"q_prayer", cls:"faith",   name:"Practice open prayer out loud 🙏",   emoji:"🙏", xp:70},
-  {id:"q_bible",  cls:"faith",   name:"Study a Bible passage with Claude ✝️",emoji:"✝️",xp:60},
+  {id:"q_bible",  cls:"faith",   name:"Read scripture for 10+ mins ✝️",     emoji:"✝️",xp:60},
+  {id:"q_bstudy", cls:"faith",   name:"Find or attend a Bible study 📖",    emoji:"📖", xp:100},
+  {id:"q_devote", cls:"faith",   name:"Do your devotional before your phone 🌅",emoji:"🌅",xp:60},
   {id:"q_grace",  cls:"faith",   name:"Plant a faith seed with Grace 🌱",   emoji:"🌱", xp:80},
   {id:"q_social", cls:"joy",     name:"Reach out to expand social circle 👋",emoji:"👋",xp:70},
   {id:"q_sat",    cls:"joy",     name:"Own a Saturday night out 🌙",        emoji:"🌙", xp:120},
@@ -579,11 +587,7 @@ const ALL_QUESTS = [
   {id:"q_volunteer",cls:"joy",   name:"Volunteer your time somewhere 🤲",   emoji:"🤲", xp:120},
   {id:"q_dinner", cls:"family",  name:"No-phones Sunday family dinner 🍽️",  emoji:"🍽️",xp:80},
   {id:"q_gma",    cls:"family",  name:"Visit grandma with love 🌸",         emoji:"🌸", xp:70},
-  {id:"q_vend",   cls:"passive", name:"Research vending machine business 🏧",   emoji:"🏧", xp:80},
-  {id:"q_party",  cls:"passive", name:"Research party rental business 🎪",      emoji:"🎪", xp:80},
   {id:"q_bonus",  cls:"career",  name:"Do something today to earn a bonus 💰",  emoji:"💰", xp:100},
-  {id:"q_broker", cls:"passive", name:"Work on San Diego condo plan 🌊",    emoji:"🌊", xp:80},
-  {id:"q_insure", cls:"passive", name:"Research life insurance options 🛡️", emoji:"🛡️",xp:80},
 ];
 
 // Growth quests — one guaranteed daily, rotates through all of them
@@ -648,12 +652,14 @@ function loadState() {
       // Protein streak — all 3 meals = streak day
       const proteinDone = S.protein && S.protein.every(Boolean);
       S.proteinStreak = proteinDone ? (S.proteinStreak || 0) + 1 : 0;
-      // Streak-type habits (alcohol-free, no-spend) — if NOT checked yesterday, break the streak
+      // Streak-type habits (alcohol-free, no-spend) — increment if checked, reset if missed
       HABITS.forEach(h => {
         if (h.streak) {
           const wasChecked = !!S.habitDone[h.id];
-          if (!wasChecked) {
-            S.habitStr[h.id] = 0; // missed day — reset streak
+          if (wasChecked) {
+            S.habitStr[h.id] = (S.habitStr[h.id] || 0) + 1; // kept streak going!
+          } else {
+            S.habitStr[h.id] = 0; // missed day — streak broken
           }
         }
       });
@@ -1262,9 +1268,11 @@ function renderToday() {
   STREAKS.forEach(h=>{
     const done=!!S.habitDone[h.id];
     const str=S.habitStr[h.id]||0;
+    // Show running total + today if checked (tomorrow's reset will make it permanent)
+    const displayStr = str + (done ? 1 : 0);
     const el=document.createElement('div');
     el.className='habit-row streak-type'+(done?' done':'');
-    el.innerHTML='<div class="habit-emoji">'+h.emoji+'</div><div class="habit-info"><div class="habit-name">'+h.name+'</div><div class="habit-sub">+'+h.xp+' XP · Tap to log</div></div><div class="streak-num">'+str+'</div><div class="chk">'+(done?'<svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="white" stroke-width="2.5"><polyline points="2,5.5 4.5,8 9,3"/></svg>':'')+'</div>';
+    el.innerHTML='<div class="habit-emoji">'+h.emoji+'</div><div class="habit-info"><div class="habit-name">'+h.name+'</div><div class="habit-sub">+'+h.xp+' XP · '+(!done?'Tap to log':'Streak active!')+'</div></div><div class="streak-num">'+displayStr+'</div><div class="chk">'+(done?'<svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="white" stroke-width="2.5"><polyline points="2,5.5 4.5,8 9,3"/></svg>':'')+'</div>';
     el.onclick=()=>toggleHabit(h);
     sw.appendChild(el);
   });
@@ -1775,14 +1783,13 @@ const QUICK_IDEAS = {
   ],
   career:[
     {name:"Prep your CEOs for tomorrow's meetings",xp:60},
-    {name:"Use Claude for one EA task right now",xp:40},
     {name:"Organize your inbox to zero",xp:50},
     {name:"Read one article about leadership or strategy",xp:40},
     {name:"Draft one message you've been putting off",xp:45},
     {name:"Ask your CEO what their biggest priority is this week",xp:60},
-    {name:"Spend 15 mins working on your Solo 401k setup",xp:80},
     {name:"Write down 3 things a CoS would handle differently than an EA",xp:50},
     {name:"Send a proactive update to your CEOs before they ask",xp:60},
+    {name:"Do something today that will earn you a bonus",xp:80},
   ],
   faith:[
     {name:"Read one Psalm out loud — any one",xp:40},
@@ -1793,8 +1800,12 @@ const QUICK_IDEAS = {
     {name:"Read one chapter of Mere Christianity",xp:50},
     {name:"Practice open prayer out loud — even 2 minutes",xp:60},
     {name:"Ask Grace one genuine question about what she believes",xp:70},
-    {name:"Find a local Bible study to attend this week",xp:60},
-    {name:"Read today's devotional if you haven't yet",xp:40},
+    {name:"Research Bible studies near Gilbert this week",xp:60},
+    {name:"Read today's devotional before you pick up your phone",xp:50},
+    {name:"Sit in silence for 5 minutes — no phone, just you and God",xp:50},
+    {name:"Write down what you're grateful for — 5 specific things",xp:40},
+    {name:"Read a chapter from one of your faith books",xp:50},
+    {name:"Pray specifically for the two guys you're dating — clarity and discernment",xp:60},
   ],
   joy:[
     {name:"Text Yvette something fun right now",xp:30},
@@ -1993,12 +2004,12 @@ function toggleHabit(h) {
   const delta=done?-h.xp:h.xp;
   S.xp=Math.max(0,S.xp+delta);
   S.classXP[h.cls]=Math.max(0,(S.classXP[h.cls]||0)+delta);
-  if (h.streak) {
-    // Streak habits: increment when checked, decrement back if unchecked same day (undo)
-    S.habitStr[h.id]=Math.max(0,(S.habitStr[h.id]||0)+(done?-1:1));
-  } else {
+  if (!h.streak) {
+    // Non-streak habits: increment/decrement counter on tap
     S.habitStr[h.id]=Math.max(0,(S.habitStr[h.id]||0)+(done?-1:1));
   }
+  // Streak habits (alcohol-free, no-spend): counter is managed entirely by daily reset
+  // We just show today's check status — the streak number persists until a missed day
   save(); renderAll();
   if (!done) { if (!checkLevelUp()) toast('+'+h.xp+' XP — '+h.name+' done! 💖'); }
 }
