@@ -653,14 +653,12 @@ function loadState() {
       const proteinDone = S.protein && S.protein.every(Boolean);
       S.proteinStreak = proteinDone ? (S.proteinStreak || 0) + 1 : 0;
       // Streak-type habits (alcohol-free, no-spend) — increment if checked, reset if missed
-      HABITS.forEach(h => {
-        if (h.streak) {
-          const wasChecked = !!S.habitDone[h.id];
-          if (wasChecked) {
-            S.habitStr[h.id] = (S.habitStr[h.id] || 0) + 1; // kept streak going!
-          } else {
-            S.habitStr[h.id] = 0; // missed day — streak broken
-          }
+      STREAKS.forEach(h => {
+        const wasChecked = !!S.habitDone[h.id];
+        if (wasChecked) {
+          S.habitStr[h.id] = (S.habitStr[h.id] || 0) + 1;
+        } else {
+          S.habitStr[h.id] = 0; // missed day — streak broken
         }
       });
       S.history = [...S.history, S.xp].slice(-30);
